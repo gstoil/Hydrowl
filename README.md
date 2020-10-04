@@ -4,7 +4,7 @@ Hydrowl was developed between 2012 and 2016 as a prototypical tool for answering
 
  1) Repairing: A rewriting system is used at a pre-processing step to extract/materialise from the input Ontology Schema (TBox) all those schema axioms R that an RDF triple-store would miss. Then, it loads to the system the input schema, the extracted set of axioms R and the RDF graph. The idea is that the extra axioms would help the system compute more answers than it would otherwise do.
 
-ii) Hybrid: Techniques are used at run-time to decide if a given user SPARQL query Q can be answers correctly by a triple-store. If the answer is "yes" then the query is evaluated over this system; otherwise a fully-fledged OWL 2 DL system needs to be employed. Even in this case special techniques are used to speed-up evaluation. 
+2) Hybrid: Techniques are used at run-time to decide if a given user SPARQL query Q can be answers correctly by a triple-store. If the answer is "yes" then the query is evaluated over this system; otherwise a fully-fledged OWL 2 DL system needs to be employed. Even in this case special techniques are used to speed-up evaluation. 
 
 In principle, both approaches can be applied to any kind of system that supports any fragment of OWL 2 DL. Moreover, all techniques supported by Hydrowl interact with the various reasoners through (in most cases standard) interfaces that can be implemented for new systems in order to integrate them in the architecture and benefit from the approaches. 
 
