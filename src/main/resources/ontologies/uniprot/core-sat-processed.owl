@@ -1,0 +1,4421 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY core "http://purl.uniprot.org/core/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY swrl "http://www.w3.org/2003/11/swrl#" >
+    <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY protege "http://protege.stanford.edu/plugins/owl/protege#" >
+]>
+
+
+<rdf:RDF xmlns="http://purl.uniprot.org/core/"
+     xml:base="http://purl.uniprot.org/core/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:core="http://purl.uniprot.org/core/"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="http://purl.uniprot.org/core/">
+        <rdfs:comment rdf:datatype="&xsd;string">Properties and classes used for protein annotation.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
+
+    <owl:AnnotationProperty rdf:about="&rdfs;label"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.uniprot.org/core/alternativeName -->
+
+    <owl:ObjectProperty rdf:about="&core;alternativeName">
+        <rdfs:comment rdf:datatype="&xsd;string">A synonym of the recommended name.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/protein_names</rdfs:seeAlso>
+        <rdfs:range rdf:resource="&core;Structured_Name"/>
+        <rdfs:subPropertyOf rdf:resource="&core;structuredName"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&core;Part"/>
+                    <rdf:Description rdf:about="&core;Protein"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/annotation -->
+
+    <owl:ObjectProperty rdf:about="&core;annotation">
+        <rdfs:comment rdf:datatype="&xsd;string">Attaches an annotation to a resource.</rdfs:comment>
+        <rdfs:range rdf:resource="&core;Annotation"/>
+        <rdfs:domain rdf:resource="&core;Protein"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/attribution -->
+
+    <owl:ObjectProperty rdf:about="&core;attribution">
+        <rdfs:range rdf:resource="&core;Attribution"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&core;Protein"/>
+                    <rdf:Description rdf:about="&rdf;Statement"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/basedOn -->
+
+    <owl:ObjectProperty rdf:about="&core;basedOn">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">based on</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">The sequence on which the description of a modified sequence is based.</rdfs:comment>
+        <rdfs:domain rdf:resource="&core;Modified_Sequence"/>
+        <rdfs:range rdf:resource="&core;Simple_Sequence"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/category -->
+
+    <owl:ObjectProperty rdf:about="&core;category"/>
+    
+
+
+    <!-- http://purl.uniprot.org/core/cellularComponent -->
+
+    <owl:ObjectProperty rdf:about="&core;cellularComponent">
+        <rdfs:range rdf:resource="&core;Cellular_Component"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&core;cellularComponent"/>
+                        <owl:onClass rdf:resource="&core;Cellular_Component"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&core;orientation"/>
+                        <owl:onClass rdf:resource="&core;Orientation"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&core;topology"/>
+                        <owl:onClass rdf:resource="&core;Topology"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/citation -->
+
+    <owl:ObjectProperty rdf:about="&core;citation">
+        <rdfs:comment rdf:datatype="&xsd;string">A publication from which data was extracted, or which contains additional information.</rdfs:comment>
+        <rdfs:range rdf:resource="&core;Citation"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&core;Cellular_Component"/>
+                    <rdf:Description rdf:about="&core;Database"/>
+                    <rdf:Description rdf:about="&core;External_Sequence"/>
+                    <rdf:Description rdf:about="&core;Nucleotide_Resource"/>
+                    <rdf:Description rdf:about="&core;Orientation"/>
+                    <rdf:Description rdf:about="&core;Protein"/>
+                    <rdf:Description rdf:about="&core;Topology"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/classifiedWith -->
+
+    <owl:ObjectProperty rdf:about="&core;classifiedWith">
+        <rdfs:label rdf:datatype="&xsd;string">classified with</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">A concept that classifies this resource.</rdfs:comment>
+        <rdfs:range rdf:resource="&core;Concept"/>
+        <rdfs:domain rdf:resource="&core;Protein"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/commonTaxon -->
+
+    <owl:ObjectProperty rdf:about="&core;commonTaxon">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&core;Cluster"/>
+        <rdfs:range rdf:resource="&core;Taxon"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/component -->
+
+    <owl:ObjectProperty rdf:about="&core;component">
+        <rdfs:comment rdf:datatype="&xsd;string">A component of a protein.</rdfs:comment>
+        <rdfs:range rdf:resource="&core;Part"/>
+        <rdfs:domain rdf:resource="&core;Protein"/>
+        <rdfs:subPropertyOf rdf:resource="&core;part"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/conflictingSequence -->
+
+    <owl:ObjectProperty rdf:about="&core;conflictingSequence">
+        <rdfs:range rdf:resource="&core;External_Sequence"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&core;Protein"/>
+                    <rdf:Description rdf:about="&core;Sequence_Caution_Annotation"/>
+                    <rdf:Description rdf:about="&core;Sequence_Conflict_Annotation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/context -->
+
+    <owl:ObjectProperty rdf:about="&core;context">
+        <rdfs:domain rdf:resource="&core;Citation_Statement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/database -->
+
+    <owl:ObjectProperty rdf:about="&core;database">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&core;Database"/>
+        <rdfs:domain rdf:resource="&core;Resource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/domain -->
+
+    <owl:ObjectProperty rdf:about="&core;domain">
+        <rdfs:comment rdf:datatype="&xsd;string">A domain of a protein.</rdfs:comment>
+        <rdfs:range rdf:resource="&core;Part"/>
+        <rdfs:domain rdf:resource="&core;Protein"/>
+        <rdfs:subPropertyOf rdf:resource="&core;part"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/encodedBy -->
+
+    <owl:ObjectProperty rdf:about="&core;encodedBy">
+        <rdfs:label rdf:datatype="&xsd;string">encoded by</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">The gene by which a protein is encoded.</rdfs:comment>
+        <rdfs:range rdf:resource="&core;Gene"/>
+        <rdfs:domain rdf:resource="&core;Protein"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/encodedIn -->
+
+    <owl:ObjectProperty rdf:about="&core;encodedIn">
+        <rdfs:label rdf:datatype="&xsd;string">encoded in</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">The subcellular location where a protein is encoded.</rdfs:comment>
+        <rdfs:domain rdf:resource="&core;Protein"/>
+        <rdfs:range rdf:resource="&core;Subcellular_Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/enzyme -->
+
+    <owl:ObjectProperty rdf:about="&core;enzyme">
+        <rdfs:label rdf:datatype="&xsd;string">enzyme</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">The catalytic activity associated with a protein. or part of a protein.</rdfs:comment>
+        <rdfs:range rdf:resource="&core;Enzyme"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&core;Part"/>
+                    <rdf:Description rdf:about="&core;Protein"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/erratum -->
+
+    <owl:ObjectProperty rdf:about="&core;erratum">
+        <rdfs:comment rdf:datatype="&xsd;string">An erratum for a publication.</rdfs:comment>
+        <rdfs:range rdf:resource="&core;Published_Citation"/>
+        <rdfs:domain rdf:resource="&core;Published_Citation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/erratumFor -->
+
+    <owl:ObjectProperty rdf:about="&core;erratumFor">
+        <rdfs:label rdf:datatype="&xsd;string">erratum for</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">The publication which an erratum refers to.</rdfs:comment>
+        <rdfs:domain rdf:resource="&core;Published_Citation"/>
+        <rdfs:range rdf:resource="&core;Published_Citation"/>
+        <owl:inverseOf rdf:resource="&core;erratum"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/existence -->
+
+    <owl:ObjectProperty rdf:about="&core;existence"/>
+    
+
+
+    <!-- http://purl.uniprot.org/core/host -->
+
+    <owl:ObjectProperty rdf:about="&core;host">
+        <rdfs:range rdf:resource="&core;Taxon"/>
+        <rdfs:domain rdf:resource="&core;Taxon"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/interaction -->
+
+    <owl:ObjectProperty rdf:about="&core;interaction">
+        <rdfs:range rdf:resource="&core;Interaction"/>
+        <rdfs:domain rdf:resource="&core;Protein"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/isolatedFrom -->
+
+    <owl:ObjectProperty rdf:about="&core;isolatedFrom">
+        <rdfs:domain rdf:resource="&core;Protein"/>
+        <rdfs:range rdf:resource="&core;Tissue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/locatedIn -->
+
+    <owl:ObjectProperty rdf:about="&core;locatedIn">
+        <rdfs:domain rdf:resource="&core;Subcellular_Location_Annotation"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&core;cellularComponent"/>
+                        <owl:onClass rdf:resource="&core;Cellular_Component"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&core;orientation"/>
+                        <owl:onClass rdf:resource="&core;Orientation"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&core;topology"/>
+                        <owl:onClass rdf:resource="&core;Topology"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/locatedOn -->
+
+    <owl:ObjectProperty rdf:about="&core;locatedOn">
+        <rdfs:label rdf:datatype="&xsd;string">located on</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">The molecule a this resource is located on.</rdfs:comment>
+        <rdfs:range rdf:resource="&core;Molecule"/>
+        <rdfs:domain rdf:resource="&core;Nucleotide_Resource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/member -->
+
+    <owl:ObjectProperty rdf:about="&core;member">
+        <rdfs:comment rdf:datatype="&xsd;string">One of several similar resources.</rdfs:comment>
+        <rdfs:domain rdf:resource="&core;Cluster"/>
+        <rdfs:range rdf:resource="&core;Sequence"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/memberOf -->
+
+    <owl:ObjectProperty rdf:about="&core;memberOf">
+        <rdfs:label rdf:datatype="&xsd;string">member of</rdfs:label>
+        <rdfs:range rdf:resource="&core;Cluster"/>
+        <rdfs:domain rdf:resource="&core;Sequence"/>
+        <owl:inverseOf rdf:resource="&core;member"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/method -->
+
+    <owl:ObjectProperty rdf:about="&core;method">
+        <rdfs:comment rdf:datatype="&xsd;string">The experimental method that was used.</rdfs:comment>
+        <rdfs:range rdf:resource="&core;Method"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&core;Mass_Spectrometry_Annotation"/>
+                    <rdf:Description rdf:about="&core;Structure_Resource"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/modification -->
+
+    <owl:ObjectProperty rdf:about="&core;modification">
+        <rdfs:comment rdf:datatype="&xsd;string">A modification of a sequence.</rdfs:comment>
+        <rdfs:range rdf:resource="&core;Alternative_Sequence_Annotation"/>
+        <rdfs:domain rdf:resource="&core;Modified_Sequence"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/organism -->
+
+    <owl:ObjectProperty rdf:about="&core;organism">
+        <rdfs:comment rdf:datatype="&xsd;string">The organism in which a protein occurs.</rdfs:comment>
+        <rdfs:range rdf:resource="&core;Taxon"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&core;Protein"/>
+                    <rdf:Description rdf:about="&core;Sequence"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/orientation -->
+
+    <owl:ObjectProperty rdf:about="&core;orientation">
+        <rdfs:range rdf:resource="&core;Orientation"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&core;cellularComponent"/>
+                        <owl:onClass rdf:resource="&core;Cellular_Component"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&core;orientation"/>
+                        <owl:onClass rdf:resource="&core;Orientation"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&core;topology"/>
+                        <owl:onClass rdf:resource="&core;Topology"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/part -->
+
+    <owl:ObjectProperty rdf:about="&core;part">
+        <rdfs:range rdf:resource="&core;Part"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/partOf -->
+
+    <owl:ObjectProperty rdf:about="&core;partOf">
+        <rdfs:range rdf:resource="&core;Subcellular_Location"/>
+        <rdfs:domain rdf:resource="&core;Subcellular_Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/participant -->
+
+    <owl:ObjectProperty rdf:about="&core;participant">
+        <rdfs:comment rdf:datatype="&xsd;string">A protein that participates in a protein-protein interaction.</rdfs:comment>
+        <rdfs:domain rdf:resource="&core;Interaction"/>
+        <rdfs:range rdf:resource="&core;Participant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/range -->
+
+    <owl:ObjectProperty rdf:about="&core;range">
+        <rdfs:comment rdf:datatype="&xsd;string">A range of amino acids.</rdfs:comment>
+        <rdfs:range rdf:resource="&core;Range"/>
+        <rdfs:domain rdf:resource="&core;Sequence_Annotation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/rank -->
+
+    <owl:ObjectProperty rdf:about="&core;rank">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">The rank of a taxon.</rdfs:comment>
+        <rdfs:range rdf:resource="&core;Rank"/>
+        <rdfs:domain rdf:resource="&core;Taxon"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/recommendedName -->
+
+    <owl:ObjectProperty rdf:about="&core;recommendedName">
+        <rdfs:comment rdf:datatype="&xsd;string">The name recommended by the UniProt consortium.</rdfs:comment>
+        <rdfs:range rdf:resource="&core;Structured_Name"/>
+        <rdfs:subPropertyOf rdf:resource="&core;structuredName"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&core;Part"/>
+                    <rdf:Description rdf:about="&core;Protein"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/relatedLocation -->
+
+    <owl:ObjectProperty rdf:about="&core;relatedLocation">
+        <rdfs:range rdf:resource="&core;Subcellular_Location"/>
+        <rdfs:domain rdf:resource="&core;Subcellular_Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/replacedBy -->
+
+    <owl:ObjectProperty rdf:about="&core;replacedBy">
+        <rdfs:label rdf:datatype="&xsd;string">replaced by</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">A resource that replaces this resource.</rdfs:comment>
+        <owl:inverseOf rdf:resource="&core;replaces"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&core;Enzyme"/>
+                    <rdf:Description rdf:about="&core;Protein"/>
+                    <rdf:Description rdf:about="&core;Taxon"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&core;Enzyme"/>
+                    <rdf:Description rdf:about="&core;Protein"/>
+                    <rdf:Description rdf:about="&core;Taxon"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/replaces -->
+
+    <owl:ObjectProperty rdf:about="&core;replaces">
+        <rdfs:comment rdf:datatype="&xsd;string">A resource that is replaced by this resource.</rdfs:comment>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&core;Obsolete"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&core;Enzyme"/>
+                            <rdf:Description rdf:about="&core;Protein"/>
+                            <rdf:Description rdf:about="&core;Taxon"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&core;Enzyme"/>
+                    <rdf:Description rdf:about="&core;Protein"/>
+                    <rdf:Description rdf:about="&core;Taxon"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/representativeFor -->
+
+    <owl:ObjectProperty rdf:about="&core;representativeFor">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:range rdf:resource="&core;Cluster"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&core;Protein"/>
+                    <rdf:Description rdf:about="&core;Sequence"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/seedFor -->
+
+    <owl:ObjectProperty rdf:about="&core;seedFor">
+        <rdfs:range rdf:resource="&core;Cluster"/>
+        <rdfs:domain rdf:resource="&core;Sequence"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/sequence -->
+
+    <owl:ObjectProperty rdf:about="&core;sequence">
+        <rdfs:comment rdf:datatype="&xsd;string">An amino acid sequence.</rdfs:comment>
+        <rdfs:range rdf:resource="&core;Sequence"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&core;Annotation"/>
+                    <rdf:Description rdf:about="&core;Protein"/>
+                    <rdf:Description rdf:about="&core;Resource"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/sequenceFor -->
+
+    <owl:ObjectProperty rdf:about="&core;sequenceFor">
+        <rdfs:label rdf:datatype="&xsd;string">sequence for</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">A resource that describes this sequence.</rdfs:comment>
+        <rdfs:domain rdf:resource="&core;Sequence"/>
+        <owl:inverseOf rdf:resource="&core;sequence"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&core;Annotation"/>
+                    <rdf:Description rdf:about="&core;Protein"/>
+                    <rdf:Description rdf:about="&core;Resource"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/source -->
+
+    <owl:ObjectProperty rdf:about="&core;source">
+        <rdfs:domain rdf:resource="&core;Attribution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/status -->
+
+    <owl:ObjectProperty rdf:about="&core;status">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">The reliability of a statement.</rdfs:comment>
+        <rdfs:range rdf:resource="&core;Status"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/strain -->
+
+    <owl:ObjectProperty rdf:about="&core;strain">
+        <rdfs:range rdf:resource="&core;Strain"/>
+        <rdfs:domain rdf:resource="&core;Taxon"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/structuredName -->
+
+    <owl:ObjectProperty rdf:about="&core;structuredName">
+        <rdfs:range rdf:resource="&core;Structured_Name"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&core;Part"/>
+                    <rdf:Description rdf:about="&core;Protein"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/submittedName -->
+
+    <owl:ObjectProperty rdf:about="&core;submittedName">
+        <rdfs:comment rdf:datatype="&xsd;string">A name provided by the submitter of the underlying nucleotide sequence.</rdfs:comment>
+        <rdfs:range rdf:resource="&core;Structured_Name"/>
+        <rdfs:subPropertyOf rdf:resource="&core;structuredName"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&core;Part"/>
+                    <rdf:Description rdf:about="&core;Protein"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/topology -->
+
+    <owl:ObjectProperty rdf:about="&core;topology">
+        <rdfs:range rdf:resource="&core;Topology"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&core;cellularComponent"/>
+                        <owl:onClass rdf:resource="&core;Cellular_Component"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&core;orientation"/>
+                        <owl:onClass rdf:resource="&core;Orientation"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&core;topology"/>
+                        <owl:onClass rdf:resource="&core;Topology"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/transcribedFrom -->
+
+    <owl:ObjectProperty rdf:about="&core;transcribedFrom">
+        <rdfs:domain rdf:resource="&core;Transcript_Resource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/translatedFrom -->
+
+    <owl:ObjectProperty rdf:about="&core;translatedFrom">
+        <rdfs:domain rdf:resource="&core;External_Sequence"/>
+        <rdfs:range rdf:resource="&core;Nucleotide_Resource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/translatedTo -->
+
+    <owl:ObjectProperty rdf:about="&core;translatedTo">
+        <rdfs:domain rdf:resource="&core;Transcript_Resource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:ObjectProperty rdf:about="&skos;prefLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.uniprot.org/core/abstract -->
+
+    <owl:DatatypeProperty rdf:about="&core;abstract">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">True if the class does not have any direct instances.</rdfs:comment>
+        <rdfs:domain rdf:resource="&core;Database"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/activity -->
+
+    <owl:DatatypeProperty rdf:about="&core;activity">
+        <rdfs:label rdf:datatype="&xsd;string">catalytic activity</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">The description of a catalytic activity.</rdfs:comment>
+        <rdfs:domain rdf:resource="&core;Enzyme"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/alias -->
+
+    <owl:DatatypeProperty rdf:about="&core;alias">
+        <rdfs:comment rdf:datatype="&xsd;string">An alternative name used in the flat text format.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/allergenName -->
+
+    <owl:DatatypeProperty rdf:about="&core;allergenName">
+        <rdfs:comment rdf:datatype="&xsd;string">See http://www.expasy.org/cgi-bin/lists?allergen.txt</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&core;structuredNameType"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/atypical -->
+
+    <owl:DatatypeProperty rdf:about="&core;atypical">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">True if the protein is divergent in sequence or has mutated functional sites.</rdfs:comment>
+        <rdfs:domain rdf:resource="&core;Family_Membership_Statement"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/author -->
+
+    <owl:DatatypeProperty rdf:about="&core;author">
+        <rdfs:comment rdf:datatype="&xsd;string">The author of a publication.</rdfs:comment>
+        <rdfs:domain rdf:resource="&core;Citation"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/authorsIncomplete -->
+
+    <owl:DatatypeProperty rdf:about="&core;authorsIncomplete">
+        <rdfs:domain rdf:resource="&core;Citation"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/base -->
+
+    <owl:DatatypeProperty rdf:about="&core;base"/>
+    
+
+
+    <!-- http://purl.uniprot.org/core/begin -->
+
+    <owl:DatatypeProperty rdf:about="&core;begin">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">The first position of a range.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&core;Range"/>
+                    <rdf:Description rdf:about="&core;Sequence"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/biotechName -->
+
+    <owl:DatatypeProperty rdf:about="&core;biotechName">
+        <rdfs:comment rdf:datatype="&xsd;string">A name used in a biotechnological context.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&core;structuredNameType"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/cdAntigenName -->
+
+    <owl:DatatypeProperty rdf:about="&core;cdAntigenName">
+        <rdfs:comment rdf:datatype="&xsd;string">A name from the Human Cell Differentiation Molecules (HCDM) nomenclature.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&core;structuredNameType"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/certain -->
+
+    <owl:DatatypeProperty rdf:about="&core;certain">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">False if there is any uncertainty about a statement.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&core;Absorption_Annotation"/>
+                    <rdf:Description rdf:about="&core;Domain_Assignment_Statement"/>
+                    <rdf:Description rdf:about="&core;Endpoint_Statement"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/chain -->
+
+    <owl:DatatypeProperty rdf:about="&core;chain">
+        <rdfs:comment rdf:datatype="&xsd;string">Maps a series of symbols representing chains of a protein to a range of amino acids.</rdfs:comment>
+        <rdfs:domain rdf:resource="&core;Structure_Mapping_Statement"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/checksum -->
+
+    <owl:DatatypeProperty rdf:about="&core;checksum">
+        <rdfs:comment>An caclulated value that is used to detect if there are errors in the sequence as shown due to among others IO errors. Both the crc64 and md5sum have collisions in UniProt data and cannot be used as unique keys.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/cofactor -->
+
+    <owl:DatatypeProperty rdf:about="&core;cofactor">
+        <rdfs:label rdf:datatype="&xsd;string">cofactor</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">A cofactor required for a catalytic activity.</rdfs:comment>
+        <rdfs:domain rdf:resource="&core;Enzyme"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/commonName -->
+
+    <owl:DatatypeProperty rdf:about="&core;commonName">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">common name</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="&core;name"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/complete -->
+
+    <owl:DatatypeProperty rdf:about="&core;complete">
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/faq/15</rdfs:seeAlso>
+        <rdfs:domain rdf:resource="&core;Taxon"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/crc64Checksum -->
+
+    <owl:DatatypeProperty rdf:about="&core;crc64Checksum">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&core;Sequence"/>
+        <rdfs:subPropertyOf rdf:resource="&core;checksum"/>
+        <rdfs:range rdf:resource="&xsd;token"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/created -->
+
+    <owl:DatatypeProperty rdf:about="&core;created">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">The date a resource was created.</rdfs:comment>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&core;Protein"/>
+                    <rdf:Description rdf:about="&core;Resource"/>
+                    <rdf:Description rdf:about="&core;Sequence"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/date -->
+
+    <owl:DatatypeProperty rdf:about="&core;date">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&core;Attribution"/>
+                    <rdf:Description rdf:about="&core;Citation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/domains -->
+
+    <owl:DatatypeProperty rdf:about="&core;domains">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">The number of domains in a protein that correspond to a family. This is almost always 1, but may be 2 if  two identical domains are fused.</rdfs:comment>
+        <rdfs:domain rdf:resource="&core;Family_Membership_Statement"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/ecName -->
+
+    <owl:DatatypeProperty rdf:about="&core;ecName">
+        <rdfs:comment>The ecName is the enzyme classification associated with a structured name of the protein. Proteins are often named after their enzymatic activity but can have more than one activity leading to multiple names.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&core;structuredNameType"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/editor -->
+
+    <owl:DatatypeProperty rdf:about="&core;editor">
+        <rdfs:comment rdf:datatype="&xsd;string">The editor of a publication.</rdfs:comment>
+        <rdfs:domain rdf:resource="&core;Book_Citation"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/end -->
+
+    <owl:DatatypeProperty rdf:about="&core;end">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">The last position of a range.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&core;Range"/>
+                    <rdf:Description rdf:about="&core;Sequence"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/experiments -->
+
+    <owl:DatatypeProperty rdf:about="&core;experiments">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&core;Interaction"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/falseNegative -->
+
+    <owl:DatatypeProperty rdf:about="&core;falseNegative">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">false negative</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">True if a statement is true even though it was not predicted.</rdfs:comment>
+        <rdfs:domain rdf:resource="&core;Domain_Assignment_Statement"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/fragment -->
+
+    <owl:DatatypeProperty rdf:about="&core;fragment">
+        <rdfs:comment rdf:datatype="&xsd;string">Indicates if a sequence is complete or consists of one or more fragments.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/sequence_status</rdfs:seeAlso>
+        <rdfs:domain rdf:resource="&core;Simple_Sequence"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">multiple</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">single</rdf:first>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/frameshift -->
+
+    <owl:DatatypeProperty rdf:about="&core;frameshift">
+        <rdfs:comment rdf:datatype="&xsd;string">True if a sequence modification causes a frameshift.</rdfs:comment>
+        <rdfs:domain rdf:resource="&core;RNA_Editing_Annotation"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/fullName -->
+
+    <owl:DatatypeProperty rdf:about="&core;fullName">
+        <rdfs:comment rdf:datatype="&xsd;string">The full name.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&core;structuredNameType"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/fused -->
+
+    <owl:DatatypeProperty rdf:about="&core;fused">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">True if the rule on which the membership of a protein to a family is based does not cover the entire protein.</rdfs:comment>
+        <rdfs:domain rdf:resource="&core;Family_Membership_Statement"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/group -->
+
+    <owl:DatatypeProperty rdf:about="&core;group">
+        <rdfs:comment rdf:datatype="&xsd;string">The group or consortium that authored a publication.</rdfs:comment>
+        <rdfs:domain rdf:resource="&core;Citation"/>
+        <rdfs:subPropertyOf rdf:resource="&core;author"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/height -->
+
+    <owl:DatatypeProperty rdf:about="&core;height">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&foaf;Image"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/hits -->
+
+    <owl:DatatypeProperty rdf:about="&core;hits">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">The number of hits found in a sequence.</rdfs:comment>
+        <rdfs:domain rdf:resource="&core;Domain_Assignment_Statement"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/identity -->
+
+    <owl:DatatypeProperty rdf:about="&core;identity">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">The level of sequence identity in a cluster.</rdfs:comment>
+        <rdfs:domain rdf:resource="&core;Cluster"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">0.5</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">0.9</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">1.0</rdf:first>
+                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/implicit -->
+
+    <owl:DatatypeProperty rdf:about="&core;implicit">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">True if existance of this resource can be inferred.</rdfs:comment>
+        <rdfs:domain rdf:resource="&core;Database"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/indexable -->
+
+    <owl:DatatypeProperty rdf:about="&core;indexable">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/institution -->
+
+    <owl:DatatypeProperty rdf:about="&core;institution">
+        <rdfs:comment rdf:datatype="&xsd;string">The institution at which a thesis was written.</rdfs:comment>
+        <rdfs:domain rdf:resource="&core;Thesis_Citation"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/internationalNonproprietaryName -->
+
+    <owl:DatatypeProperty rdf:about="&core;internationalNonproprietaryName">
+        <rdfs:comment rdf:datatype="&xsd;string">The international nonproprietary name: A generic name for a pharmaceutical substance or active pharmaceutical ingredient that is globally recognized and is a public property.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&core;structuredNameType"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/length -->
+
+    <owl:DatatypeProperty rdf:about="&core;length">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&core;Sequence"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/limit -->
+
+    <owl:DatatypeProperty rdf:about="&core;limit">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">True if the range does not extend beyond the specified endpoint.</rdfs:comment>
+        <rdfs:domain rdf:resource="&core;Endpoint_Statement"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/locator -->
+
+    <owl:DatatypeProperty rdf:about="&core;locator">
+        <rdfs:domain rdf:resource="&core;Citation"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/locusName -->
+
+    <owl:DatatypeProperty rdf:about="&core;locusName">
+        <rdfs:label rdf:datatype="&xsd;string">locus name</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="&core;name"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/manual -->
+
+    <owl:DatatypeProperty rdf:about="&core;manual">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&core;Attribution"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/mass -->
+
+    <owl:DatatypeProperty rdf:about="&core;mass">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">The mass of a sequence in Daltons.</rdfs:comment>
+        <rdfs:domain rdf:resource="&core;Simple_Sequence"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/maximum -->
+
+    <owl:DatatypeProperty rdf:about="&core;maximum">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A maximum value.</rdfs:comment>
+        <rdfs:domain rdf:resource="&core;Absorption_Annotation"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/md5Checksum -->
+
+    <owl:DatatypeProperty rdf:about="&core;md5Checksum">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&core;Sequence"/>
+        <rdfs:subPropertyOf rdf:resource="&core;checksum"/>
+        <rdfs:range rdf:resource="&xsd;token"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/measuredActivity -->
+
+    <owl:DatatypeProperty rdf:about="&core;measuredActivity">
+        <rdfs:label rdf:datatype="&xsd;string">measured activity</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">The maximum velocity, Vmax.</rdfs:comment>
+        <rdfs:domain rdf:resource="&core;Kinetics_Annotation"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/measuredAffinity -->
+
+    <owl:DatatypeProperty rdf:about="&core;measuredAffinity">
+        <rdfs:label rdf:datatype="&xsd;string">measured affinity</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">The Michaelis-Menten constant, Km.</rdfs:comment>
+        <rdfs:domain rdf:resource="&core;Kinetics_Annotation"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/measuredError -->
+
+    <owl:DatatypeProperty rdf:about="&core;measuredError">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">measured error</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">The magnitude of the error of a value that was measured.</rdfs:comment>
+        <rdfs:domain rdf:resource="&core;Mass_Spectrometry_Annotation"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/measuredValue -->
+
+    <owl:DatatypeProperty rdf:about="&core;measuredValue">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">measured value</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">A value that was measured.</rdfs:comment>
+        <rdfs:domain rdf:resource="&core;Mass_Spectrometry_Annotation"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/mnemonic -->
+
+    <owl:DatatypeProperty rdf:about="&core;mnemonic">
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/entry_name</rdfs:seeAlso>
+        <rdfs:comment>A easy to remember identifier for a UniProtKB entry, but it is not a stable identifier and should not be used by programs to identify entries.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="&core;name"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/modified -->
+
+    <owl:DatatypeProperty rdf:about="&core;modified">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">The date a resource was last modified.</rdfs:comment>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&core;Cluster"/>
+                    <rdf:Description rdf:about="&core;Protein"/>
+                    <rdf:Description rdf:about="&core;Sequence"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/name -->
+
+    <owl:DatatypeProperty rdf:about="&core;name">
+        <rdfs:label rdf:datatype="&xsd;string">name</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/negative -->
+
+    <owl:DatatypeProperty rdf:about="&core;negative">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&core;Interaction"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/obsolete -->
+
+    <owl:DatatypeProperty rdf:about="&core;obsolete">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">obsolete</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">True if this resource has been replaced or deleted.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&core;Protein"/>
+                    <rdf:Description rdf:about="&core;Taxon"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/oldMnemonic -->
+
+    <owl:DatatypeProperty rdf:about="&core;oldMnemonic">
+        <rdfs:comment>A mnemonic that is no longer in use for this entry.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="&core;name"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/orfName -->
+
+    <owl:DatatypeProperty rdf:about="&core;orfName">
+        <rdfs:label rdf:datatype="&xsd;string">ORF name</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="&core;name"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/otherName -->
+
+    <owl:DatatypeProperty rdf:about="&core;otherName">
+        <rdfs:label rdf:datatype="&xsd;string">other name</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="&core;name"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/pages -->
+
+    <owl:DatatypeProperty rdf:about="&core;pages">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">The first and last page for a chapter or article.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&core;Book_Citation"/>
+                    <rdf:Description rdf:about="&core;Journal_Citation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/partOfLineage -->
+
+    <owl:DatatypeProperty rdf:about="&core;partOfLineage">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">part of lineage</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">True for taxa that can appear as part of an organism&apos;s lineage.</rdfs:comment>
+        <rdfs:domain rdf:resource="&core;Taxon"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/partial -->
+
+    <owl:DatatypeProperty rdf:about="&core;partial">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">True if the pattern or profile on which the domain assignment is based did not detect the sequence because the sequence is not complete and lacks the region on which the pattern or profile is based.</rdfs:comment>
+        <rdfs:domain rdf:resource="&core;Domain_Assignment_Statement"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/pattern -->
+
+    <owl:DatatypeProperty rdf:about="&core;pattern">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A URL pattern, used to generate links by substituting an identifier.</rdfs:comment>
+        <rdfs:domain rdf:resource="&core;Database"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/place -->
+
+    <owl:DatatypeProperty rdf:about="&core;place">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">The place where a publication was published. This usually includes a country name.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&core;Book_Citation"/>
+                    <rdf:Description rdf:about="&core;Thesis_Citation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/position -->
+
+    <owl:DatatypeProperty rdf:about="&core;position">
+        <rdfs:comment rdf:datatype="&xsd;string">A position on a sequence.</rdfs:comment>
+        <rdfs:domain rdf:resource="&core;RNA_Editing_Annotation"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/precursor -->
+
+    <owl:DatatypeProperty rdf:about="&core;precursor">
+        <rdfs:domain rdf:resource="&core;Simple_Sequence"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/publisher -->
+
+    <owl:DatatypeProperty rdf:about="&core;publisher">
+        <rdfs:comment rdf:datatype="&xsd;string">The publisher of a book.</rdfs:comment>
+        <rdfs:domain rdf:resource="&core;Book_Citation"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/referenceProteome -->
+
+    <owl:DatatypeProperty rdf:about="&core;referenceProteome">
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/faq/47</rdfs:seeAlso>
+        <rdfs:domain rdf:resource="&core;Taxon"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/resolution -->
+
+    <owl:DatatypeProperty rdf:about="&core;resolution">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">The resolution of an experiment, in Angstrom.</rdfs:comment>
+        <rdfs:domain rdf:resource="&core;Structure_Resource"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/reviewed -->
+
+    <owl:DatatypeProperty rdf:about="&core;reviewed">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Indicates whether a resource has been reviewed by a curator.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&core;Protein"/>
+                    <rdf:Description rdf:about="&core;Taxon"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/scientificName -->
+
+    <owl:DatatypeProperty rdf:about="&core;scientificName">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">scientific name</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="&core;name"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/scope -->
+
+    <owl:DatatypeProperty rdf:about="&core;scope">
+        <rdfs:comment rdf:datatype="&xsd;string">The extent of the work carried out by the authors of a publication.</rdfs:comment>
+        <rdfs:domain rdf:resource="&core;Citation_Statement"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/shortName -->
+
+    <owl:DatatypeProperty rdf:about="&core;shortName">
+        <rdfs:comment rdf:datatype="&xsd;string">An abbreviation of the full name or an acronym.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&core;structuredNameType"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/structuredNameType -->
+
+    <owl:DatatypeProperty rdf:about="&core;structuredNameType">
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/protein_names</rdfs:seeAlso>
+        <rdfs:comment>All names of the protein, from commonly used to obsolete, to used in the literature..</rdfs:comment>
+        <rdfs:domain rdf:resource="&core;Structured_Name"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/submittedTo -->
+
+    <owl:DatatypeProperty rdf:about="&core;submittedTo">
+        <rdfs:comment rdf:datatype="&xsd;string">The database a resource  was submitted to.</rdfs:comment>
+        <rdfs:domain rdf:resource="&core;Submission_Citation"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/substitution -->
+
+    <owl:DatatypeProperty rdf:about="&core;substitution">
+        <rdfs:comment rdf:datatype="&xsd;string">A replacement sequence.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&core;Mutagenesis_Annotation"/>
+                    <rdf:Description rdf:about="&core;Natural_Variant_Annotation"/>
+                    <rdf:Description rdf:about="&core;Sequence_Conflict_Annotation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/synonym -->
+
+    <owl:DatatypeProperty rdf:about="&core;synonym">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="&core;name"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/title -->
+
+    <owl:DatatypeProperty rdf:about="&core;title">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">The title of a publication.</rdfs:comment>
+        <rdfs:domain rdf:resource="&core;Citation"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/version -->
+
+    <owl:DatatypeProperty rdf:about="&core;version">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&core;Protein"/>
+                    <rdf:Description rdf:about="&core;Sequence"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/volume -->
+
+    <owl:DatatypeProperty rdf:about="&core;volume">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string">The volume a publication is part of.</rdfs:comment>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&core;Book_Citation"/>
+                    <rdf:Description rdf:about="&core;Journal_Citation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/width -->
+
+    <owl:DatatypeProperty rdf:about="&core;width">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&foaf;Image"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.uniprot.org/core/xeno -->
+
+    <owl:DatatypeProperty rdf:about="&core;xeno">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/binary_interactions</rdfs:seeAlso>
+        <rdfs:domain rdf:resource="&core;Interaction"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.uniprot.org/core/Absorption_Annotation -->
+
+    <owl:Class rdf:about="&core;Absorption_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Absorption</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Biophysicochemical_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Indicates the wavelength in nm at which photoreactive proteins such as opsins and DNA photolyases show maximal absorption.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Active_Site_Annotation -->
+
+    <owl:Class rdf:about="&core;Active_Site_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Active Site</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Site_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Amino acid(s) involved in the activity of an enzyme.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/act_site</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Allergen_Annotation -->
+
+    <owl:Class rdf:about="&core;Allergen_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Allergen</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Information relevant to allergenic proteins.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/allergenic_properties</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Alternative_Initiation_Annotation -->
+
+    <owl:Class rdf:about="&core;Alternative_Initiation_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Alternative Initiation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Alternative_Products_Annotation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Alternative_Products_Annotation -->
+
+    <owl:Class rdf:about="&core;Alternative_Products_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Alternative Products</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Description of the existence of related protein sequences produced by alternative splicing of the same gene or by the use of alternative initiation codons.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/alternative_products</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Alternative_Promoter_Usage_Annotation -->
+
+    <owl:Class rdf:about="&core;Alternative_Promoter_Usage_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Alternative Promoter Usage</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Alternative_Products_Annotation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Alternative_Sequence_Annotation -->
+
+    <owl:Class rdf:about="&core;Alternative_Sequence_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Splice Variant</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Natural_Variation_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Description of sequence variants produced by alternative splicing.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/var_seq</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Alternative_Splicing_Annotation -->
+
+    <owl:Class rdf:about="&core;Alternative_Splicing_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Alternative Splicing</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Alternative_Products_Annotation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Annotation -->
+
+    <owl:Class rdf:about="&core;Annotation">
+        <rdfs:comment rdf:datatype="&xsd;string">Description of a resource on a specific topic.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Attribution -->
+
+    <owl:Class rdf:about="&core;Attribution">
+        <rdfs:comment xml:lang="en">Entity used to attach evidence or provenance to a rdf statement via reification.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Beta_Strand_Annotation -->
+
+    <owl:Class rdf:about="&core;Beta_Strand_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Strand</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Secondary_Structure_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Beta strand regions within the experimentally determined protein structure</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/strand</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Binding_Site_Annotation -->
+
+    <owl:Class rdf:about="&core;Binding_Site_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Binding Site</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Site_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Binding site for any chemical group (co-enzyme, prosthetic group, etc.).</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/binding</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Biophysicochemical_Annotation -->
+
+    <owl:Class rdf:about="&core;Biophysicochemical_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Biophysicochemical Property</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Biophysical and physicochemical data such as pH dependence, temperature dependence, kinetic parameters, redox potentials, and maximal absorption.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://purl.uniprot.org/core/biophysicochemical_properties</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Biotechnology_Annotation -->
+
+    <owl:Class rdf:about="&core;Biotechnology_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Biotechnology</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Description of the use of a specific protein in a biotechnological process.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/biotechnological_use</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Book_Citation -->
+
+    <owl:Class rdf:about="&core;Book_Citation">
+        <rdfs:label rdf:datatype="&xsd;string">Book Citation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Published_Citation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&core;name"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string">A chapter from a book.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Calcium_Binding_Annotation -->
+
+    <owl:Class rdf:about="&core;Calcium_Binding_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Calcium Binding</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Region_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Extent of a calcium-binding region.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/ca_bind</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Catalytic_Activity_Annotation -->
+
+    <owl:Class rdf:about="&core;Catalytic_Activity_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Catalytic Activity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Description of the reactions catalyzed by an enzyme.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/catalytic_activity</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Caution_Annotation -->
+
+    <owl:Class rdf:about="&core;Caution_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Caution</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Warning about possible errors and/or grounds for confusion.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/caution</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Cellular_Component -->
+
+    <owl:Class rdf:about="&core;Cellular_Component">
+        <rdfs:label>Cellular Component</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Subcellular_Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Chain_Annotation -->
+
+    <owl:Class rdf:about="&core;Chain_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Chain</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Molecule_Processing_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Extent of a polypeptide chain in the mature protein.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/chain</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Citation -->
+
+    <owl:Class rdf:about="&core;Citation">
+        <rdfs:comment rdf:datatype="&xsd;string">Description of a publication from which data was obtained.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/references</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Citation_Statement -->
+
+    <owl:Class rdf:about="&core;Citation_Statement">
+        <rdfs:label rdf:datatype="&xsd;string">Citation Statement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&rdf;Statement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&core;context"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&core;Strain"/>
+                            <rdf:Description rdf:about="&core;Tissue"/>
+                            <rdf:Description rdf:about="&core;Transposon"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string">The relationship between a resource and a citation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Cluster -->
+
+    <owl:Class rdf:about="&core;Cluster">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&core;member"/>
+                <owl:allValuesFrom rdf:resource="&core;Sequence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string">Cluster of proteins with similar sequences.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/uniref/</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Cofactor_Annotation -->
+
+    <owl:Class rdf:about="&core;Cofactor_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Cofactor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Description of an enzyme cofactor.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/cofactor</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Coiled_Coil_Annotation -->
+
+    <owl:Class rdf:about="&core;Coiled_Coil_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Coiled-Coil</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Region_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Extent of a coiled-coil region.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/coiled</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Compositional_Bias_Annotation -->
+
+    <owl:Class rdf:about="&core;Compositional_Bias_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Compositionally Biased Region</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Region_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Extent of a compositionally biased region.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/compbias</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Concept -->
+
+    <owl:Class rdf:about="&core;Concept">
+        <rdfs:label rdf:datatype="&xsd;string">Concept</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Class"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&core;replaces"/>
+                <owl:allValuesFrom rdf:resource="&core;Concept"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string">A concept used to classify resources.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Cross-link_Annotation -->
+
+    <owl:Class rdf:about="&core;Cross-link_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Crosslink</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Modification_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Posttranslationally formed amino acid bonds.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/crosslnk</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/DNA -->
+
+    <owl:Class rdf:about="&core;DNA">
+        <rdfs:subClassOf rdf:resource="&core;Molecule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Database -->
+
+    <owl:Class rdf:about="&core;Database">
+        <rdfs:subClassOf rdf:resource="&owl;Class"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Metadata for a life science database.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/cross_references</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Developmental_Stage_Annotation -->
+
+    <owl:Class rdf:about="&core;Developmental_Stage_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Developmental Stage</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Description of the developmentally-specific expression of a protein.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/developmental_stage</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Disease_Annotation -->
+
+    <owl:Class rdf:about="&core;Disease_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Disease</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Description of the diseases associated with a deficiency of a protein.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/involvement_in_disease</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Disruption_Phenotype_Annotation -->
+
+    <owl:Class rdf:about="&core;Disruption_Phenotype_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Disruption Phenotype</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Annotation"/>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/disruption_phenotype</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Disulfide_Bond_Annotation -->
+
+    <owl:Class rdf:about="&core;Disulfide_Bond_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Disulfide Bond</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Modification_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Describes residues which are linked by an intra-chain disulfide bond. If the endpoints are identical, the disulfide bond is an interchain one.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/disulfid</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Domain_Annotation -->
+
+    <owl:Class rdf:about="&core;Domain_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Domain</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Description of the domain structure of a protein.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/domain_cc</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Domain_Assignment_Statement -->
+
+    <owl:Class rdf:about="&core;Domain_Assignment_Statement">
+        <rdfs:label rdf:datatype="&xsd;string">Domain Assignment Statement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&rdf;Statement"/>
+        <rdfs:comment rdf:datatype="&xsd;string">The relationship between a protein and a protein domain.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Domain_Extent_Annotation -->
+
+    <owl:Class rdf:about="&core;Domain_Extent_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Domain Extent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Region_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Extent of a domain, which is defined as a specific combination of secondary structures organized into a characteristic three-dimensional structure or fold.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/domain</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Electronic_Citation -->
+
+    <owl:Class rdf:about="&core;Electronic_Citation">
+        <rdfs:label rdf:datatype="&xsd;string">Electronic Citation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Published_Citation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&core;name"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string">An electronic publication.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Endpoint_Statement -->
+
+    <owl:Class rdf:about="&core;Endpoint_Statement">
+        <rdfs:label rdf:datatype="&xsd;string">Endpoint Statement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&rdf;Statement"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Metadata for an endpoint of a range on a sequence.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Enzyme -->
+
+    <owl:Class rdf:about="&core;Enzyme">
+        <rdfs:label rdf:datatype="&xsd;string">Enzyme</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Class"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&core;replacedBy"/>
+                <owl:allValuesFrom rdf:resource="&core;Enzyme"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&core;replaces"/>
+                <owl:allValuesFrom rdf:resource="&core;Enzyme"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string">A specific catalytic activity, defined by the Enzyme Commission of the Nomenclature Committee of the International Union of Biochemistry and Molecular Biology (IUBMB).</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.expasy.org/enzyme/</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Enzyme_Regulation_Annotation -->
+
+    <owl:Class rdf:about="&core;Enzyme_Regulation_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Enzyme Regulation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Description of an enzyme regulatory mechanism.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/enzyme_regulation</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Erroneous_Gene_Model_Prediction_Annotation -->
+
+    <owl:Class rdf:about="&core;Erroneous_Gene_Model_Prediction_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Erroneous Gene Model Prediction</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Sequence_Caution_Annotation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Erroneous_Initiation_Annotation -->
+
+    <owl:Class rdf:about="&core;Erroneous_Initiation_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Erroneous Initiation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Sequence_Caution_Annotation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Erroneous_Termination_Annotation -->
+
+    <owl:Class rdf:about="&core;Erroneous_Termination_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Erroneous Termination</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Sequence_Caution_Annotation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Erroneous_Translation_Annotation -->
+
+    <owl:Class rdf:about="&core;Erroneous_Translation_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Erroneous Translation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Sequence_Caution_Annotation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Experimental_Information_Annotation -->
+
+    <owl:Class rdf:about="&core;Experimental_Information_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Experimental Information</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Sequence_Annotation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/External_Sequence -->
+
+    <owl:Class rdf:about="&core;External_Sequence">
+        <rdfs:label rdf:datatype="&xsd;string">External Sequence</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Known_Sequence"/>
+        <rdfs:comment rdf:datatype="&xsd;string">The protein described in the linked record is an alternative splice form of the same gene product as described in this record. The function between the two isoforms is highly divergent.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/alternative_products</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Family_Membership_Statement -->
+
+    <owl:Class rdf:about="&core;Family_Membership_Statement">
+        <rdfs:label rdf:datatype="&xsd;string">Family Membership Statement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&rdf;Statement"/>
+        <rdfs:comment rdf:datatype="&xsd;string">The relationship between a protein and a protein family.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Frameshift_Annotation -->
+
+    <owl:Class rdf:about="&core;Frameshift_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Frameshift</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Sequence_Caution_Annotation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Function_Annotation -->
+
+    <owl:Class rdf:about="&core;Function_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Function</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">General description of the functions of a protein.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/function</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Gene -->
+
+    <owl:Class rdf:about="&core;Gene">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf rdf:resource="&skos;Concept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&skos;prefLabel"/>
+                <owl:onClass rdf:resource="&core;Gene"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Genomic_DNA -->
+
+    <owl:Class rdf:about="&core;Genomic_DNA">
+        <rdfs:label rdf:datatype="&xsd;string">Genomic DNA</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;DNA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Genomic_RNA -->
+
+    <owl:Class rdf:about="&core;Genomic_RNA">
+        <rdfs:label rdf:datatype="&xsd;string">Genomic RNA</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;RNA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Glycosylation_Annotation -->
+
+    <owl:Class rdf:about="&core;Glycosylation_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Glycosylation Site</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Modification_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Describes the occurrence of the attachment of a glycan (mono- or polysaccharide) to a residue of a protein.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/carbohyd</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Helix_Annotation -->
+
+    <owl:Class rdf:about="&core;Helix_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Helix</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Secondary_Structure_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Helical regions within the experimentally determined protein structure</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/helix</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Induction_Annotation -->
+
+    <owl:Class rdf:about="&core;Induction_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Induction</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Description of the compounds or conditions that stimulate the synthesis of a protein.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/induction</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Initiator_Methionine_Annotation -->
+
+    <owl:Class rdf:about="&core;Initiator_Methionine_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Initiator Methionine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Molecule_Processing_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Indicates that the initiator methionine has been cleaved off and is not shown in the sequence.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/init_met</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Interaction -->
+
+    <owl:Class rdf:about="&core;Interaction">
+        <rdfs:comment rdf:datatype="&xsd;string">Description of a protein-protein interaction.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/binary_interactions</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Intramembrane_Annotation -->
+
+    <owl:Class rdf:about="&core;Intramembrane_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">INTRAMEM</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Region_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Extent of a region located in a membrane without crossing it</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/Intramembrane</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Journal_Citation -->
+
+    <owl:Class rdf:about="&core;Journal_Citation">
+        <rdfs:label rdf:datatype="&xsd;string">Journal Citation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Published_Citation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&core;name"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string">An article published in a journal.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Kinetics_Annotation -->
+
+    <owl:Class rdf:about="&core;Kinetics_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Kinetics</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Biophysicochemical_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Mentions the Michaelis-Menten constant (KM) and maximal velocity (Vmax) of enzymes.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Known_Sequence -->
+
+    <owl:Class rdf:about="&core;Known_Sequence">
+        <rdfs:label rdf:datatype="&xsd;string">Known Sequence</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Sequence"/>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/sequences</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Lipidation_Annotation -->
+
+    <owl:Class rdf:about="&core;Lipidation_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Lipid Binding</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Modification_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Covalent binding of a lipid moiety.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/lipid</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/MRNA -->
+
+    <owl:Class rdf:about="&core;MRNA">
+        <rdfs:label rdf:datatype="&xsd;string">mRNA</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;RNA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Mass_Measurement_Method -->
+
+    <owl:Class rdf:about="&core;Mass_Measurement_Method">
+        <rdfs:label rdf:datatype="&xsd;string">Mass Measurement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Method"/>
+        <rdfs:comment rdf:datatype="&xsd;string">An experimental method for measuring the mass of a molecule.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">iki:Mass_spectrometry</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Mass_Spectrometry_Annotation -->
+
+    <owl:Class rdf:about="&core;Mass_Spectrometry_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Mass</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Experimental_Information_Annotation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&core;method"/>
+                <owl:allValuesFrom rdf:resource="&core;Mass_Measurement_Method"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&core;method"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string">Indicates the mass of a sequence determined by mass spectrometry.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/mass_spectrometry</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Metal_Binding_Annotation -->
+
+    <owl:Class rdf:about="&core;Metal_Binding_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Metal Ion Binding Site</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Site_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Binding site for a metal ion.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/metal</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Method -->
+
+    <owl:Class rdf:about="&core;Method">
+        <rdfs:comment rdf:datatype="&xsd;string">An experimental method.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Modification_Annotation -->
+
+    <owl:Class rdf:about="&core;Modification_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Modification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Sequence_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Describes amino acid modifications, post pre- and post-translational.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Modified_Residue_Annotation -->
+
+    <owl:Class rdf:about="&core;Modified_Residue_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Modified Residue</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Modification_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Posttranslational modification of a residue.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/mod_res</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Modified_Sequence -->
+
+    <owl:Class rdf:about="&core;Modified_Sequence">
+        <rdfs:label rdf:datatype="&xsd;string">Modified Sequence</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Known_Sequence"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&core;modification"/>
+                <owl:allValuesFrom rdf:resource="&core;Alternative_Sequence_Annotation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&core;basedOn"/>
+                <owl:allValuesFrom rdf:resource="&core;Simple_Sequence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Molecule -->
+
+    <owl:Class rdf:about="&core;Molecule">
+        <rdfs:comment rdf:datatype="&xsd;string">A biological molecule.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Molecule_Processing_Annotation -->
+
+    <owl:Class rdf:about="&core;Molecule_Processing_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Molecule Processing</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Sequence_Annotation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Motif_Annotation -->
+
+    <owl:Class rdf:about="&core;Motif_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Motif</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Region_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Short (&lt;=20 amino acids) sequence motif of biological interest.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/motif</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Mutagenesis_Annotation -->
+
+    <owl:Class rdf:about="&core;Mutagenesis_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Mutagenesis Site</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Experimental_Information_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Site which has been experimentally altered.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/mutagen</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/NP_Binding_Annotation -->
+
+    <owl:Class rdf:about="&core;NP_Binding_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Nucleotide Phosphate Binding</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Region_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Extent of a nucleotide phosphate-binding region.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/dna_bind</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Natural_Variant_Annotation -->
+
+    <owl:Class rdf:about="&core;Natural_Variant_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Sequence Variant</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Natural_Variation_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Authors report that sequence variants exist.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/variant</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Natural_Variation_Annotation -->
+
+    <owl:Class rdf:about="&core;Natural_Variation_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Natural Variation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Sequence_Annotation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Non-adjacent_Residues_Annotation -->
+
+    <owl:Class rdf:about="&core;Non-adjacent_Residues_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Non-consecutive Residues</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Experimental_Information_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Indicates that two residues in a sequence are not consecutive and that there are a number of unsequenced residues between them.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/non_cons</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Non-standard_Residue_Annotation -->
+
+    <owl:Class rdf:about="&core;Non-standard_Residue_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Non standard residue</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Modification_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Describes the occurrence of a non standard residue in the sequence record.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/non_std</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Non-terminal_Residue_Annotation -->
+
+    <owl:Class rdf:about="&core;Non-terminal_Residue_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Non-terminal Residue</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Experimental_Information_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">The residue at an extremity of the sequence is not the terminal residue.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/non_ter</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/NotObsolete -->
+
+    <owl:Class rdf:about="&core;NotObsolete">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&core;obsolete"/>
+                <owl:hasValue rdf:datatype="&xsd;boolean">false</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="&xsd;string">A class introduced to group all records that are currently in the database.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/NotObsoleteProtein -->
+
+    <owl:Class rdf:about="&core;NotObsoleteProtein">
+        <rdfs:subClassOf rdf:resource="&core;NotObsolete"/>
+        <rdfs:subClassOf rdf:resource="&core;Protein"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&core;organism"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&core;existence"/>
+                <owl:someValuesFrom rdf:resource="&core;Protein_Existence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&core;sequence"/>
+                <owl:someValuesFrom rdf:resource="&core;Simple_Sequence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/NotObsoleteTaxon -->
+
+    <owl:Class rdf:about="&core;NotObsoleteTaxon">
+        <rdfs:subClassOf rdf:resource="&core;NotObsolete"/>
+        <rdfs:subClassOf rdf:resource="&core;Taxon"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&core;scientificName"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Nucleotide_Binding_Annotation -->
+
+    <owl:Class rdf:about="&core;Nucleotide_Binding_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">DNA Binding</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Region_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Extent of a DNA-binding region.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/np_bind</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Nucleotide_Mapping_Statement -->
+
+    <owl:Class rdf:about="&core;Nucleotide_Mapping_Statement">
+        <rdfs:label rdf:datatype="&xsd;string">Nucleotide Mapping Statement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&rdf;Statement"/>
+        <rdfs:comment rdf:datatype="&xsd;string">The relationship between a protein and a nucleotide sequence.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Nucleotide_Resource -->
+
+    <owl:Class rdf:about="&core;Nucleotide_Resource">
+        <rdfs:label rdf:datatype="&xsd;string">Nucleotide Resource</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&core;locatedOn"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&core;Resource"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A resource that descripes a nucleotide sequence.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Observation_Citation -->
+
+    <owl:Class rdf:about="&core;Observation_Citation">
+        <rdfs:label rdf:datatype="&xsd;string">Observation Citation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Unpublished_Citation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Citation of an unpublished result.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Obsolete -->
+
+    <owl:Class rdf:about="&core;Obsolete">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&core;obsolete"/>
+                <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="&xsd;string">The class of all obsolete records in the database (i.e. records that where once published but are now removed).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/ObsoleteProtein -->
+
+    <owl:Class rdf:about="&core;ObsoleteProtein">
+        <rdfs:subClassOf rdf:resource="&core;Obsolete"/>
+        <rdfs:subClassOf rdf:resource="&core;Protein"/>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/faq/11</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/ObsoleteTaxon -->
+
+    <owl:Class rdf:about="&core;ObsoleteTaxon">
+        <rdfs:subClassOf rdf:resource="&core;Obsolete"/>
+        <rdfs:subClassOf rdf:resource="&core;Taxon"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Taxa are occasionally removed from the taxonomy database (particularly internal nodes, during a taxonomic revision) – these taxids are deleted, and are not reused.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.ncbi.nlm.nih.gov/books/NBK54428/</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Organelle -->
+
+    <owl:Class rdf:about="&core;Organelle">
+        <rdfs:label>Organelle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Orientation -->
+
+    <owl:Class rdf:about="&core;Orientation">
+        <rdfs:label>Orientation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Subcellular_Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Other_DNA -->
+
+    <owl:Class rdf:about="&core;Other_DNA">
+        <rdfs:label rdf:datatype="&xsd;string">Other DNA</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;DNA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Other_RNA -->
+
+    <owl:Class rdf:about="&core;Other_RNA">
+        <rdfs:label rdf:datatype="&xsd;string">Other RNA</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;RNA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/PH_Dependence_Annotation -->
+
+    <owl:Class rdf:about="&core;PH_Dependence_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">pH Dependence</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Biophysicochemical_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Describes the optimum pH for enzyme activity and/or the variation of enzyme activity with pH variation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/PTM_Annotation -->
+
+    <owl:Class rdf:about="&core;PTM_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">PTM</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Description of a posttranslational modification.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/post-translational_modification</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Part -->
+
+    <owl:Class rdf:about="&core;Part">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Description of a part of a protein.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/protein_names</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Participant -->
+
+    <owl:Class rdf:about="&core;Participant">
+        <rdfs:comment rdf:datatype="&xsd;string">A participant in a protein-protein interaction.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/binary_interactions</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Patent_Citation -->
+
+    <owl:Class rdf:about="&core;Patent_Citation">
+        <rdfs:label rdf:datatype="&xsd;string">Patent Citation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Published_Citation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A patent application.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Pathway -->
+
+    <owl:Class rdf:about="&core;Pathway">
+        <rdfs:subClassOf rdf:resource="&owl;Class"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A hierarchical discription of a metabolic pathway.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.grenoble.prabi.fr/obiwarehouse/unipathway</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/pathway</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Pathway_Annotation -->
+
+    <owl:Class rdf:about="&core;Pathway_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Pathway</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Description of the metabolic pathways with which a protein is associated.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/pathway</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Peptide_Annotation -->
+
+    <owl:Class rdf:about="&core;Peptide_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Peptide</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Molecule_Processing_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Extent of a released active peptide.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/peptide</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Pharmaceutical_Annotation -->
+
+    <owl:Class rdf:about="&core;Pharmaceutical_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Pharmaceutical</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Description of the use of a protein as a pharmaceutical drug.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/pharmaceutical_use</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Polymorphism_Annotation -->
+
+    <owl:Class rdf:about="&core;Polymorphism_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Polymorphism</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Description of polymorphisms.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/polymorphism</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Propeptide_Annotation -->
+
+    <owl:Class rdf:about="&core;Propeptide_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Propeptide</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Molecule_Processing_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Extent of a propeptide.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/propep</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Protein -->
+
+    <owl:Class rdf:about="&core;Protein">
+        <rdfs:label rdf:datatype="&xsd;string">Protein</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&core;replacedBy"/>
+                <owl:allValuesFrom rdf:resource="&core;Protein"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&core;replaces"/>
+                <owl:allValuesFrom rdf:resource="&core;Protein"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string">Description of a protein.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/help/uniprotkb</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Protein_Existence -->
+
+    <owl:Class rdf:about="&core;Protein_Existence">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&core;Uncertain_Existence"/>
+                    <rdf:Description rdf:about="&core;Predicted_Existence"/>
+                    <rdf:Description rdf:about="&core;Evidence_at_Protein_Level_Existence"/>
+                    <rdf:Description rdf:about="&core;Evidence_at_Transcript_Level_Existence"/>
+                    <rdf:Description rdf:about="&core;Inferred_from_Homology_Existence"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Protein_Family -->
+
+    <owl:Class rdf:about="&core;Protein_Family">
+        <rdfs:label rdf:datatype="&xsd;string">Protein Family</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Desription of a set of related proteins.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Published_Citation -->
+
+    <owl:Class rdf:about="&core;Published_Citation">
+        <rdfs:label rdf:datatype="&xsd;string">Published Citation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Citation"/>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/references</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/RNA -->
+
+    <owl:Class rdf:about="&core;RNA">
+        <rdfs:subClassOf rdf:resource="&core;Molecule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/RNA_Editing_Annotation -->
+
+    <owl:Class rdf:about="&core;RNA_Editing_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">RNA Editing</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Description of any type of RNA editing that leads to one or more amino acid changes.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/rna_editing</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Range -->
+
+    <owl:Class rdf:about="&core;Range">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&core;begin"/>
+                                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                                <owl:onDataRange rdf:resource="&xsd;string"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&core;end"/>
+                                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                                <owl:onDataRange rdf:resource="&xsd;string"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&core;end"/>
+                                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                                <owl:onDataRange rdf:resource="&xsd;string"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&core;begin"/>
+                                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                                <owl:onDataRange rdf:resource="&xsd;string"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="&xsd;string">A range of amino acids on a protein  sequence.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Rank -->
+
+    <owl:Class rdf:about="&core;Rank">
+        <rdfs:comment rdf:datatype="&xsd;string">A rank of a taxon.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Redox_Potential_Annotation -->
+
+    <owl:Class rdf:about="&core;Redox_Potential_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Redox Potential</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Biophysicochemical_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Reports the value of the standard (midpoint) oxido-reduction potential(s) for electron transport proteins.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Region_Annotation -->
+
+    <owl:Class rdf:about="&core;Region_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Region</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Sequence_Annotation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Repeat_Annotation -->
+
+    <owl:Class rdf:about="&core;Repeat_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Repeat</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Region_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Extent of an internal sequence repetition.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/repeat</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Resource -->
+
+    <owl:Class rdf:about="&core;Resource">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&core;database"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="&xsd;string">A life science resource.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Ribosomal_Frameshifting -->
+
+    <owl:Class rdf:about="&core;Ribosomal_Frameshifting">
+        <rdfs:label rdf:datatype="&xsd;string">Ribosomal Frameshifting</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Alternative_Products_Annotation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Secondary_Structure_Annotation -->
+
+    <owl:Class rdf:about="&core;Secondary_Structure_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Secondary Structure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Sequence_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Describes the secondary structure of proteins whose tertiary structure is known experimentally.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Sequence -->
+
+    <owl:Class rdf:about="&core;Sequence">
+        <rdfs:comment rdf:datatype="&xsd;string">An amino acid sequence.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/help/uniparc</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/sequences</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Sequence_Annotation -->
+
+    <owl:Class rdf:about="&core;Sequence_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Sequence Annotation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Description of a special region or site in a protein sequence.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/sequence_annotation</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Sequence_Caution_Annotation -->
+
+    <owl:Class rdf:about="&core;Sequence_Caution_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Sequence Caution</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Sequence_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Warning about possible errors related to the protein sequence</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/sequence_caution</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Sequence_Conflict_Annotation -->
+
+    <owl:Class rdf:about="&core;Sequence_Conflict_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Sequence Conflict</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Experimental_Information_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Different sources report differing sequences.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/conflict</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Sequence_Uncertainty_Annotation -->
+
+    <owl:Class rdf:about="&core;Sequence_Uncertainty_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Unsure Residue</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Experimental_Information_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Used to describe region(s) of a sequence for which the authors are unsure about the sequence assignment.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/unsure</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Signal_Peptide_Annotation -->
+
+    <owl:Class rdf:about="&core;Signal_Peptide_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Signal Peptide</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Molecule_Processing_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Extent of a signal sequence (prepeptide).</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/signal</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Similarity_Annotation -->
+
+    <owl:Class rdf:about="&core;Similarity_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Similarity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Description of the similarities (sequence or structural) of a protein with other proteins.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/sequence_similarities</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Simple_Sequence -->
+
+    <owl:Class rdf:about="&core;Simple_Sequence">
+        <rdfs:label rdf:datatype="&xsd;string">Simple Sequence</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Known_Sequence"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Site_Annotation -->
+
+    <owl:Class rdf:about="&core;Site_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Site</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Sequence_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Any interesting single amino-acid site on the sequence, that is not defined by another feature key. It can also apply to an amino acid bond which is represented by the positions of the two flanking amino acids.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/site</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Status -->
+
+    <owl:Class rdf:about="&core;Status">
+        <rdfs:comment rdf:datatype="&xsd;string">Indicator for the reliability of a piece of information.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/non_experimental_qualifiers</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Strain -->
+
+    <owl:Class rdf:about="&core;Strain">
+        <rdfs:label rdf:datatype="&xsd;string">Strain</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">A strain of a species.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Structure_Determination_Method -->
+
+    <owl:Class rdf:about="&core;Structure_Determination_Method">
+        <rdfs:label rdf:datatype="&xsd;string">Structure Determination</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Method"/>
+        <rdfs:comment rdf:datatype="&xsd;string">An experimental method for determining the 3D structure of a protein.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Structure_Mapping_Statement -->
+
+    <owl:Class rdf:about="&core;Structure_Mapping_Statement">
+        <rdfs:label rdf:datatype="&xsd;string">Structure Mapping Statement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&rdf;Statement"/>
+        <rdfs:comment rdf:datatype="&xsd;string">The relationship between a protein and a 3D structure.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Structure_Resource -->
+
+    <owl:Class rdf:about="&core;Structure_Resource">
+        <rdfs:label rdf:datatype="&xsd;string">Structure Resource</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&core;method"/>
+                        <owl:allValuesFrom rdf:resource="&core;Structure_Determination_Method"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&core;method"/>
+                        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&core;Resource"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A resource that describes the 3D structure of a protein.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Structured_Name -->
+
+    <owl:Class rdf:about="&core;Structured_Name">
+        <rdfs:comment rdf:datatype="&xsd;string">A resource that holds a set of the known names for this protein together.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/protein_names</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Subcellular_Location -->
+
+    <owl:Class rdf:about="&core;Subcellular_Location">
+        <rdfs:label>Subcellular Location</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/locations/</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Subcellular_Location_Annotation -->
+
+    <owl:Class rdf:about="&core;Subcellular_Location_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Subcellular Location</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Description of the subcellular location of the mature protein.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/subcellular_location</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Submission_Citation -->
+
+    <owl:Class rdf:about="&core;Submission_Citation">
+        <rdfs:label rdf:datatype="&xsd;string">Submission Citation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Published_Citation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&core;submittedTo"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string">Data that was submitted directly to a database.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Subunit_Annotation -->
+
+    <owl:Class rdf:about="&core;Subunit_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Subunit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Description of the quaternary structure of a protein.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/subunit_structure</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Taxon -->
+
+    <owl:Class rdf:about="&core;Taxon">
+        <rdfs:subClassOf rdf:resource="&owl;Class"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&core;replaces"/>
+                <owl:allValuesFrom rdf:resource="&core;Taxon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&core;mnemonic"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string">An element of a taxonomy for classifying life forms.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.ncbi.nlm.nih.gov/books/NBK54428/</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Temperature_Dependence_Annotation -->
+
+    <owl:Class rdf:about="&core;Temperature_Dependence_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Temperature Dependence</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Biophysicochemical_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Indicates the optimum temperature for enzyme activity and/or the variation of enzyme activity with temperature variation; the thermostability/thermolability of the enzyme is also mentioned when it is known.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Thesis_Citation -->
+
+    <owl:Class rdf:about="&core;Thesis_Citation">
+        <rdfs:label rdf:datatype="&xsd;string">Thesis Citation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Published_Citation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&core;institution"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string">A Ph.D. thesis.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Tissue -->
+
+    <owl:Class rdf:about="&core;Tissue">
+        <rdfs:label rdf:datatype="&xsd;string">Tissue</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">A tissue such as lung or heart.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/docs/tisslist</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Tissue_Specificity_Annotation -->
+
+    <owl:Class rdf:about="&core;Tissue_Specificity_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Tissue Specificity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Description of the tissue specificity of a protein.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/tissue_specificity</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Topological_Domain_Annotation -->
+
+    <owl:Class rdf:about="&core;Topological_Domain_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Topological Domain</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Region_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A topological domain.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/domain</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Topology -->
+
+    <owl:Class rdf:about="&core;Topology">
+        <rdfs:label>Topology</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Subcellular_Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Toxic_Dose_Annotation -->
+
+    <owl:Class rdf:about="&core;Toxic_Dose_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Toxic Dose</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Information on the LD(50). LD stands for &quot;Lethal Dose&quot;. LD(50) is the amount of a toxin, given all at once, which causes the death of 50% (one half) of a group of test animals.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/toxic_dose</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Transcribed_RNA -->
+
+    <owl:Class rdf:about="&core;Transcribed_RNA">
+        <rdfs:label rdf:datatype="&xsd;string">Transcribed RNA</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;RNA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Transcript_Resource -->
+
+    <owl:Class rdf:about="&core;Transcript_Resource">
+        <rdfs:label>Transcript Resource</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Transit_Peptide_Annotation -->
+
+    <owl:Class rdf:about="&core;Transit_Peptide_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Transit Peptide</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Molecule_Processing_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Extent of a transit peptide (mitochondrion, chloroplast, thylakoid, cyanelle or microbody).</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/transit</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Transmembrane_Annotation -->
+
+    <owl:Class rdf:about="&core;Transmembrane_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Transmembrane</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Region_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Extent of a transmembrane region.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/transmem</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Transposon -->
+
+    <owl:Class rdf:about="&core;Transposon">
+        <rdfs:label rdf:datatype="&xsd;string">Transposon</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">A transposon</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Turn_Annotation -->
+
+    <owl:Class rdf:about="&core;Turn_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Turn</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Secondary_Structure_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Turns within the experimentally determined protein structure.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/turn</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Unassigned_DNA -->
+
+    <owl:Class rdf:about="&core;Unassigned_DNA">
+        <rdfs:label rdf:datatype="&xsd;string">Unassigned DNA</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;DNA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Unassigned_RNA -->
+
+    <owl:Class rdf:about="&core;Unassigned_RNA">
+        <rdfs:label rdf:datatype="&xsd;string">Unassigned RNA</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;RNA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Unknown_Sequence -->
+
+    <owl:Class rdf:about="&core;Unknown_Sequence">
+        <rdfs:label rdf:datatype="&xsd;string">Unknown Sequence</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Sequence"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Unpublished_Citation -->
+
+    <owl:Class rdf:about="&core;Unpublished_Citation">
+        <rdfs:label rdf:datatype="&xsd;string">Unpublished Citation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Citation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Viral_cRNA -->
+
+    <owl:Class rdf:about="&core;Viral_cRNA">
+        <rdfs:label rdf:datatype="&xsd;string">Viral cRNA</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;RNA"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Positive cRNA molecule that is made from from a single stranded genomic RNA.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Zinc_Finger_Annotation -->
+
+    <owl:Class rdf:about="&core;Zinc_Finger_Annotation">
+        <rdfs:label rdf:datatype="&xsd;string">Zinc Finger</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&core;Region_Annotation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Extent of a zinc finger region.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.uniprot.org/manual/zn_fing</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement -->
+
+    <owl:Class rdf:about="&rdf;Statement"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Class -->
+
+    <owl:Class rdf:about="&owl;Class"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+    <owl:Class rdf:about="&skos;Concept"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Image -->
+
+    <owl:Class rdf:about="&foaf;Image"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.uniprot.org/core/API -->
+
+    <owl:Thing rdf:about="&core;API">
+        <rdf:type rdf:resource="&core;Mass_Measurement_Method"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Atmospheric Pressure Ionization</rdfs:label>
+        <rdfs:comment>Mass measurement using Atmospheric Pressure Ionization</rdfs:comment>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Apicoplast -->
+
+    <owl:Thing rdf:about="&core;Apicoplast">
+        <rdf:type rdf:resource="&core;Organelle"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Apicoplast</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/By_Similarity -->
+
+    <owl:Thing rdf:about="&core;By_Similarity">
+        <rdf:type rdf:resource="&core;Status"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">By Similarity</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Chloroplast -->
+
+    <owl:Thing rdf:about="&core;Chloroplast">
+        <rdf:type rdf:resource="&core;Organelle"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Chloroplast</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Class -->
+
+    <owl:Thing rdf:about="&core;Class">
+        <rdf:type rdf:resource="&core;Rank"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Taxonomy rank Class</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Cyanelle -->
+
+    <owl:Thing rdf:about="&core;Cyanelle">
+        <rdf:type rdf:resource="&core;Organelle"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Cyanelle</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/ESI -->
+
+    <owl:Thing rdf:about="&core;ESI">
+        <rdf:type rdf:resource="&core;Mass_Measurement_Method"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Electrospray Ionization</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">iki:Electrospray_ionization</rdfs:seeAlso>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Electron_Microscopy -->
+
+    <owl:Thing rdf:about="&core;Electron_Microscopy">
+        <rdf:type rdf:resource="&core;Structure_Determination_Method"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Electron Microscopy</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">The electron microscope is a microscope that can magnify very small details with high resolving power due to the use of electrons rather than light to scatter off material, magnifying at levels up to 500,000 times.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">iki:Electron_microscopy</rdfs:seeAlso>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Evidence_at_Protein_Level_Existence -->
+
+    <owl:Thing rdf:about="&core;Evidence_at_Protein_Level_Existence">
+        <rdf:type rdf:resource="&core;Protein_Existence"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Evidence at protein level</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Evidence_at_Transcript_Level_Existence -->
+
+    <owl:Thing rdf:about="&core;Evidence_at_Transcript_Level_Existence">
+        <rdf:type rdf:resource="&core;Protein_Existence"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Evidence at transcript level</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Indicates that the existence of a protein has not been strictly proven but that expression data (such as existence of cDNA(s), RT-PCR or Northern blots) indicate the existence of a transcript.</rdfs:comment>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Experimental -->
+
+    <owl:Thing rdf:about="&core;Experimental">
+        <rdf:type rdf:resource="&core;Status"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Indicates that there is some experimental evidence that the given annotation could apply.</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/FAB -->
+
+    <owl:Thing rdf:about="&core;FAB">
+        <rdf:type rdf:resource="&core;Mass_Measurement_Method"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Fast Atom Bombardment</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Family -->
+
+    <owl:Thing rdf:about="&core;Family">
+        <rdf:type rdf:resource="&core;Rank"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Taxonomy rank Family</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Fiber_Diffraction -->
+
+    <owl:Thing rdf:about="&core;Fiber_Diffraction">
+        <rdf:type rdf:resource="&core;Structure_Determination_Method"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Fiber Diffraction</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Forma -->
+
+    <owl:Thing rdf:about="&core;Forma">
+        <rdf:type rdf:resource="&core;Rank"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Taxonomy rank Forma</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Genus -->
+
+    <owl:Thing rdf:about="&core;Genus">
+        <rdf:type rdf:resource="&core;Rank"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Taxonomy rank Genus</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Hydrogenosome -->
+
+    <owl:Thing rdf:about="&core;Hydrogenosome">
+        <rdf:type rdf:resource="&core;Organelle"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Hydrogenosome</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Inferred_from_Homology_Existence -->
+
+    <owl:Thing rdf:about="&core;Inferred_from_Homology_Existence">
+        <rdf:type rdf:resource="&core;Protein_Existence"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Inferred from homology</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Infraclass -->
+
+    <owl:Thing rdf:about="&core;Infraclass">
+        <rdf:type rdf:resource="&core;Rank"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Taxonomy rank Infraclass</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Infraorder -->
+
+    <owl:Thing rdf:about="&core;Infraorder">
+        <rdf:type rdf:resource="&core;Rank"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Taxonomy rank Infraorder</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Infrared_Spectroscopy -->
+
+    <owl:Thing rdf:about="&core;Infrared_Spectroscopy">
+        <rdf:type rdf:resource="&core;Structure_Determination_Method"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Infrared Spectroscopy</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">A type of spectroscopy that uses the Infrared portion of the electromagnetic spectrum.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">iki:Infrared_spectroscopy</rdfs:seeAlso>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Kingdom -->
+
+    <owl:Thing rdf:about="&core;Kingdom">
+        <rdf:type rdf:resource="&core;Rank"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Taxonomy rank Kingdom</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/LSIMS -->
+
+    <owl:Thing rdf:about="&core;LSIMS">
+        <rdf:type rdf:resource="&core;Mass_Measurement_Method"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Liquid Secondary Ionization</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/MALDI -->
+
+    <owl:Thing rdf:about="&core;MALDI">
+        <rdf:type rdf:resource="&core;Mass_Measurement_Method"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Matrix-Assisted Laser Desorption</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">iki:Matrix-assisted_laser_desorption_ionization</rdfs:seeAlso>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Mitochondrion -->
+
+    <owl:Thing rdf:about="&core;Mitochondrion">
+        <rdf:type rdf:resource="&core;Organelle"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Mitochondion</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/NMR_Spectroscopy -->
+
+    <owl:Thing rdf:about="&core;NMR_Spectroscopy">
+        <rdf:type rdf:resource="&core;Structure_Determination_Method"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">NMR Spectroscopy</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">iki:NMR</rdfs:seeAlso>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Neutron_Diffraction -->
+
+    <owl:Thing rdf:about="&core;Neutron_Diffraction">
+        <rdf:type rdf:resource="&core;Structure_Determination_Method"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Neutron Diffraction</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">iki:Neutron_diffraction</rdfs:seeAlso>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Non-photosynthetic_plastid -->
+
+    <owl:Thing rdf:about="&core;Non-photosynthetic_plastid">
+        <rdf:type rdf:resource="&core;Organelle"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Non-photosyntethic plastid</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Nucleomorph -->
+
+    <owl:Thing rdf:about="&core;Nucleomorph">
+        <rdf:type rdf:resource="&core;Organelle"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Nuleomorph</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Order -->
+
+    <owl:Thing rdf:about="&core;Order">
+        <rdf:type rdf:resource="&core;Rank"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Taxonomy rank Order</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Organellar_chromatophore -->
+
+    <owl:Thing rdf:about="&core;Organellar_chromatophore">
+        <rdf:type rdf:resource="&core;Organelle"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Organellar chromatophore</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/PD -->
+
+    <owl:Thing rdf:about="&core;PD">
+        <rdf:type rdf:resource="&core;Mass_Measurement_Method"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Plasma Desorption</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Parvorder -->
+
+    <owl:Thing rdf:about="&core;Parvorder">
+        <rdf:type rdf:resource="&core;Rank"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Taxonomy rank Parvorder</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Phylum -->
+
+    <owl:Thing rdf:about="&core;Phylum">
+        <rdf:type rdf:resource="&core;Rank"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Taxonomy rank Phylum</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Plastid -->
+
+    <owl:Thing rdf:about="&core;Plastid">
+        <rdf:type rdf:resource="&core;Organelle"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Plastid</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Potential -->
+
+    <owl:Thing rdf:about="&core;Potential">
+        <rdf:type rdf:resource="&core;Status"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label>Potential</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">indicates that there is some logical or conclusive evidence that the given annotation could apply. This non-experimental qualifier is often used to present results from protein sequence analysis software tools, which are only annotated if the result makes sense in the biological context of a given protein. A typical example is the annotation of N-glycosylation sites in secreted proteins</rdfs:comment>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Predicted_Existence -->
+
+    <owl:Thing rdf:about="&core;Predicted_Existence">
+        <rdf:type rdf:resource="&core;Protein_Existence"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Predicted</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">This is used for proteins without evidence at protein, transcript, or homology levels.</rdfs:comment>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Prediction -->
+
+    <owl:Thing rdf:about="&core;Prediction">
+        <rdf:type rdf:resource="&core;Structure_Determination_Method"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Prediction</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Probable -->
+
+    <owl:Thing rdf:about="&core;Probable">
+        <rdf:type rdf:resource="&core;Status"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Probable</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">The status ‘Probable’ indicates stronger evidence than the qualifier ‘Potential’. This qualifier implies that there must be at least some experimental evidence, which indicates, that the information is expected to be found in the natural environment of a protein.</rdfs:comment>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/SELDI -->
+
+    <owl:Thing rdf:about="&core;SELDI">
+        <rdf:type rdf:resource="&core;Mass_Measurement_Method"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Surface Enhanced Laser Desorption Ionization</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Species -->
+
+    <owl:Thing rdf:about="&core;Species">
+        <rdf:type rdf:resource="&core;Rank"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Taxonomic rank Species</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Species_Group -->
+
+    <owl:Thing rdf:about="&core;Species_Group">
+        <rdf:type rdf:resource="&core;Rank"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Taxonomic rank Species Group</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Species_Subgroup -->
+
+    <owl:Thing rdf:about="&core;Species_Subgroup">
+        <rdf:type rdf:resource="&core;Rank"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Taxonomic rank Species Subgroup</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Subclass -->
+
+    <owl:Thing rdf:about="&core;Subclass">
+        <rdf:type rdf:resource="&core;Rank"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Taxonomic rank Subclass</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Subfamily -->
+
+    <owl:Thing rdf:about="&core;Subfamily">
+        <rdf:type rdf:resource="&core;Rank"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Taxonomic rank Subfamily</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Subgenus -->
+
+    <owl:Thing rdf:about="&core;Subgenus">
+        <rdf:type rdf:resource="&core;Rank"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Taxonomic rank Subgenus</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Subkingdom -->
+
+    <owl:Thing rdf:about="&core;Subkingdom">
+        <rdf:type rdf:resource="&core;Rank"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Taxonomic rank Subkingdom</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Suborder -->
+
+    <owl:Thing rdf:about="&core;Suborder">
+        <rdf:type rdf:resource="&core;Rank"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Taxonomic rank Suborder</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Subphylum -->
+
+    <owl:Thing rdf:about="&core;Subphylum">
+        <rdf:type rdf:resource="&core;Rank"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Taxonomic rank Subphylum</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Subspecies -->
+
+    <owl:Thing rdf:about="&core;Subspecies">
+        <rdf:type rdf:resource="&core;Rank"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Taxonomic rank Subspecies</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Subtribe -->
+
+    <owl:Thing rdf:about="&core;Subtribe">
+        <rdf:type rdf:resource="&core;Rank"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Taxonomic rank Subtribe</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Superclass -->
+
+    <owl:Thing rdf:about="&core;Superclass">
+        <rdf:type rdf:resource="&core;Rank"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Taxonomic rank Superclass</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Superfamily -->
+
+    <owl:Thing rdf:about="&core;Superfamily">
+        <rdf:type rdf:resource="&core;Rank"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Taxonomic rank Superfamily</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Superkingdom -->
+
+    <owl:Thing rdf:about="&core;Superkingdom">
+        <rdf:type rdf:resource="&core;Rank"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Taxonomic rank Superkingdom</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Superorder -->
+
+    <owl:Thing rdf:about="&core;Superorder">
+        <rdf:type rdf:resource="&core;Rank"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Taxonomic rank Superorder</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Superphylum -->
+
+    <owl:Thing rdf:about="&core;Superphylum">
+        <rdf:type rdf:resource="&core;Rank"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Taxonomic rank Superphylum</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Tribe -->
+
+    <owl:Thing rdf:about="&core;Tribe">
+        <rdf:type rdf:resource="&core;Rank"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Taxonomic rank Tribe</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Uncertain_Existence -->
+
+    <owl:Thing rdf:about="&core;Uncertain_Existence">
+        <rdf:type rdf:resource="&core;Protein_Existence"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Uncertain</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Varietas -->
+
+    <owl:Thing rdf:about="&core;Varietas">
+        <rdf:type rdf:resource="&core;Rank"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">Taxonomic rank Varietas</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://purl.uniprot.org/core/X-Ray_Crystallography -->
+
+    <owl:Thing rdf:about="&core;X-Ray_Crystallography">
+        <rdf:type rdf:resource="&core;Structure_Determination_Method"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:label rdf:datatype="&xsd;string">X-Ray Crystallography</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">A technique in crystallography in which the pattern produced by the diffraction of x-rays through the closely spaced lattice of atoms in a crystal is recorded and then analyzed to reveal the nature of that lattice.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">iki:X-ray_crystallography</rdfs:seeAlso>
+    </owl:Thing>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&core;Predicted_Existence"/>
+            <rdf:Description rdf:about="&core;Uncertain_Existence"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&core;Electron_Microscopy"/>
+            <rdf:Description rdf:about="&core;Fiber_Diffraction"/>
+            <rdf:Description rdf:about="&core;Infrared_Spectroscopy"/>
+            <rdf:Description rdf:about="&core;NMR_Spectroscopy"/>
+            <rdf:Description rdf:about="&core;Neutron_Diffraction"/>
+            <rdf:Description rdf:about="&core;Prediction"/>
+            <rdf:Description rdf:about="&core;X-Ray_Crystallography"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&core;Evidence_at_Transcript_Level_Existence"/>
+            <rdf:Description rdf:about="&core;Uncertain_Existence"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&core;By_Similarity"/>
+            <rdf:Description rdf:about="&core;Experimental"/>
+            <rdf:Description rdf:about="&core;Potential"/>
+            <rdf:Description rdf:about="&core;Probable"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&core;Inferred_from_Homology_Existence"/>
+            <rdf:Description rdf:about="&core;Predicted_Existence"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&core;Evidence_at_Transcript_Level_Existence"/>
+            <rdf:Description rdf:about="&core;Predicted_Existence"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&core;Evidence_at_Protein_Level_Existence"/>
+            <rdf:Description rdf:about="&core;Uncertain_Existence"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&core;Evidence_at_Protein_Level_Existence"/>
+            <rdf:Description rdf:about="&core;Inferred_from_Homology_Existence"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&core;Class"/>
+            <rdf:Description rdf:about="&core;Family"/>
+            <rdf:Description rdf:about="&core;Forma"/>
+            <rdf:Description rdf:about="&core;Genus"/>
+            <rdf:Description rdf:about="&core;Kingdom"/>
+            <rdf:Description rdf:about="&core;Order"/>
+            <rdf:Description rdf:about="&core;Parvorder"/>
+            <rdf:Description rdf:about="&core;Phylum"/>
+            <rdf:Description rdf:about="&core;Species"/>
+            <rdf:Description rdf:about="&core;Species_Group"/>
+            <rdf:Description rdf:about="&core;Species_Subgroup"/>
+            <rdf:Description rdf:about="&core;Subclass"/>
+            <rdf:Description rdf:about="&core;Subfamily"/>
+            <rdf:Description rdf:about="&core;Subgenus"/>
+            <rdf:Description rdf:about="&core;Subkingdom"/>
+            <rdf:Description rdf:about="&core;Suborder"/>
+            <rdf:Description rdf:about="&core;Subphylum"/>
+            <rdf:Description rdf:about="&core;Subspecies"/>
+            <rdf:Description rdf:about="&core;Subtribe"/>
+            <rdf:Description rdf:about="&core;Superclass"/>
+            <rdf:Description rdf:about="&core;Superfamily"/>
+            <rdf:Description rdf:about="&core;Superkingdom"/>
+            <rdf:Description rdf:about="&core;Superorder"/>
+            <rdf:Description rdf:about="&core;Superphylum"/>
+            <rdf:Description rdf:about="&core;Tribe"/>
+            <rdf:Description rdf:about="&core;Varietas"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&core;API"/>
+            <rdf:Description rdf:about="&core;ESI"/>
+            <rdf:Description rdf:about="&core;FAB"/>
+            <rdf:Description rdf:about="&core;LSIMS"/>
+            <rdf:Description rdf:about="&core;MALDI"/>
+            <rdf:Description rdf:about="&core;PD"/>
+            <rdf:Description rdf:about="&core;SELDI"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&core;Inferred_from_Homology_Existence"/>
+            <rdf:Description rdf:about="&core;Uncertain_Existence"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&core;Evidence_at_Transcript_Level_Existence"/>
+            <rdf:Description rdf:about="&core;Inferred_from_Homology_Existence"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&core;Evidence_at_Protein_Level_Existence"/>
+            <rdf:Description rdf:about="&core;Evidence_at_Transcript_Level_Existence"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&core;Evidence_at_Protein_Level_Existence"/>
+            <rdf:Description rdf:about="&core;Predicted_Existence"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

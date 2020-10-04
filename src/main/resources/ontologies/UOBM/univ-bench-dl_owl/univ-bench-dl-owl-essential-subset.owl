@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://uob.iodt.ibm.com/univ-bench-dl.owl#"
+     xml:base="http://uob.iodt.ibm.com/univ-bench-dl.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://uob.iodt.ibm.com/univ-bench-dl.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://uob.iodt.ibm.com/univ-bench-dl.owl#like -->
+
+    <owl:ObjectProperty rdf:about="http://uob.iodt.ibm.com/univ-bench-dl.owl#like"/>
+    
+
+
+    <!-- http://uob.iodt.ibm.com/univ-bench-dl.owl#love -->
+
+    <owl:ObjectProperty rdf:about="http://uob.iodt.ibm.com/univ-bench-dl.owl#love"/>
+    
+
+
+    <!-- http://uob.iodt.ibm.com/univ-bench-dl.owl#takesCourse -->
+
+    <owl:ObjectProperty rdf:about="http://uob.iodt.ibm.com/univ-bench-dl.owl#takesCourse"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://uob.iodt.ibm.com/univ-bench-dl.owl#Director -->
+
+    <owl:Class rdf:about="http://uob.iodt.ibm.com/univ-bench-dl.owl#Director">
+        <rdfs:subClassOf rdf:resource="http://uob.iodt.ibm.com/univ-bench-dl.owl#Employee"/>
+    </owl:Class>
+    
+
+
+    <!-- http://uob.iodt.ibm.com/univ-bench-dl.owl#Employee -->
+
+    <owl:Class rdf:about="http://uob.iodt.ibm.com/univ-bench-dl.owl#Employee"/>
+    
+
+
+    <!-- http://uob.iodt.ibm.com/univ-bench-dl.owl#GraduateCourse -->
+
+    <owl:Class rdf:about="http://uob.iodt.ibm.com/univ-bench-dl.owl#GraduateCourse"/>
+    
+
+
+    <!-- http://uob.iodt.ibm.com/univ-bench-dl.owl#GraduateStudent -->
+
+    <owl:Class rdf:about="http://uob.iodt.ibm.com/univ-bench-dl.owl#GraduateStudent">
+        <rdfs:subClassOf rdf:resource="http://uob.iodt.ibm.com/univ-bench-dl.owl#Student"/>
+    </owl:Class>
+    
+
+
+    <!-- http://uob.iodt.ibm.com/univ-bench-dl.owl#PeopleWithHobby -->
+
+    <owl:Class rdf:about="http://uob.iodt.ibm.com/univ-bench-dl.owl#PeopleWithHobby"/>
+    
+
+
+    <!-- http://uob.iodt.ibm.com/univ-bench-dl.owl#Person -->
+
+    <owl:Class rdf:about="http://uob.iodt.ibm.com/univ-bench-dl.owl#Person"/>
+    
+
+
+    <!-- http://uob.iodt.ibm.com/univ-bench-dl.owl#ResearchAssistant -->
+
+    <owl:Class rdf:about="http://uob.iodt.ibm.com/univ-bench-dl.owl#ResearchAssistant"/>
+    
+
+
+    <!-- http://uob.iodt.ibm.com/univ-bench-dl.owl#SportsFan -->
+
+    <owl:Class rdf:about="http://uob.iodt.ibm.com/univ-bench-dl.owl#SportsFan">
+        <rdfs:subClassOf rdf:resource="http://uob.iodt.ibm.com/univ-bench-dl.owl#PeopleWithHobby"/>
+        <rdfs:subClassOf rdf:resource="http://uob.iodt.ibm.com/univ-bench-dl.owl#SportsLover"/>
+    </owl:Class>
+    
+
+
+    <!-- http://uob.iodt.ibm.com/univ-bench-dl.owl#SportsLover -->
+
+    <owl:Class rdf:about="http://uob.iodt.ibm.com/univ-bench-dl.owl#SportsLover">
+        <rdfs:subClassOf rdf:resource="http://uob.iodt.ibm.com/univ-bench-dl.owl#PeopleWithHobby"/>
+    </owl:Class>
+    
+
+
+    <!-- http://uob.iodt.ibm.com/univ-bench-dl.owl#Student -->
+
+    <owl:Class rdf:about="http://uob.iodt.ibm.com/univ-bench-dl.owl#Student"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Restriction>
+        <rdfs:subClassOf rdf:resource="http://uob.iodt.ibm.com/univ-bench-dl.owl#GraduateCourse"/>
+        <owl:onProperty>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://uob.iodt.ibm.com/univ-bench-dl.owl#takesCourse"/>
+            </rdf:Description>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://uob.iodt.ibm.com/univ-bench-dl.owl#GraduateStudent"/>
+    </owl:Restriction>
+    <owl:Class>
+        <rdfs:subClassOf rdf:resource="http://uob.iodt.ibm.com/univ-bench-dl.owl#PeopleWithHobby"/>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://uob.iodt.ibm.com/univ-bench-dl.owl#GraduateStudent"/>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uob.iodt.ibm.com/univ-bench-dl.owl#love"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:intersectionOf>
+    </owl:Class>
+    <owl:Class>
+        <rdfs:subClassOf rdf:resource="http://uob.iodt.ibm.com/univ-bench-dl.owl#Employee"/>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://uob.iodt.ibm.com/univ-bench-dl.owl#Person"/>
+            <rdf:Description rdf:about="http://uob.iodt.ibm.com/univ-bench-dl.owl#ResearchAssistant"/>
+        </owl:intersectionOf>
+    </owl:Class>
+    <owl:Class>
+        <rdfs:subClassOf rdf:resource="http://uob.iodt.ibm.com/univ-bench-dl.owl#PeopleWithHobby"/>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://uob.iodt.ibm.com/univ-bench-dl.owl#Person"/>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uob.iodt.ibm.com/univ-bench-dl.owl#like"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:intersectionOf>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.3) http://owlapi.sourceforge.net -->
+

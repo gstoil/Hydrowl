@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1434718902936" name="http://semantics.crl.ibm.com/univ-bench-dl.owl" uri="univ-bench-dl-2.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1434718902936" name="duplicate:http://uob.iodt.ibm.com/univ-bench-dl.owl" uri="univ-bench-dl-correct.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1434718902936" name="duplicate:http://uob.iodt.ibm.com/univ-bench-dl.owl" uri="univ-bench-dl-owl-repair_for_OWLim.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1434718902936" name="duplicate:http://uob.iodt.ibm.com/univ-bench-dl.owl" uri="univ-bench-dl.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1434718902936" name="http://uob.iodt.ibm.com/univ-bench-dlessential-subset" uri="univ-bench-dl-owl-essential-subset.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1434718902936" name="http://www.semanticweb.org/owl/owlapi/turtle" uri="Zhou/dataset/UOBM-1/uobm1.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1434718902936" name="shadowed:http://semantics.crl.ibm.com/univ-bench-dl.owl" uri="Zhou/univ-bench-dl-Zhou.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1434718902936" name="shadowed:http://uob.iodt.ibm.com/univ-bench-dl.owl" uri="univ-bench-dl_owl/univ-bench-dl-owl-essential-subset.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1434718902936" name="shadowed:http://uob.iodt.ibm.com/univ-bench-dl.owl" uri="univ-bench-dl_owl/univ-bench-dl-owl-repair-allTreeShapedCQs.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1434718902936" name="shadowed:http://uob.iodt.ibm.com/univ-bench-dl.owl" uri="univ-bench-dl_owl/univ-bench-dl-owl-repair_for_OWLim.owl"/>
+    </group>
+</catalog>

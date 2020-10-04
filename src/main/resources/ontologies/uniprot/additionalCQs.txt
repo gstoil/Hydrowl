@@ -1,0 +1,8 @@
+http://purl.uniprot.org/core/Enzyme 
+http://purl.uniprot.org/core/Protein
+http://purl.uniprot.org/core/Taxon
+http://purl.uniprot.org/core/Strain
+http://purl.uniprot.org/core/Tissue
+http://purl.uniprot.org/core/Transposon
+http://purl.uniprot.org/core/Annotation
+http://purl.uniprot.org/core/Resource

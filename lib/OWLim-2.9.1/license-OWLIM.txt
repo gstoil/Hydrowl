@@ -1,0 +1,39 @@
+Licensing
+
+SwiftOWLIM License Agreement:
+(c) Copyright 2005-2007, Ontotext Lab, Sirma Group Corp.
+135 Tsarigradsko Shosse, Sofia 1784, Bulgaria,
+http://www.ontotext.com.
+
+This library is a free software. One can redistribute and/or modify it under the
+terms of  the GNU  Lesser General  Public License  (LGPL) published  by the Free
+Software Foundation. Consult either version 2.1 of the License, or a later.  The
+library is distributed with the hope  that it will be useful, but  note: WITHOUT
+ANY WARRANTY, this means- even  without the implied warranty of  MERCHANTABILITY
+or of FITNESS  FOR A PARTICULAR  PURPOSE. For more  details, see the  GNU Lesser
+General Public  License. It  is expected  that you  received a  copy of  the GNU
+Lesser General Public License together with this library; if not, send a request
+to the Free Software  Foundation, Inc., 59 Temple  Place, Suite 330, Boston,  MA
+02111-1307 USA.
+
+Licensing of Third Party Libraries:
+
+Sesame - (c) Copyright Aduna b.v.  Sesame  is an  open-source library, available
+under  LGPL.
+
+SwiftTRREE - (c) Copyright Ontotext Lab,  Sirma Group Corp. SwiftTRREE is not an
+open-source software. It  is owned by  Ontotext Lab. SwiftTRREE  is licensed for
+use  free  of charge  as an  integral part   of SwiftOWLIM.  Re-distribution  of
+SwiftTRREE in any form, except  as part of the original  SwiftOWLIM distribution
+package,  is  strictly  forbidden.   Any  form  of  modification    or   reverse
+-engineering  of  SwiftTRREE is  forbidden. SwiftTRREE is distributed   together
+with  SwiftOWLIM  without any warranty. 
+
+
+The following open-source libraries are used in the test and sample applications
+of SwiftOWLIM. They are not required for the usage of SwiftOWLIM.
+
+LUBM - (c) Copyright 2004, Semantic Web and Agent Technology Lab, CSE Department, 
+Lehigh University, USA. Available under GPL version 2.
+
+JUnit- (c) Copyright JUnit.org. Available under the conditions of CPL version 1.0 

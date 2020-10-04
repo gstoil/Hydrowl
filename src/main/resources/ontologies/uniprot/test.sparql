@@ -1,0 +1,1689 @@
+^[Query1]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Induction_Annotation>
+}
+
+^[Query2]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Developmental_Stage_Annotation>
+}
+
+^[Query3]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Participant>
+}
+
+^[Query4]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Subcellular_Location_Annotation>
+}
+
+^[Query5]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Caution_Annotation>
+}
+
+^[Query6]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Electronic_Citation>
+}
+
+^[Query7]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/ObsoleteTaxon>
+}
+
+^[Query8]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Protein_Existence>
+}
+
+^[Query9]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Tissue>
+}
+
+^[Query10]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Catalytic_Activity_Annotation>
+}
+
+^[Query11]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Disease_Annotation>
+}
+
+^[Query12]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Obsolete>
+}
+
+^[Query13]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Range>
+}
+
+^[Query14]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/MRNA>
+}
+
+^[Query15]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Family_Membership_Statement>
+}
+
+^[Query16]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Genomic_RNA>
+}
+
+^[Query17]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/External_Sequence>
+}
+
+^[Query18]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Taxon>
+}
+
+^[Query19]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/NotObsolete>
+}
+
+^[Query20]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Unpublished_Citation>
+}
+
+^[Query21]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Observation_Citation>
+}
+
+^[Query22]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Frameshift_Annotation>
+}
+
+^[Query23]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Annotation>
+}
+
+^[Query24]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Secondary_Structure_Annotation>
+}
+
+^[Query25]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Simple_Sequence>
+}
+
+^[Query26]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Interaction>
+}
+
+^[Query27]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Structured_Name>
+}
+
+^[Query28]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Cluster>
+}
+
+^[Query29]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Cellular_Component>
+}
+
+^[Query30]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Journal_Citation>
+}
+
+^[Query31]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Calcium_Binding_Annotation>
+}
+
+^[Query32]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Subunit_Annotation>
+}
+
+^[Query33]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Non-terminal_Residue_Annotation>
+}
+
+^[Query34]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Status>
+}
+
+^[Query35]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Pharmaceutical_Annotation>
+}
+
+^[Query36]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Mass_Spectrometry_Annotation>
+}
+
+^[Query37]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Thesis_Citation>
+}
+
+^[Query38]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Erroneous_Initiation_Annotation>
+}
+
+^[Query39]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Turn_Annotation>
+}
+
+^[Query40]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Alternative_Promoter_Usage_Annotation>
+}
+
+^[Query41]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Database>
+}
+
+^[Query42]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Concept>
+}
+
+^[Query43]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Other_DNA>
+}
+
+^[Query44]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Unassigned_RNA>
+}
+
+^[Query45]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Domain_Annotation>
+}
+
+^[Query46]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Other_RNA>
+}
+
+^[Query47]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Tissue_Specificity_Annotation>
+}
+
+^[Query48]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Orientation>
+}
+
+^[Query49]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Structure_Mapping_Statement>
+}
+
+^[Query50]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Modified_Residue_Annotation>
+}
+
+^[Query51]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Ribosomal_Frameshifting>
+}
+
+^[Query52]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Alternative_Initiation_Annotation>
+}
+
+^[Query53]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Citation_Statement>
+}
+
+^[Query54]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Active_Site_Annotation>
+}
+
+^[Query55]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Alternative_Splicing_Annotation>
+}
+
+^[Query56]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Unassigned_DNA>
+}
+
+^[Query57]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Toxic_Dose_Annotation>
+}
+
+^[Query58]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Disruption_Phenotype_Annotation>
+}
+
+^[Query59]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Biophysicochemical_Annotation>
+}
+
+^[Query60]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Chain_Annotation>
+}
+
+^[Query61]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Transit_Peptide_Annotation>
+}
+
+^[Query62]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Signal_Peptide_Annotation>
+}
+
+^[Query63]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Sequence_Uncertainty_Annotation>
+}
+
+^[Query64]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Part>
+}
+
+^[Query65]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Temperature_Dependence_Annotation>
+}
+
+^[Query66]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Modification_Annotation>
+}
+
+^[Query67]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Erroneous_Gene_Model_Prediction_Annotation>
+}
+
+^[Query68]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Helix_Annotation>
+}
+
+^[Query69]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Sequence>
+}
+
+^[Query70]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Disulfide_Bond_Annotation>
+}
+
+^[Query71]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Site_Annotation>
+}
+
+^[Query72]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Mass_Measurement_Method>
+}
+
+^[Query73]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/DNA>
+}
+
+^[Query74]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Metal_Binding_Annotation>
+}
+
+^[Query75]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Subcellular_Location>
+}
+
+^[Query76]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Peptide_Annotation>
+}
+
+^[Query77]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Beta_Strand_Annotation>
+}
+
+^[Query78]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Glycosylation_Annotation>
+}
+
+^[Query79]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Natural_Variation_Annotation>
+}
+
+^[Query80]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Sequence_Caution_Annotation>
+}
+
+^[Query81]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Strain>
+}
+
+^[Query82]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Similarity_Annotation>
+}
+
+^[Query83]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Kinetics_Annotation>
+}
+
+^[Query84]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Absorption_Annotation>
+}
+
+^[Query85]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Attribution>
+}
+
+^[Query86]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Known_Sequence>
+}
+
+^[Query87]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Alternative_Products_Annotation>
+}
+
+^[Query88]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Intramembrane_Annotation>
+}
+
+^[Query89]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Nucleotide_Mapping_Statement>
+}
+
+^[Query90]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Natural_Variant_Annotation>
+}
+
+^[Query91]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Nucleotide_Binding_Annotation>
+}
+
+^[Query92]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Enzyme_Regulation_Annotation>
+}
+
+^[Query93]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Pathway_Annotation>
+}
+
+^[Query94]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/NP_Binding_Annotation>
+}
+
+^[Query95]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Rank>
+}
+
+^[Query96]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/RNA>
+}
+
+^[Query97]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Binding_Site_Annotation>
+}
+
+^[Query98]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Nucleotide_Resource>
+}
+
+^[Query99]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Pathway>
+}
+
+^[Query100]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Cofactor_Annotation>
+}
+
+^[Query101]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Resource>
+}
+
+^[Query102]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Citation>
+}
+
+^[Query103]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Structure_Determination_Method>
+}
+
+^[Query104]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Transcribed_RNA>
+}
+
+^[Query105]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Unknown_Sequence>
+}
+
+^[Query106]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Erroneous_Translation_Annotation>
+}
+
+^[Query107]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Viral_cRNA>
+}
+
+^[Query108]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Protein>
+}
+
+^[Query109]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Molecule>
+}
+
+^[Query110]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Non-adjacent_Residues_Annotation>
+}
+
+^[Query111]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Patent_Citation>
+}
+
+^[Query112]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Function_Annotation>
+}
+
+^[Query113]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Endpoint_Statement>
+}
+
+^[Query114]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Zinc_Finger_Annotation>
+}
+
+^[Query115]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Propeptide_Annotation>
+}
+
+^[Query116]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Transposon>
+}
+
+^[Query117]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Sequence_Annotation>
+}
+
+^[Query118]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://xmlns.com/foaf/0.1/Image>
+}
+
+^[Query119]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Allergen_Annotation>
+}
+
+^[Query120]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Structure_Resource>
+}
+
+^[Query121]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Genomic_DNA>
+}
+
+^[Query122]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Domain_Extent_Annotation>
+}
+
+^[Query123]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Region_Annotation>
+}
+
+^[Query124]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Organelle>
+}
+
+^[Query125]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Book_Citation>
+}
+
+^[Query126]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Transcript_Resource>
+}
+
+^[Query127]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/RNA_Editing_Annotation>
+}
+
+^[Query128]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/NotObsoleteProtein>
+}
+
+^[Query129]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Erroneous_Termination_Annotation>
+}
+
+^[Query130]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Domain_Assignment_Statement>
+}
+
+^[Query131]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Non-standard_Residue_Annotation>
+}
+
+^[Query132]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Molecule_Processing_Annotation>
+}
+
+^[Query133]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement>
+}
+
+^[Query134]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Polymorphism_Annotation>
+}
+
+^[Query135]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Alternative_Sequence_Annotation>
+}
+
+^[Query136]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Coiled_Coil_Annotation>
+}
+
+^[Query137]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/PTM_Annotation>
+}
+
+^[Query138]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Repeat_Annotation>
+}
+
+^[Query139]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Topology>
+}
+
+^[Query140]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Experimental_Information_Annotation>
+}
+
+^[Query141]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Transmembrane_Annotation>
+}
+
+^[Query142]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Method>
+}
+
+^[Query143]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.w3.org/2002/07/owl#Class>
+}
+
+^[Query144]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Sequence_Conflict_Annotation>
+}
+
+^[Query145]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Motif_Annotation>
+}
+
+^[Query146]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Gene>
+}
+
+^[Query147]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Enzyme>
+}
+
+^[Query148]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Published_Citation>
+}
+
+^[Query149]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/PH_Dependence_Annotation>
+}
+
+^[Query150]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Mutagenesis_Annotation>
+}
+
+^[Query151]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/NotObsoleteTaxon>
+}
+
+^[Query152]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Initiator_Methionine_Annotation>
+}
+
+^[Query153]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Modified_Sequence>
+}
+
+^[Query154]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Redox_Potential_Annotation>
+}
+
+^[Query155]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Lipidation_Annotation>
+}
+
+^[Query156]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.w3.org/2004/02/skos/core#Concept>
+}
+
+^[Query157]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Submission_Citation>
+}
+
+^[Query158]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Cross-link_Annotation>
+}
+
+^[Query159]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Compositional_Bias_Annotation>
+}
+
+^[Query160]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Protein_Family>
+}
+
+^[Query161]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Biotechnology_Annotation>
+}
+
+^[Query162]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/ObsoleteProtein>
+}
+
+^[Query163]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://purl.uniprot.org/core/Topological_Domain_Annotation>
+}
+
+^[Query164]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/status> ?Y .
+}
+
+^[Query165]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/host> ?Y .
+}
+
+^[Query166]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/rank> ?Y .
+}
+
+^[Query167]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.w3.org/2000/01/rdf-schema#label> ?Y .
+}
+
+^[Query168]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/submittedName> ?Y .
+}
+
+^[Query169]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/source> ?Y .
+}
+
+^[Query170]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/basedOn> ?Y .
+}
+
+^[Query171]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/commonName> ?Y .
+}
+
+^[Query172]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/annotation> ?Y .
+}
+
+^[Query173]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/representativeFor> ?Y .
+}
+
+^[Query174]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/translatedFrom> ?Y .
+}
+
+^[Query175]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/sequence> ?Y .
+}
+
+^[Query176]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/organism> ?Y .
+}
+
+^[Query177]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/locusName> ?Y .
+}
+
+^[Query178]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/recommendedName> ?Y .
+}
+
+^[Query179]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/sequenceFor> ?Y .
+}
+
+^[Query180]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/partOf> ?Y .
+}
+
+^[Query181]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/cellularComponent> ?Y .
+}
+
+^[Query182]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/scientificName> ?Y .
+}
+
+^[Query183]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/enzyme> ?Y .
+}
+
+^[Query184]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/part> ?Y .
+}
+
+^[Query185]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/conflictingSequence> ?Y .
+}
+
+^[Query186]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/database> ?Y .
+}
+
+^[Query187]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/citation> ?Y .
+}
+
+^[Query188]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/participant> ?Y .
+}
+
+^[Query189]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/replaces> ?Y .
+}
+
+^[Query190]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/strain> ?Y .
+}
+
+^[Query191]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/interaction> ?Y .
+}
+
+^[Query192]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/component> ?Y .
+}
+
+^[Query193]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/modification> ?Y .
+}
+
+^[Query194]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/range> ?Y .
+}
+
+^[Query195]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/classifiedWith> ?Y .
+}
+
+^[Query196]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/domain> ?Y .
+}
+
+^[Query197]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/encodedBy> ?Y .
+}
+
+^[Query198]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/erratumFor> ?Y .
+}
+
+^[Query199]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/relatedLocation> ?Y .
+}
+
+^[Query200]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/name> ?Y .
+}
+
+^[Query201]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/locatedIn> ?Y .
+}
+
+^[Query202]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/orientation> ?Y .
+}
+
+^[Query203]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/transcribedFrom> ?Y .
+}
+
+^[Query204]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/existence> ?Y .
+}
+
+^[Query205]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/erratum> ?Y .
+}
+
+^[Query206]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/mnemonic> ?Y .
+}
+
+^[Query207]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.w3.org/2004/02/skos/core#prefLabel> ?Y .
+}
+
+^[Query208]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/structuredName> ?Y .
+}
+
+^[Query209]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/oldMnemonic> ?Y .
+}
+
+^[Query210]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/orfName> ?Y .
+}
+
+^[Query211]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/otherName> ?Y .
+}
+
+^[Query212]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/translatedTo> ?Y .
+}
+
+^[Query213]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/alternativeName> ?Y .
+}
+
+^[Query214]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/locatedOn> ?Y .
+}
+
+^[Query215]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/context> ?Y .
+}
+
+^[Query216]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/member> ?Y .
+}
+
+^[Query217]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/synonym> ?Y .
+}
+
+^[Query218]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/method> ?Y .
+}
+
+^[Query219]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/commonTaxon> ?Y .
+}
+
+^[Query220]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/isolatedFrom> ?Y .
+}
+
+^[Query221]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/attribution> ?Y .
+}
+
+^[Query222]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/memberOf> ?Y .
+}
+
+^[Query223]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/replacedBy> ?Y .
+}
+
+^[Query224]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/seedFor> ?Y .
+}
+
+^[Query225]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/category> ?Y .
+}
+
+^[Query226]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/topology> ?Y .
+}
+
+^[Query227]
+SELECT ?X ?Y
+WHERE {
+?X <http://purl.uniprot.org/core/encodedIn> ?Y .
+}
+
+^[Query3]
+PREFIX up:<http://purl.uniprot.org/core/> 
+PREFIX taxon:<http://purl.uniprot.org/taxonomy/> 
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#> 
+SELECT ?protein ?s
+WHERE
+{
+	?protein a up:Protein .
+	?protein up:organism ?organism . 
+	?protein up:organism taxon:83333 .
+	?protein up:sequence ?s 
+}
+
+^[Query3]
+PREFIX up:<http://purl.uniprot.org/core/> 
+PREFIX taxon:<http://purl.uniprot.org/taxonomy/> 
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#> 
+SELECT ?protein
+WHERE
+{
+	?protein a up:Protein .
+	?protein up:organism ?organism . 
+	?protein up:organism taxon:83333 .
+}
+
+^[Query3]
+PREFIX up:<http://purl.uniprot.org/core/> 
+PREFIX taxon:<http://purl.uniprot.org/taxonomy/> 
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#> 
+SELECT ?protein ?s
+WHERE
+{
+	?protein a up:Protein .
+	?protein up:organism ?organism . 
+	?protein up:organism taxon:1227497 .
+	?protein up:sequence ?s .
+}
+
+^[Query4]
+PREFIX up:<http://purl.uniprot.org/core/> 
+SELECT ?protein
+WHERE
+{
+		?protein a up:Protein .
+		?protein up:mnemonic "A4_HUMAN"
+}
+
+^[Query4]
+PREFIX up:<http://purl.uniprot.org/core/> 
+SELECT ?protein ?y
+WHERE
+{
+		?protein a up:Protein .
+		?protein up:mnemonic ?y 
+}
+
+
+^[Query5]
+PREFIX up:<http://purl.uniprot.org/core/> 
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#> 
+SELECT ?protein ?db
+WHERE
+{
+		?protein a up:Protein .
+		?protein rdfs:seeAlso ?db .
+		?db up:database <http://purl.uniprot.org/database/PDB>
+}
+
+^[Query6]
+PREFIX up:<http://purl.uniprot.org/core/> 
+PREFIX keywords:<http://purl.uniprot.org/keywords/> 
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#> 
+SELECT DISTINCT ?link
+WHERE
+{
+	?protein a up:Protein . 
+	?protein up:classifiedWith keywords:3 .
+	?protein rdfs:seeAlso ?link .
+	?link up:database ?db .
+	?db up:category "3D structure databases"
+}
+			
+
+^[Query7]
+PREFIX up:<http://purl.uniprot.org/core/> 
+PREFIX skos:<http://www.w3.org/2004/02/skos/core#> 
+SELECT ?protein ?name ?text
+WHERE
+{
+		?protein a up:Protein .
+		?protein up:recommendedName ?recommended .
+		?recommended up:fullName ?name .
+		?protein up:encodedBy ?gene .
+		?gene skos:prefLabel ?text 
+}
+
+^[Query7]
+PREFIX up:<http://purl.uniprot.org/core/> 
+PREFIX skos:<http://www.w3.org/2004/02/skos/core#> 
+SELECT ?protein ?name
+WHERE
+{
+		?protein a up:Protein .
+		?protein up:recommendedName ?recommended .
+		?recommended up:fullName ?name .
+		?protein up:encodedBy ?gene
+}
+
+^[Query8]
+PREFIX up:<http://purl.uniprot.org/core/> 
+PREFIX taxon:<http://purl.uniprot.org/taxonomy/> 
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX skos:<http://www.w3.org/2004/02/skos/core#> 
+SELECT ?name ?text
+WHERE
+{
+		?protein a up:Protein . 
+		?protein up:organism taxon:9606 .
+		?protein up:encodedBy ?gene . 
+		?gene skos:prefLabel ?name .
+		?protein up:annotation ?annotation .
+		?annotation a up:Disease_Annotation .
+		?annotation rdfs:comment ?text
+} 
+
+^[Query8]
+PREFIX up:<http://purl.uniprot.org/core/> 
+PREFIX taxon:<http://purl.uniprot.org/taxonomy/> 
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX skos:<http://www.w3.org/2004/02/skos/core#> 
+SELECT ?protein
+WHERE
+{
+		?protein a up:Protein . 
+		?protein up:organism taxon:9606 .
+} 
+
+^[Query11]
+PREFIX up:<http://purl.uniprot.org/core/> 
+PREFIX faldo:<http://biohackathon.org/resource/faldo#> 
+SELECT ?protein ?begin ?end
+WHERE 
+{
+	?protein a up:Protein .
+	?protein up:annotation ?annotation .
+	?annotation a up:Transmembrane_Annotation .
+	?annotation up:range ?range .
+	?range faldo:begin ?begin .
+	?range faldo:end ?end
+}
+
+^[Query14]
+PREFIX up:<http://purl.uniprot.org/core/> 
+PREFIX taxon:<http://purl.uniprot.org/taxonomy/> 
+SELECT ?protein
+WHERE
+{
+	?protein a up:Protein .
+	?protein up:organism taxon:9606
+}
+		

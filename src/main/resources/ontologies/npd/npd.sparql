@@ -1,0 +1,3199 @@
+^[Query1]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#BAATransfer>
+}
+
+^[Query2]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#ShallowWellbore>
+}
+
+^[Query3]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#ProductionLicenceArea>
+}
+
+^[Query4]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#WellboreStratum>
+}
+
+^[Query5]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.ifomis.org/bfo/1.1/span#Occurrent>
+}
+
+^[Query6]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#FieldMonthlyProduction>
+}
+
+^[Query7]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Award>
+}
+
+^[Query8]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#WellboreDrillStemTest>
+}
+
+^[Query9]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#OilPipeline>
+}
+
+^[Query10]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Jacket6LegsFacility>
+}
+
+^[Query11]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#LithostratigraphicUnit>
+}
+
+^[Query12]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#RouteSurvey>
+}
+
+^[Query13]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#ChangeOfCompanyNameTransfer>
+}
+
+^[Query14]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/geosparql#Geometry>
+}
+
+^[Query15]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#SemisubConcreteFacility>
+}
+
+^[Query16]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#ElectromagneticSurvey>
+}
+
+^[Query17]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#LineStringSegment>
+}
+
+^[Query18]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.ifomis.org/bfo/1.1/snap#ObjectBoundary>
+}
+
+^[Query19]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#PetroleumDeposit>
+}
+
+^[Query20]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#ParcellBAA>
+}
+
+^[Query21]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#FieldOwner>
+}
+
+^[Query22]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#MultiWellTemplateFacility>
+}
+
+^[Query23]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#ContingentResources>
+}
+
+^[Query24]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#FeederPipeline>
+}
+
+^[Query25]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#SplineCurve>
+}
+
+^[Query26]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.ifomis.org/bfo/1.1/snap#OneDimensionalRegion>
+}
+
+^[Query27]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#WellTarget>
+}
+
+^[Query28]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#LiquefiedPetroleumGas>
+}
+
+^[Query29]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#CommercialDiscovery>
+}
+
+^[Query30]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#AbstractGeometry>
+}
+
+^[Query31]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/sf#LinearRing>
+}
+
+^[Query32]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2-ptl#ChangedAwardNotification>
+}
+
+^[Query33]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#VesselFacility>
+}
+
+^[Query34]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#AbstractCurveSegment>
+}
+
+^[Query35]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#TestProductionWell>
+}
+
+^[Query36]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.ifomis.org/bfo/1.1/span#SpatiotemporalInstant>
+}
+
+^[Query37]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#WildcatWell>
+}
+
+^[Query38]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#ProductionLicenceTransfer>
+}
+
+^[Query39]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/sf#TIN>
+}
+
+^[Query40]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#BSpline>
+}
+
+^[Query41]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#SurveyMultilineArea>
+}
+
+^[Query42]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#NaturalGasLiquid>
+}
+
+^[Query43]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.ifomis.org/bfo/1.1/snap#TwoDimensionalRegion>
+}
+
+^[Query44]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#ObservationWell>
+}
+
+^[Query45]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#GeodesicString>
+}
+
+^[Query46]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#TUFacility>
+}
+
+^[Query47]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#ProductionLicenceAreaPerBlock>
+}
+
+^[Query48]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#FieldYearlyProduction>
+}
+
+^[Query49]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/sf#Line>
+}
+
+^[Query50]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#Cylinder>
+}
+
+^[Query51]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#MultilateralWellbore>
+}
+
+^[Query52]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#NCSYearlyProduction>
+}
+
+^[Query53]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#MultifieldWellbore>
+}
+
+^[Query54]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#SidetrackWellbore>
+}
+
+^[Query55]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#FSUFacility>
+}
+
+^[Query56]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/sf#Geometry>
+}
+
+^[Query57]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#OrientableSurface>
+}
+
+^[Query58]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Wellbore>
+}
+
+^[Query59]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#WellboreDrillingMudSample>
+}
+
+^[Query60]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#ReClassToTestWellbore>
+}
+
+^[Query61]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.ifomis.org/bfo/1.1/span#TemporalInstant>
+}
+
+^[Query62]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#DorisFacility>
+}
+
+^[Query63]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.ifomis.org/bfo/1.1/snap#ObjectAggregate>
+}
+
+^[Query64]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#TechnicalSideTrack>
+}
+
+^[Query65]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#AbstractGeometricPrimitive>
+}
+
+^[Query66]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#GeometricComplex>
+}
+
+^[Query67]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/sf#Point>
+}
+
+^[Query68]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.w3.org/2004/02/skos/core#Collection>
+}
+
+^[Query69]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#OffsetCurve>
+}
+
+^[Query70]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/sf#LineString>
+}
+
+^[Query71]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Field>
+}
+
+^[Query72]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#FacilityPoint>
+}
+
+^[Query73]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Member>
+}
+
+^[Query74]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#AbstractSurfacePatch>
+}
+
+^[Query75]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#ArcByCenterPoint>
+}
+
+^[Query76]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Kick>
+}
+
+^[Query77]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Agent>
+}
+
+^[Query78]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#Shell>
+}
+
+^[Query79]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#ProductionLicenceStatus>
+}
+
+^[Query80]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#SeismicAreaBAA>
+}
+
+^[Query81]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#SiteSurvey>
+}
+
+^[Query82]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#PlanForDevelopmentAndOperationOfPetroleumDeposits>
+}
+
+^[Query83]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Formation>
+}
+
+^[Query84]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#BlowOut>
+}
+
+^[Query85]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#FieldStatus>
+}
+
+^[Query86]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.ifomis.org/bfo/1.1/snap#FiatObjectPart>
+}
+
+^[Query87]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#Cone>
+}
+
+^[Query88]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.ifomis.org/bfo/1.1/snap#ThreeDimensionalRegion>
+}
+
+^[Query89]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#CircleByCenterPoint>
+}
+
+^[Query90]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#FieldOperator>
+}
+
+^[Query91]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#MultiFieldWellbore>
+}
+
+^[Query92]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Equipment>
+}
+
+^[Query93]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#AbandonedWell>
+}
+
+^[Query94]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#WellTrack>
+}
+
+^[Query95]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#WellboreCoreSet>
+}
+
+^[Query96]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#WellboreCorePhoto>
+}
+
+^[Query97]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#AbstractParametricCurveSurface>
+}
+
+^[Query98]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#NCSMonthlyProduction>
+}
+
+^[Query99]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Plan>
+}
+
+^[Query100]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#MultiCurve>
+}
+
+^[Query101]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#TriangulatedSurface>
+}
+
+^[Query102]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#LandfallFacility>
+}
+
+^[Query103]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Owner>
+}
+
+^[Query104]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Survey>
+}
+
+^[Query105]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#ArcByBulge>
+}
+
+^[Query106]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#TerminationPoint>
+}
+
+^[Query107]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.ifomis.org/bfo/1.1/span#SpatiotemporalInterval>
+}
+
+^[Query108]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Transfer>
+}
+
+^[Query109]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/sf#MultiPoint>
+}
+
+^[Query110]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#WellboreDocument>
+}
+
+^[Query111]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#FieldInvestment>
+}
+
+^[Query112]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#WellborePoint>
+}
+
+^[Query113]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#LiquefiedNaturalGas>
+}
+
+^[Query114]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.ifomis.org/bfo/1.1/snap#RealizableEntity>
+}
+
+^[Query115]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Play>
+}
+
+^[Query116]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.ifomis.org/bfo/1.1/snap#Function>
+}
+
+^[Query117]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#OnshoreFacility>
+}
+
+^[Query118]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.ifomis.org/bfo/1.1/snap#ZeroDimensionalRegion>
+}
+
+^[Query119]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#MoveableFacility>
+}
+
+^[Query120]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#SubseaStructureFacility>
+}
+
+^[Query121]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://resource.geosciml.org/classifier/ics/ischart/GeochronologicEra>
+}
+
+^[Query122]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#AwardArea>
+}
+
+^[Query123]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#OrientableCurve>
+}
+
+^[Query124]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2-ptl#EasementNotification>
+}
+
+^[Query125]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#MopustorFacility>
+}
+
+^[Query126]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#RichGas>
+}
+
+^[Query127]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#SDFITransfer>
+}
+
+^[Query128]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Facility>
+}
+
+^[Query129]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#Rectangle>
+}
+
+^[Query130]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#Curve>
+}
+
+^[Query131]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.w3.org/1999/02/22-rdf-syntax-ns#List>
+}
+
+^[Query132]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.ifomis.org/bfo/1.1/snap#Quality>
+}
+
+^[Query133]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#InitialWellbore>
+}
+
+^[Query134]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#SeismicSurvey>
+}
+
+^[Query135]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2-ptl#ProductionLicenceNotification>
+}
+
+^[Query136]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#AbstractGriddedSurface>
+}
+
+^[Query137]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.ifomis.org/bfo/1.1/snap#Disposition>
+}
+
+^[Query138]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#Tin>
+}
+
+^[Query139]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#DiscoveryArea>
+}
+
+^[Query140]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Recovery>
+}
+
+^[Query141]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.ifomis.org/bfo/1.1/span#TemporalRegion>
+}
+
+^[Query142]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Reserve>
+}
+
+^[Query143]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#DevelopmentWellbore>
+}
+
+^[Query144]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#AssociatedGas>
+}
+
+^[Query145]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/sf#Surface>
+}
+
+^[Query146]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.ifomis.org/bfo/1.1/span#ProcessAggregate>
+}
+
+^[Query147]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.w3.org/2004/02/skos/core#ConceptScheme>
+}
+
+^[Query148]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#FPSOFacility>
+}
+
+^[Query149]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#TerminationPlan>
+}
+
+^[Query150]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#CompressedNaturalGas>
+}
+
+^[Query151]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/sf#MultiLineString>
+}
+
+^[Query152]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#ExplorationWell>
+}
+
+^[Query153]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#SuspReenteredLaterWellbore>
+}
+
+^[Query154]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.w3.org/2004/02/skos/core#Concept>
+}
+
+^[Query155]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Jacket4LegsFacility>
+}
+
+^[Query156]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://resource.geosciml.org/ontology/timescale/gts-30#GeochronologicEra>
+}
+
+^[Query157]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Riser>
+}
+
+^[Query158]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.ifomis.org/bfo/1.1/span#ProcessualContext>
+}
+
+^[Query159]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#Point>
+}
+
+^[Query160]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#WellboreOilSample>
+}
+
+^[Query161]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#InjectionWell>
+}
+
+^[Query162]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2-ptl#DeletedEasementNotification>
+}
+
+^[Query163]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#LineString>
+}
+
+^[Query164]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#LicencedAcreage>
+}
+
+^[Query165]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#ObservationWellbore>
+}
+
+^[Query166]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#SeismicSurveyProgress>
+}
+
+^[Query167]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#FixedFacility>
+}
+
+^[Query168]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/sf#Polygon>
+}
+
+^[Query169]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#OilGasPipeline>
+}
+
+^[Query170]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#BAAArea>
+}
+
+^[Query171]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#AppraisalWellbore>
+}
+
+^[Query172]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Point>
+}
+
+^[Query173]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#ProductionLicenceWorkObligation>
+}
+
+^[Query174]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.ifomis.org/bfo/1.1/snap#Object>
+}
+
+^[Query175]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#ReClassToDevWellbore>
+}
+
+^[Query176]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#WellHead>
+}
+
+^[Query177]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.ifomis.org/bfo/1.1/span#Process>
+}
+
+^[Query178]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#UnitizedBAA>
+}
+
+^[Query179]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/sf#Curve>
+}
+
+^[Query180]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Jacket8LegsFacility>
+}
+
+^[Query181]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.ifomis.org/bfo/1.1#Entity>
+}
+
+^[Query182]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#TechnicalDiscovery>
+}
+
+^[Query183]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#JackUp3LegsFacility>
+}
+
+^[Query184]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#ExplorationWellbore>
+}
+
+^[Query185]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Area>
+}
+
+^[Query186]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.ifomis.org/bfo/1.1/snap#SpecificallyDependentContinuant>
+}
+
+^[Query187]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Refining>
+}
+
+^[Query188]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.ifomis.org/bfo/1.1/span#ConnectedSpatiotemporalRegion>
+}
+
+^[Query189]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#TUFOperator>
+}
+
+^[Query190]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#DryGas>
+}
+
+^[Query191]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#LoadingSystemFacility>
+}
+
+^[Query192]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.ifomis.org/bfo/1.1/span#ScatteredSpatiotemporalRegion>
+}
+
+^[Query193]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.ifomis.org/bfo/1.1/span#ProcessualEntity>
+}
+
+^[Query194]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#CrudeOil>
+}
+
+^[Query195]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#PAWellbore>
+}
+
+^[Query196]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2-ptl#TUFLicensee>
+}
+
+^[Query197]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#CubicSpline>
+}
+
+^[Query198]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#Sphere>
+}
+
+^[Query199]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/sf#MultiCurve>
+}
+
+^[Query200]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/sf#PolyhedralSurface>
+}
+
+^[Query201]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Royalty>
+}
+
+^[Query202]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/sf#GeometryCollection>
+}
+
+^[Query203]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#RegularSeismicSurvey>
+}
+
+^[Query204]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#KickOffPoint>
+}
+
+^[Query205]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#Geodesic>
+}
+
+^[Query206]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#MultibranchWell>
+}
+
+^[Query207]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Discovery>
+}
+
+^[Query208]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#MultiPoint>
+}
+
+^[Query209]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#CondeepMonoshaftFacility>
+}
+
+^[Query210]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#TUFOwner>
+}
+
+^[Query211]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#ProductionLicenceLicensee>
+}
+
+^[Query212]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#Arc>
+}
+
+^[Query213]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#SeismicSurveyCoordinate>
+}
+
+^[Query214]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#MultilateralWell>
+}
+
+^[Query215]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.ifomis.org/bfo/1.1/span#ScatteredTemporalRegion>
+}
+
+^[Query216]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Pipeline>
+}
+
+^[Query217]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2-ptl#Notification>
+}
+
+^[Query218]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.ifomis.org/bfo/1.1/snap#SpatialRegion>
+}
+
+^[Query219]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Jacket12LegsFacility>
+}
+
+^[Query220]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Well>
+}
+
+^[Query221]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#WildcatWellbore>
+}
+
+^[Query222]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#OilEquivalents>
+}
+
+^[Query223]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Petroleum>
+}
+
+^[Query224]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#AreaFee>
+}
+
+^[Query225]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#PolygonPatch>
+}
+
+^[Query226]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#ProductionWell>
+}
+
+^[Query227]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#JunkedWellbore>
+}
+
+^[Query228]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#CompositeCurve>
+}
+
+^[Query229]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#InjectionWellbore>
+}
+
+^[Query230]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#PlanForInstallationAndOperation>
+}
+
+^[Query231]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#WellboreStratigraphicCoreSet>
+}
+
+^[Query232]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#BAA>
+}
+
+^[Query233]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#FieldArea>
+}
+
+^[Query234]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#TransportationPipeline>
+}
+
+^[Query235]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.ifomis.org/bfo/1.1/span#FiatProcessPart>
+}
+
+^[Query236]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Condeep4ShaftsFacility>
+}
+
+^[Query237]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#TlpSteelFacility>
+}
+
+^[Query238]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#MonotowerFacility>
+}
+
+^[Query239]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#SeabedSeismicSurvey>
+}
+
+^[Query240]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#ProductionLicence>
+}
+
+^[Query241]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#GasPipeline>
+}
+
+^[Query242]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#Bezler>
+}
+
+^[Query243]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#ConcreteStructureFacility>
+}
+
+^[Query244]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2-ptl#TUFNotification>
+}
+
+^[Query245]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#PolynomialSpline>
+}
+
+^[Query246]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/sf#Triangle>
+}
+
+^[Query247]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2-ptl#ProductionLicenceLicensee>
+}
+
+^[Query248]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Oil>
+}
+
+^[Query249]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Condensate>
+}
+
+^[Query250]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#WellboreCore>
+}
+
+^[Query251]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#MultiSolid>
+}
+
+^[Query252]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Licensee>
+}
+
+^[Query253]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2-ptl#TUFacility>
+}
+
+^[Query254]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.ifomis.org/bfo/1.1/snap#GenericallyDependentContinuant>
+}
+
+^[Query255]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#Circle>
+}
+
+^[Query256]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.ifomis.org/bfo/1.1/span#ProcessBoundary>
+}
+
+^[Query257]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#AppraisalWell>
+}
+
+^[Query258]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.ifomis.org/bfo/1.1/snap#DependentContinuant>
+}
+
+^[Query259]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.ifomis.org/bfo/1.1/snap#IndependentContinuant>
+}
+
+^[Query260]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#Solid>
+}
+
+^[Query261]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Rig>
+}
+
+^[Query262]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.ifomis.org/bfo/1.1/snap#Site>
+}
+
+^[Query263]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.ifomis.org/bfo/1.1/span#SpatiotemporalRegion>
+}
+
+^[Query264]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#SurveyArea>
+}
+
+^[Query265]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.w3.org/2004/02/skos/core#OrderedCollection>
+}
+
+^[Query266]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#BlowoutWellbore>
+}
+
+^[Query267]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Operator>
+}
+
+^[Query268]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#CompanyReserve>
+}
+
+^[Query269]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#DevelopmentWell>
+}
+
+^[Query270]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#Triangle>
+}
+
+^[Query271]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#MultipurposeWellbore>
+}
+
+^[Query272]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Gas>
+}
+
+^[Query273]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#SuspendedWellbore>
+}
+
+^[Query274]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#WellboreCasingAndLeakoffTest>
+}
+
+^[Query275]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.ifomis.org/bfo/1.1/snap#Role>
+}
+
+^[Query276]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#ArcString>
+}
+
+^[Query277]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#Polygon>
+}
+
+^[Query278]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#ProductionWellbore>
+}
+
+^[Query279]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/sf#MultiSurface>
+}
+
+^[Query280]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#Clothoid>
+}
+
+^[Query281]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#TlpConcreteFacility>
+}
+
+^[Query282]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Prospect>
+}
+
+^[Query283]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#MainArea>
+}
+
+^[Query284]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Sidetrack>
+}
+
+^[Query285]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Quadrant>
+}
+
+^[Query286]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#DiscoveryReserve>
+}
+
+^[Query287]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#PolyhedralSurface>
+}
+
+^[Query288]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#ReEntryWellbore>
+}
+
+^[Query289]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.ifomis.org/bfo/1.1/snap#Continuant>
+}
+
+^[Query290]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#ArcStringByBulge>
+}
+
+^[Query291]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#CompositeSurface>
+}
+
+^[Query292]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Company>
+}
+
+^[Query293]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.ifomis.org/bfo/1.1/span#TemporalInterval>
+}
+
+^[Query294]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#DiscoveryWellbore>
+}
+
+^[Query295]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#SlidingScaleBAA>
+}
+
+^[Query296]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#WetGas>
+}
+
+^[Query297]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#CondensatePipeline>
+}
+
+^[Query298]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#JackUp4LegsFacility>
+}
+
+^[Query299]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#WellboreCoordinate>
+}
+
+^[Query300]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#RecoveryWell>
+}
+
+^[Query301]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#LinearRing>
+}
+
+^[Query302]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#ShallowWell>
+}
+
+^[Query303]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Block>
+}
+
+^[Query304]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#SingleWellTemplateFacility>
+}
+
+^[Query305]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2-ptl#ProductionLicence>
+}
+
+^[Query306]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Condeep3ShaftsFacility>
+}
+
+^[Query307]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#Composite>
+}
+
+^[Query308]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#OtherSurvey>
+}
+
+^[Query309]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#MultiGeometry>
+}
+
+^[Query310]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#FieldLicensee>
+}
+
+^[Query311]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#Ring>
+}
+
+^[Query312]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#ProductionLicenceOperator>
+}
+
+^[Query313]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#Surface>
+}
+
+^[Query314]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/geosparql#SpatialObject>
+}
+
+^[Query315]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#SubseaCompletedWell>
+}
+
+^[Query316]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#MultiSurface>
+}
+
+^[Query317]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#BAALicensee>
+}
+
+^[Query318]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#FieldReserve>
+}
+
+^[Query319]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.ifomis.org/bfo/1.1/snap#MaterialEntity>
+}
+
+^[Query320]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#PetroleumActivity>
+}
+
+^[Query321]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/geosparql#Feature>
+}
+
+^[Query322]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2-ptl#NewAwardNotification>
+}
+
+^[Query323]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/sf#MultiPolygon>
+}
+
+^[Query324]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#GroundSurvey>
+}
+
+^[Query325]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.opengis.net/ont/gml#CompositeSolid>
+}
+
+^[Query326]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.ifomis.org/bfo/1.1/span#ConnectedTemporalRegion>
+}
+
+^[Query327]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#MergerTakeoverTransfer>
+}
+
+^[Query328]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#JacketTripodFacility>
+}
+
+^[Query329]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#Group>
+}
+
+^[Query330]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://sws.ifi.uio.no/vocab/npd-v2#SemisubSteelFacility>
+}
+
+^[Query331]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.w3.org/2004/02/skos/core#broadMatch> ?Y .
+}
+
+^[Query332]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#stratumForWellbore> ?Y .
+}
+
+^[Query333]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.w3.org/2004/02/skos/core#relatedMatch> ?Y .
+}
+
+^[Query334]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#provinceLocation> ?Y .
+}
+
+^[Query335]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.w3.org/2004/02/skos/core#topConceptOf> ?Y .
+}
+
+^[Query336]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#fieldOperator> ?Y .
+}
+
+^[Query337]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#corePhotoURL> ?Y .
+}
+
+^[Query338]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#discoveryWellbore> ?Y .
+}
+
+^[Query339]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.opengis.net/ont/geosparql#rcc8po> ?Y .
+}
+
+^[Query340]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#blockLocation> ?Y .
+}
+
+^[Query341]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#statusForSurvey> ?Y .
+}
+
+^[Query342]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#factPageURL> ?Y .
+}
+
+^[Query343]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#oilSampleTestForWellbore> ?Y .
+}
+
+^[Query344]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#statusForField> ?Y .
+}
+
+^[Query345]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.opengis.net/ont/geosparql#ehContains> ?Y .
+}
+
+^[Query346]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#reservesForField> ?Y .
+}
+
+^[Query347]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#shallowWellboreForField> ?Y .
+}
+
+^[Query348]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#coordinateForWellbore> ?Y .
+}
+
+^[Query349]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.opengis.net/ont/geosparql#ehInside> ?Y .
+}
+
+^[Query350]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.opengis.net/ont/geosparql#rcc8tppi> ?Y .
+}
+
+^[Query351]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#licenseeForLicence> ?Y .
+}
+
+^[Query352]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#DSTForWellbore> ?Y .
+}
+
+^[Query353]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#isGeometryOfFeature> ?Y .
+}
+
+^[Query354]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2-ptl#TUFLicenceeForTUF> ?Y .
+}
+
+^[Query355]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#currentFieldOperator> ?Y .
+}
+
+^[Query356]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#mudTestForWellbore> ?Y .
+}
+
+^[Query357]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.w3.org/2004/02/skos/core#broaderTransitive> ?Y .
+}
+
+^[Query358]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#fieldLicensee> ?Y .
+}
+
+^[Query359]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2-ptl#licenceLicenceeCompany> ?Y .
+}
+
+^[Query360]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#developmentWellboreForLicence> ?Y .
+}
+
+^[Query361]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.w3.org/2004/02/skos/core#narrowerTransitive> ?Y .
+}
+
+^[Query362]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#productionForField> ?Y .
+}
+
+^[Query363]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.opengis.net/ont/geosparql#ehOverlap> ?Y .
+}
+
+^[Query364]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#reservesForCompany> ?Y .
+}
+
+^[Query365]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.w3.org/2004/02/skos/core#mappingRelation> ?Y .
+}
+
+^[Query366]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.w3.org/2004/02/skos/core#member> ?Y .
+}
+
+^[Query367]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#drillingFacility> ?Y .
+}
+
+^[Query368]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.w3.org/2004/02/skos/core#inScheme> ?Y .
+}
+
+^[Query369]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.w3.org/2004/02/skos/core#closeMatch> ?Y .
+}
+
+^[Query370]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#licenceOperatorCompany> ?Y .
+}
+
+^[Query371]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.opengis.net/ont/geosparql#rcc8tpp> ?Y .
+}
+
+^[Query372]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#baaOperatorCompany> ?Y .
+}
+
+^[Query373]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#reportingCompany> ?Y .
+}
+
+^[Query374]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.opengis.net/ont/geosparql#ehMeet> ?Y .
+}
+
+^[Query375]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.opengis.net/ont/geosparql#defaultGeometry> ?Y .
+}
+
+^[Query376]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#includedInField> ?Y .
+}
+
+^[Query377]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.opengis.net/ont/geosparql#sfOverlaps> ?Y .
+}
+
+^[Query378]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#investmentForField> ?Y .
+}
+
+^[Query379]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#operatorForField> ?Y .
+}
+
+^[Query380]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#coreForWellbore> ?Y .
+}
+
+^[Query381]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#currentResponsibleCompany> ?Y .
+}
+
+^[Query382]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#operatorForLicence> ?Y .
+}
+
+^[Query383]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.w3.org/2004/02/skos/core#broader> ?Y .
+}
+
+^[Query384]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.opengis.net/ont/geosparql#sfCrosses> ?Y .
+}
+
+^[Query385]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.opengis.net/ont/geosparql#hasGeometry> ?Y .
+}
+
+^[Query386]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#drillingOperatorCompany> ?Y .
+}
+
+^[Query387]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#belongsToFacility> ?Y .
+}
+
+^[Query388]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#transferredBAA> ?Y .
+}
+
+^[Query389]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#belongsToWell> ?Y .
+}
+
+^[Query390]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#pipelineOperator> ?Y .
+}
+
+^[Query391]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#reclassedFromWellbore> ?Y .
+}
+
+^[Query392]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#pressReleaseURL> ?Y .
+}
+
+^[Query393]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#coresForWellbore> ?Y .
+}
+
+^[Query394]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2-ptl#TUFOperatorForLicence> ?Y .
+}
+
+^[Query395]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#coordinateForSurvey> ?Y .
+}
+
+^[Query396]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#pipelineFromFacility> ?Y .
+}
+
+^[Query397]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.opengis.net/ont/geosparql#ehEquals> ?Y .
+}
+
+^[Query398]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#explorationWellboreForLicence> ?Y .
+}
+
+^[Query399]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#productionForDiscovery> ?Y .
+}
+
+^[Query400]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2-ptl#messageForTUF> ?Y .
+}
+
+^[Query401]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#LOTForWellbore> ?Y .
+}
+
+^[Query402]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#taskForCompany> ?Y .
+}
+
+^[Query403]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.opengis.net/ont/geosparql#rcc8ntpp> ?Y .
+}
+
+^[Query404]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2-ptl#licenceOperatorCompany> ?Y .
+}
+
+^[Query405]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#stratigraphicParent> ?Y .
+}
+
+^[Query406]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.opengis.net/ont/geosparql#ehDisjoint> ?Y .
+}
+
+^[Query407]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#inLithostratigraphicUnit> ?Y .
+}
+
+^[Query408]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.opengis.net/ont/geosparql#rcc8dc> ?Y .
+}
+
+^[Query409]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.w3.org/2004/02/skos/core#narrowMatch> ?Y .
+}
+
+^[Query410]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#wellboreForDiscovery> ?Y .
+}
+
+^[Query411]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#documentURL> ?Y .
+}
+
+^[Query412]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#pipelineToFacility> ?Y .
+}
+
+^[Query413]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.w3.org/2004/02/skos/core#related> ?Y .
+}
+
+^[Query414]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.opengis.net/ont/geosparql#ehCovers> ?Y .
+}
+
+^[Query415]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#baaTransferCompany> ?Y .
+}
+
+^[Query416]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.opengis.net/ont/geosparql#sfContains> ?Y .
+}
+
+^[Query417]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#licenseeForField> ?Y .
+}
+
+^[Query418]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#containsWellbore> ?Y .
+}
+
+^[Query419]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#quadrantLocation> ?Y .
+}
+
+^[Query420]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#baaLicensee> ?Y .
+}
+
+^[Query421]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.w3.org/2004/02/skos/core#exactMatch> ?Y .
+}
+
+^[Query422]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#wellboreForField> ?Y .
+}
+
+^[Query423]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#wellboreFormationHc> ?Y .
+}
+
+^[Query424]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#mainAreaLocation> ?Y .
+}
+
+^[Query425]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#wellOperator> ?Y .
+}
+
+^[Query426]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#geochronologicEra> ?Y .
+}
+
+^[Query427]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.opengis.net/ont/geosparql#rcc8ec> ?Y .
+}
+
+^[Query428]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#shallowWellboreForLicence> ?Y .
+}
+
+^[Query429]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#wellboreFormationTD> ?Y .
+}
+
+^[Query430]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#lastOperatorCompany> ?Y .
+}
+
+^[Query431]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#reservesForDiscovery> ?Y .
+}
+
+^[Query432]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.opengis.net/ont/geosparql#sfDisjoint> ?Y .
+}
+
+^[Query433]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2-ptl#TUFOwnerForLicence> ?Y .
+}
+
+^[Query434]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#productionFacility> ?Y .
+}
+
+^[Query435]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#registeredInCountry> ?Y .
+}
+
+^[Query436]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#messageForLicence> ?Y .
+}
+
+^[Query437]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#licenseeForBAA> ?Y .
+}
+
+^[Query438]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#developmentWellboreForField> ?Y .
+}
+
+^[Query439]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#documentForWellbore> ?Y .
+}
+
+^[Query440]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.opengis.net/ont/geosparql#rcc8eq> ?Y .
+}
+
+^[Query441]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#dependsOnTask> ?Y .
+}
+
+^[Query442]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#wellboreAgeHc> ?Y .
+}
+
+^[Query443]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2-ptl#TUFOwnerCompany> ?Y .
+}
+
+^[Query444]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#statusForLicence> ?Y .
+}
+
+^[Query445]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#corePhotoForWellbore> ?Y .
+}
+
+^[Query446]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#transferredLicence> ?Y .
+}
+
+^[Query447]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#resourcesIncludedInDiscovery> ?Y .
+}
+
+^[Query448]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#ownerForField> ?Y .
+}
+
+^[Query449]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2-ptl#licenceeForLicence> ?Y .
+}
+
+^[Query450]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.opengis.net/ont/geosparql#rcc8ntppi> ?Y .
+}
+
+^[Query451]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#taskForLicence> ?Y .
+}
+
+^[Query452]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#currentFieldOwner> ?Y .
+}
+
+^[Query453]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2-ptl#TUFLicenceeCompany> ?Y .
+}
+
+^[Query454]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.opengis.net/ont/geosparql#sfEquals> ?Y .
+}
+
+^[Query455]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#wellboreAgeHcLevel2> ?Y .
+}
+
+^[Query456]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#npdPageURL> ?Y .
+}
+
+^[Query457]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#wellboreAgeHcLevel1> ?Y .
+}
+
+^[Query458]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#explorationWellboreForField> ?Y .
+}
+
+^[Query459]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#wellboreAgeHcLevel3> ?Y .
+}
+
+^[Query460]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#licenceTransferCompany> ?Y .
+}
+
+^[Query461]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#member> ?Y .
+}
+
+^[Query462]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.w3.org/2004/02/skos/core#semanticRelation> ?Y .
+}
+
+^[Query463]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.w3.org/2002/07/owl#sameAs> ?Y .
+}
+
+^[Query464]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.opengis.net/ont/geosparql#sfTouches> ?Y .
+}
+
+^[Query465]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#factMapURL> ?Y .
+}
+
+^[Query466]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#wellboreAgeTD> ?Y .
+}
+
+^[Query467]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#wellboreFormationHcLevel2> ?Y .
+}
+
+^[Query468]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#country> ?Y .
+}
+
+^[Query469]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#wellboreFormationHcLevel1> ?Y .
+}
+
+^[Query470]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2-ptl#TUFOperatorCompany> ?Y .
+}
+
+^[Query471]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#wellboreFormationHcLevel3> ?Y .
+}
+
+^[Query472]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.opengis.net/ont/geosparql#ehCoveredBy> ?Y .
+}
+
+^[Query473]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.opengis.net/ont/geosparql#sfWithin> ?Y .
+}
+
+^[Query474]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.w3.org/2004/02/skos/core#memberList> ?Y .
+}
+
+^[Query475]
+SELECT ?X ?Y
+WHERE {
+?X <http://sws.ifi.uio.no/vocab/npd-v2#licenceLicensee> ?Y .
+}
+
+^[Query476]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.w3.org/2004/02/skos/core#narrower> ?Y .
+}
+
+^[Query477]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.opengis.net/ont/geosparql#sfIntersects> ?Y .
+}
+
+^[Query478]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.w3.org/2004/02/skos/core#hasTopConcept> ?Y .
+}
+
+

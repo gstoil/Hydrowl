@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1425298348272" name="http://semantics.crl.ibm.com/univ-bench-dl.owl" uri="UOBM/univ-bench-dl-2.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1425298348272" name="duplicate:http://uob.iodt.ibm.com/univ-bench-dl.owl" uri="UOBM/univ-bench-dl-owl-repair_for_OWLim.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1425298348272" name="duplicate:http://uob.iodt.ibm.com/univ-bench-dl.owl" uri="UOBM/univ-bench-dl.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1425298348272" name="http://uob.iodt.ibm.com/univ-bench-dlessential-subset" uri="UOBM/univ-bench-dl-owl-essential-subset.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1425298348272" name="duplicate:http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl" uri="LUBM/univ-bench-owl-repair_for_OWLim.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1425298348272" name="duplicate:http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl" uri="LUBM/univ-bench.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1425298348272" name="http://www.lehigh.edu/~zhp2/2004/0401/univ-benchessential-subset" uri="LUBM/univ-bench-owl-essential-subset.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1425298348272" name="http://www.semanticweb.org/etsalap/ontologies/2015/1/Ontology1423226325703.owl" uri="new4Hydrowl.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1425298348272" name="http://www.semanticweb.org/owl/owlapi/turtle" uri="UOBM/Zhou/dataset/UOBM-1/uobm1.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1425298348272" name="duplicate:http://www.virtualflybrain.org/ontologies/individual_neurons/FC_neuron_GF_an.owl" uri="Fly/fly_anatomy_XP_with_GJ_FC_individuals_owl-aBox-AssNorm.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1425298348272" name="duplicate:http://www.virtualflybrain.org/ontologies/individual_neurons/FC_neuron_GF_an.owl" uri="Fly/fly_anatomy_XP_with_GJ_FC_individuals_owl-tBox.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1425298348272" name="http://www.w3.org/2002/07/owl" uri="Fly/fly_anatomy_XP_with_GJ_FC_individuals_owl-tBox-AssNorm-owl_normalised-repair_for_OWLim.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1425298348272" name="shadowed:http://semantics.crl.ibm.com/univ-bench-dl.owl" uri="UOBM/Zhou/univ-bench-dl-Zhou.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1425298348272" name="shadowed:http://uob.iodt.ibm.com/univ-bench-dl.owl" uri="UOBM/univ-bench-dl_owl/univ-bench-dl-owl-essential-subset.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1425298348272" name="shadowed:http://uob.iodt.ibm.com/univ-bench-dl.owl" uri="UOBM/univ-bench-dl_owl/univ-bench-dl-owl-repair-allTreeShapedCQs.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1425298348272" name="shadowed:http://uob.iodt.ibm.com/univ-bench-dl.owl" uri="UOBM/univ-bench-dl_owl/univ-bench-dl-owl-repair_for_OWLim.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1425298348272" name="shadowed:http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl" uri="LUBM/univ-bench_owl/univ-bench-owl-essential-subset.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1425298348272" name="shadowed:http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl" uri="LUBM/univ-bench_owl/univ-bench-owl-repair-allTreeShapedCQs.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1425298348272" name="shadowed:http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl" uri="LUBM/univ-bench_owl/univ-bench-owl-repair_for_OWLim.owl"/>
+    </group>
+</catalog>

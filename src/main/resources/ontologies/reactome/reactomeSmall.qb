@@ -1,0 +1,13 @@
+http://www.biopax.org/release/biopax-level3.owl#Dna
+http://www.biopax.org/release/biopax-level3.owl#DnaRegion
+http://www.biopax.org/release/biopax-level3.owl#DnaRegionReference
+http://www.biopax.org/release/biopax-level3.owl#Gene
+http://www.biopax.org/release/biopax-level3.owl#Interaction
+http://www.biopax.org/release/biopax-level3.owl#Pathway
+http://www.biopax.org/release/biopax-level3.owl#PhysicalEntity
+http://www.biopax.org/release/biopax-level3.owl#Protein
+http://www.biopax.org/release/biopax-level3.owl#PublicationXref
+http://www.biopax.org/release/biopax-level3.owl#Rna
+http://www.biopax.org/release/biopax-level3.owl#RnaRegionReference
+http://www.biopax.org/release/biopax-level3.owl#RnaRegion
+http://www.biopax.org/release/biopax-level3.owl#UnificationXref

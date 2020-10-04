@@ -1,0 +1,951 @@
+^[Query1]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#RnaReference>
+}
+
+^[Query2]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#DnaReference>
+}
+
+^[Query3]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#TransportWithBiochemicalReaction>
+}
+
+^[Query4]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#SequenceModificationVocabulary>
+}
+
+^[Query5]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#Gene>
+}
+
+^[Query6]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#SequenceSite>
+}
+
+^[Query7]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#UnificationXref>
+}
+
+^[Query8]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#Provenance>
+}
+
+^[Query9]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#TissueVocabulary>
+}
+
+^[Query10]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#EntityReference>
+}
+
+^[Query11]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#BioSource>
+}
+
+^[Query12]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#ExperimentalFormVocabulary>
+}
+
+^[Query13]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#Xref>
+}
+
+^[Query14]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#BiochemicalReaction>
+}
+
+^[Query15]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#Score>
+}
+
+^[Query16]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#ExperimentalForm>
+}
+
+^[Query17]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#Dna>
+}
+
+^[Query18]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#FragmentFeature>
+}
+
+^[Query19]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#Control>
+}
+
+^[Query20]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#GeneticInteraction>
+}
+
+^[Query21]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#ModificationFeature>
+}
+
+^[Query22]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#Interaction>
+}
+
+^[Query23]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#RelationshipTypeVocabulary>
+}
+
+^[Query24]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#CovalentBindingFeature>
+}
+
+^[Query25]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#EntityReferenceTypeVocabulary>
+}
+
+^[Query26]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#Rna>
+}
+
+^[Query27]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#TemplateReaction>
+}
+
+^[Query28]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#KPrime>
+}
+
+^[Query29]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#ControlledVocabulary>
+}
+
+^[Query30]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#Degradation>
+}
+
+^[Query31]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#CellularLocationVocabulary>
+}
+
+^[Query32]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#MolecularInteraction>
+}
+
+^[Query33]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#Catalysis>
+}
+
+^[Query34]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#DnaRegionReference>
+}
+
+^[Query35]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#Modulation>
+}
+
+^[Query36]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#CellVocabulary>
+}
+
+^[Query37]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#Pathway>
+}
+
+^[Query38]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#Transport>
+}
+
+^[Query39]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#RnaRegion>
+}
+
+^[Query40]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#Conversion>
+}
+
+^[Query41]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#PhenotypeVocabulary>
+}
+
+^[Query42]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#Evidence>
+}
+
+^[Query43]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#SmallMolecule>
+}
+
+^[Query44]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#UtilityClass>
+}
+
+^[Query45]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#SmallMoleculeReference>
+}
+
+^[Query46]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#BiochemicalPathwayStep>
+}
+
+^[Query47]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#EvidenceCodeVocabulary>
+}
+
+^[Query48]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#PublicationXref>
+}
+
+^[Query49]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#PathwayStep>
+}
+
+^[Query50]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#PhysicalEntity>
+}
+
+^[Query51]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#ChemicalStructure>
+}
+
+^[Query52]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#ProteinReference>
+}
+
+^[Query53]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#BindingFeature>
+}
+
+^[Query54]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#DeltaG>
+}
+
+^[Query55]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#ComplexAssembly>
+}
+
+^[Query56]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#SequenceInterval>
+}
+
+^[Query57]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#SequenceRegionVocabulary>
+}
+
+^[Query58]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#DnaRegion>
+}
+
+^[Query59]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#Complex>
+}
+
+^[Query60]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#SequenceLocation>
+}
+
+^[Query61]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#Stoichiometry>
+}
+
+^[Query62]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#InteractionVocabulary>
+}
+
+^[Query63]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#EntityFeature>
+}
+
+^[Query64]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#RelationshipXref>
+}
+
+^[Query65]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#Protein>
+}
+
+^[Query66]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#TemplateReactionRegulation>
+}
+
+^[Query67]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#RnaRegionReference>
+}
+
+^[Query68]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X
+WHERE {
+?X rdf:type <http://www.biopax.org/release/biopax-level3.owl#Entity>
+}
+
+^[Query69]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#relationshipType> ?Y .
+}
+
+^[Query70]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#cellularLocation> ?Y .
+}
+
+^[Query71]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#sequenceIntervalEnd> ?Y .
+}
+
+^[Query72]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#structure> ?Y .
+}
+
+^[Query73]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#scoreSource> ?Y .
+}
+
+^[Query74]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#right> ?Y .
+}
+
+^[Query75]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#sequenceIntervalBegin> ?Y .
+}
+
+^[Query76]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#evidenceCode> ?Y .
+}
+
+^[Query77]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#bindsTo> ?Y .
+}
+
+^[Query78]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#entityReferenceType> ?Y .
+}
+
+^[Query79]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#featureLocationType> ?Y .
+}
+
+^[Query80]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#deltaG> ?Y .
+}
+
+^[Query81]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#memberEntityReference> ?Y .
+}
+
+^[Query82]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#subRegion> ?Y .
+}
+
+^[Query83]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#dataSource> ?Y .
+}
+
+^[Query84]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#controller> ?Y .
+}
+
+^[Query85]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#componentStoichiometry> ?Y .
+}
+
+^[Query86]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#evidence> ?Y .
+}
+
+^[Query87]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#left> ?Y .
+}
+
+^[Query88]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#regionType> ?Y .
+}
+
+^[Query89]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#organism> ?Y .
+}
+
+^[Query90]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#participantStoichiometry> ?Y .
+}
+
+^[Query91]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#component> ?Y .
+}
+
+^[Query92]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#pathwayOrder> ?Y .
+}
+
+^[Query93]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#stepProcess> ?Y .
+}
+
+^[Query94]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#controlled> ?Y .
+}
+
+^[Query95]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#experimentalFormDescription> ?Y .
+}
+
+^[Query96]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#interactionScore> ?Y .
+}
+
+^[Query97]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#feature> ?Y .
+}
+
+^[Query98]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#absoluteRegion> ?Y .
+}
+
+^[Query99]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#template> ?Y .
+}
+
+^[Query100]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#stepConversion> ?Y .
+}
+
+^[Query101]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#notFeature> ?Y .
+}
+
+^[Query102]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#memberFeature> ?Y .
+}
+
+^[Query103]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#confidence> ?Y .
+}
+
+^[Query104]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#physicalEntity> ?Y .
+}
+
+^[Query105]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#featureLocation> ?Y .
+}
+
+^[Query106]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#product> ?Y .
+}
+
+^[Query107]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#memberPhysicalEntity> ?Y .
+}
+
+^[Query108]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#interactionType> ?Y .
+}
+
+^[Query109]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#experimentalForm> ?Y .
+}
+
+^[Query110]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#phenotype> ?Y .
+}
+
+^[Query111]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#experimentalFormEntity> ?Y .
+}
+
+^[Query112]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#pathwayComponent> ?Y .
+}
+
+^[Query113]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#participant> ?Y .
+}
+
+^[Query114]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#modificationType> ?Y .
+}
+
+^[Query115]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#kEQ> ?Y .
+}
+
+^[Query116]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#cellType> ?Y .
+}
+
+^[Query117]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#entityReference> ?Y .
+}
+
+^[Query118]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#xref> ?Y .
+}
+
+^[Query119]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#entityFeature> ?Y .
+}
+
+^[Query120]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#experimentalFeature> ?Y .
+}
+
+^[Query121]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#cofactor> ?Y .
+}
+
+^[Query122]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#tissue> ?Y .
+}
+
+^[Query123]
+SELECT ?X ?Y
+WHERE {
+?X <http://www.biopax.org/release/biopax-level3.owl#nextStep> ?Y .
+}
+
+^[Query1]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX biopax3: <http://www.biopax.org/release/biopax-level3.owl#>
+SELECT DISTINCT ?pathway ?pathwayname 
+WHERE 
+{
+ ?pathway rdf:type biopax3:Pathway .
+ ?pathway biopax3:displayName ?pathwayname 
+}
+
+^[Query2]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX biopax3: <http://www.biopax.org/release/biopax-level3.owl#>
+SELECT DISTINCT ?pathway ?pathwayname
+WHERE {
+  ?pathway rdf:type biopax3:Pathway .  
+  ?pathway biopax3:displayName ?pathwayname .
+  ?pathway biopax3:pathwayComponent ?reaction . 
+  ?reaction rdf:type biopax3:BiochemicalReaction . 
+  ?reaction biopax3:participant ?protein .   
+  ?protein rdf:type biopax3:Protein . 
+}
+
+^[Query2]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX biopax3: <http://www.biopax.org/release/biopax-level3.owl#>
+SELECT DISTINCT ?pathway ?x 
+WHERE {
+  ?pathway rdf:type biopax3:Pathway .  
+  ?pathway biopax3:pathwayComponent ?reaction . 
+  ?reaction rdf:type biopax3:BiochemicalReaction . 
+  ?reaction biopax3:participant ?protein .   
+  ?protein rdf:type biopax3:Protein . 
+  ?protein biopax3:entityReference ?x 
+}    
+
+^[Query2]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX biopax3: <http://www.biopax.org/release/biopax-level3.owl#>
+SELECT DISTINCT ?pathway ?pathwayname 
+WHERE {
+  ?pathway rdf:type biopax3:Pathway .  
+  ?pathway biopax3:displayName ?pathwayname .
+  ?pathway biopax3:pathwayComponent ?reaction . 
+  ?reaction rdf:type biopax3:BiochemicalReaction . 
+  ?reaction biopax3:participant ?protein .   
+  ?protein rdf:type biopax3:Protein . 
+  ?protein biopax3:entityReference <http://purl.uniprot.org/uniprot/P01308> 
+}    
+
+^[Query3]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX biopax3: <http://www.biopax.org/release/biopax-level3.owl#>
+SELECT DISTINCT ?pathway ?pathwayname 
+WHERE {
+  ?pathway rdf:type biopax3:Pathway .  
+  ?pathway biopax3:displayName ?pathwayname .
+  ?pathway biopax3:pathwayComponent ?reaction . 
+  ?reaction rdf:type biopax3:BiochemicalReaction . 
+  ?reaction  biopax3:participant ?complex . 
+  ?complex rdf:type biopax3:Complex .  
+  ?complex biopax3:component ?protein . 
+  ?protein rdf:type biopax3:Protein . 
+  ?protein biopax3:entityReference <http://purl.uniprot.org/uniprot/P01308> 
+}    
+
+^[Query3]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX biopax3: <http://www.biopax.org/release/biopax-level3.owl#>
+SELECT DISTINCT ?x 
+WHERE {
+  ?pathway rdf:type biopax3:Pathway .  
+  ?pathway biopax3:pathwayComponent ?reaction . 
+  ?reaction rdf:type biopax3:BiochemicalReaction . 
+  ?reaction  biopax3:participant  ?complex . 
+  ?complex rdf:type biopax3:Complex .  
+  ?complex biopax3:component ?protein . 
+  ?protein rdf:type biopax3:Protein . 
+ ?protein biopax3:entityReference ?x
+}    
+
+^[Query3]
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX biopax3: <http://www.biopax.org/release/biopax-level3.owl#>
+SELECT DISTINCT ?pathway ?pathwayname
+WHERE {
+  ?pathway rdf:type biopax3:Pathway .  
+  ?pathway biopax3:displayName ?pathwayname .
+  ?pathway biopax3:pathwayComponent ?reaction . 
+  ?reaction rdf:type biopax3:BiochemicalReaction . 
+  ?reaction  biopax3:participant  ?complex . 
+  ?complex rdf:type biopax3:Complex .  
+  ?complex biopax3:component ?protein . 
+  ?protein rdf:type biopax3:Protein . 
+}
+

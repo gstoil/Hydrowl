@@ -1,0 +1,1351 @@
+# baseURI: http://rdf.ebi.ac.uk/terms/chembl
+# imports: http://purl.org/dc/elements/1.1/
+# imports: http://purl.org/dc/terms/
+# imports: http://semanticscience.org/ontology/sio.owl
+# imports: http://www.w3.org/2004/02/skos/core
+# imports: http://xmlns.com/foaf/0.1/
+
+@prefix :        <http://rdf.ebi.ac.uk/terms/chembl#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio:     <http://semanticscience.org/resource/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://purl.org/dc/terms/date>
+      rdfs:domain :Document .
+
+<http://purl.org/dc/terms/description>
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (:Assay :BioComponent :Substance :Source :CellLine)
+              ] .
+
+<http://purl.org/dc/terms/title>
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (:Document :Journal :Target)
+              ] .
+
+<http://rdf.ebi.ac.uk/terms/chembl>
+      rdf:type owl:Ontology ;
+      dc:description "ChEMBL Core Ontology is used to describe the define entities, which appear in the ChEMBL-RDF"^^xsd:string ;
+      dc:title "ChEMBL Core Ontology"^^xsd:string ;
+      owl:imports dc: , <http://purl.org/dc/terms/> , <http://semanticscience.org/ontology/sio.owl> , <http://www.w3.org/2004/02/skos/core> , <http://xmlns.com/foaf/0.1/> ;
+      owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
+
+:ADMET
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL ADMET Class"^^xsd:string ;
+      rdfs:subClassOf :UndefinedTarget ;
+      dc:description "Target is not applicable (e.g., physchem property)"^^xsd:string ;
+      skos:prefLabel "ChEMBL ADMET Class"^^xsd:string .
+
+:Activity
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL Activity Class"^^xsd:string ;
+      rdfs:subClassOf :ChEMBL ;
+      skos:prefLabel "ChEMBL Activity Class"^^xsd:string .
+
+:Antibody
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL Antibody Class"^^xsd:string ;
+      rdfs:subClassOf :Biological ;
+      dc:description "A substance similar in sequence to an antibody sequence"^^xsd:string ;
+      skos:prefLabel "ChEMBL Antibody Class"^^xsd:string .
+
+:ArrayExpressRef
+      rdf:type owl:Class ;
+      rdfs:label "Array Express Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :TargetCmptDbRef ;
+      skos:prefLabel "Array Express Cross Reference"^^xsd:string .
+
+:Assay
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL Assay Class"^^xsd:string ;
+      rdfs:subClassOf :ChEMBL ;
+      skos:prefLabel "ChEMBL Assay Class"^^xsd:string .
+
+:AssayDbRef
+      rdf:type owl:Class ;
+      rdfs:label "Assay Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :DatabaseReference ;
+      skos:prefLabel "Assay Cross Reference"^^xsd:string .
+
+:AtlasRef
+      rdf:type owl:Class ;
+      rdfs:label "Gene Expression Atlas Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :MoleculeDbRef ;
+      skos:prefLabel "Gene Expression Atlas Cross Reference"^^xsd:string .
+
+:BiTE
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL BiTE Class"^^xsd:string ;
+      rdfs:subClassOf :Antibody ;
+      dc:description "Bi-specific T-cell engager"^^xsd:string ;
+      skos:prefLabel "ChEMBL BiTE Class"^^xsd:string .
+
+:BindingSite
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL Binding Site Class"^^xsd:string ;
+      rdfs:subClassOf :ChEMBL ;
+      skos:prefLabel "ChEMBL Binding Site Class"^^xsd:string .
+
+:BioComponent
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL Biotherapeutic Component Class"^^xsd:string ;
+      rdfs:subClassOf :ChEMBL ;
+      skos:prefLabel "ChEMBL Biotherapeutic Component Class"^^xsd:string .
+
+:Biological
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL Biological Class"^^xsd:string ;
+      rdfs:subClassOf :Substance ;
+      dc:description "A substance primarily composed from monomers of naturally occuring substances (e.g. amino-acids, sugars, nucleotides, etc.)"^^xsd:string ;
+      skos:prefLabel "ChEMBL Biological Class"^^xsd:string .
+
+:CGDRef
+      rdf:type owl:Class ;
+      rdfs:label "NIH National Human Genome Research Institute Clinical Genomic Database (CGD) Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :TargetCmptDbRef ;
+      skos:prefLabel "NIH National Human Genome Research Institute Clinical Genomic Database (CGD) Cross Reference"^^xsd:string .
+
+:CansarTargetRef
+      rdf:type owl:Class ;
+      rdfs:label "Cansar Target Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :TargetCmptDbRef ;
+      skos:prefLabel "Cansar Target Cross Reference"^^xsd:string .
+
+:CellLine
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL Cell Line Class"^^xsd:string ;
+      rdfs:subClassOf :ChEMBL ;
+      dc:description ""^^xsd:string ;
+      skos:prefLabel "ChEMBL Cell Line Class"^^xsd:string .
+
+:CellLineTarget
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL CellLine Class"^^xsd:string ;
+      rdfs:subClassOf :NonMolecular ;
+      dc:description "Target is a specific cell-line"^^xsd:string ;
+      skos:prefLabel "ChEMBL CellLine Class"^^xsd:string .
+
+:CellTherapy
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL Cell Class"^^xsd:string ;
+      rdfs:subClassOf :Biological ;
+      dc:description "A substance with the biological characteristics of a competant cell"^^xsd:string ;
+      skos:prefLabel "ChEMBL Cell Class"^^xsd:string .
+
+:ChEMBL
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL Base Class"^^xsd:string ;
+      skos:prefLabel "ChEMBL Base Class"^^xsd:string .
+
+:ChebiRef
+      rdf:type owl:Class ;
+      rdfs:label "ChEBI Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :MoleculeDbRef ;
+      skos:prefLabel "ChEBI Cross Reference"^^xsd:string .
+
+:ChemblRef
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :MoleculeDbRef ;
+      skos:prefLabel "ChEMBL Cross Reference"^^xsd:string .
+
+:ChimericProtein
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL ChimericProtein Class"^^xsd:string ;
+      rdfs:subClassOf :ProteinTarget ;
+      dc:description "Target is a fusion of two different proteins, either a synthetic construct or naturally occurring fusion protein"^^xsd:string ;
+      skos:prefLabel "ChEMBL Base ChimericProtein"^^xsd:string .
+
+:DatabaseReference
+      rdf:type owl:Class ;
+      rdfs:label "Database Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :ChEMBL ;
+      skos:prefLabel "Database Cross Reference"^^xsd:string .
+
+:DiScFv
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL DiScFv Class"^^xsd:string ;
+      rdfs:subClassOf :Antibody ;
+      dc:description "Dimeric single-chain variable fragment"^^xsd:string ;
+      skos:prefLabel "ChEMBL DiScFv Class"^^xsd:string .
+
+:Document
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL Document Class"^^xsd:string ;
+      rdfs:subClassOf :ChEMBL ;
+      skos:prefLabel "ChEMBL Document Class"^^xsd:string .
+
+:DrugbankDbRef
+      rdf:type owl:Class ;
+      rdfs:label "DrugBank Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :MoleculeDbRef ;
+      skos:prefLabel "DrugBank Cross Reference"^^xsd:string .
+
+:EmoleculesRef
+      rdf:type owl:Class ;
+      rdfs:label "eMolecules Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :MoleculeDbRef ;
+      skos:prefLabel "eMolecules Cross Reference"^^xsd:string .
+
+:EnsemblGeneRef
+      rdf:type owl:Class ;
+      rdfs:label "Ensembl GeneCross Reference"^^xsd:string ;
+      rdfs:subClassOf :TargetCmptDbRef ;
+      skos:prefLabel "Ensembl GeneCross Reference"^^xsd:string .
+
+:Enzyme
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL Enzyme Class"^^xsd:string ;
+      rdfs:subClassOf :Biological ;
+      dc:description "A substance acting as a catalyst for a chemical reaction"^^xsd:string ;
+      skos:prefLabel "ChEMBL Enzyme Class"^^xsd:string .
+
+:EnzymeClassRef
+      rdf:type owl:Class ;
+      rdfs:label "Enzyme Classification Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :TargetCmptDbRef ;
+      skos:prefLabel "Enzyme Classification Cross Reference"^^xsd:string .
+
+:Fab  rdf:type owl:Class ;
+      rdfs:label "ChEMBL Fab Class"^^xsd:string ;
+      rdfs:subClassOf :Antibody ;
+      dc:description "Fragment, antigen-binding (one arm)"^^xsd:string ;
+      skos:prefLabel "ChEMBL Fab Class"^^xsd:string .
+
+:FabPrime
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL FabPrime Class"^^xsd:string ;
+      rdfs:subClassOf :Antibody ;
+      dc:description "Fragment, antigen-binding, including hinge region (one arm)"^^xsd:string ;
+      skos:prefLabel "ChEMBL FabPrime Class"^^xsd:string .
+
+:FabPrime2
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL FabPrime2 Class"^^xsd:string ;
+      rdfs:subClassOf :Antibody ;
+      dc:description "Fragment, antigen-binding, including hinge region (both arms)"^^xsd:string ;
+      skos:prefLabel "ChEMBL FabPrime2 Class"^^xsd:string .
+
+:FdaSrsRef
+      rdf:type owl:Class ;
+      rdfs:label " FDA/USP Substance Registration System Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :MoleculeDbRef ;
+      skos:prefLabel " FDA/USP Substance Registration System Cross Reference"^^xsd:string .
+
+:GoComponentRef
+      rdf:type owl:Class ;
+      rdfs:label "GO Component Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :TargetCmptDbRef ;
+      skos:prefLabel "GO Component Cross Reference"^^xsd:string .
+
+:GoFunctionRef
+      rdf:type owl:Class ;
+      rdfs:label "GO Function Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :TargetCmptDbRef ;
+      skos:prefLabel "GO Function Cross Reference"^^xsd:string .
+
+:GoProcessRef
+      rdf:type owl:Class ;
+      rdfs:label "GO Process Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :TargetCmptDbRef ;
+      skos:prefLabel "GO Process Cross Reference"^^xsd:string .
+
+:HmdbRef
+      rdf:type owl:Class ;
+      rdfs:label "Human Metabolome Database Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :MoleculeDbRef ;
+      skos:prefLabel "Human Metabolome Database Cross Reference"^^xsd:string .
+
+:IIIfunct
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL IIIfunct Class"^^xsd:string ;
+      rdfs:subClassOf :Antibody ;
+      dc:description "Trifunctional antibody"^^xsd:string ;
+      skos:prefLabel "ChEMBL IIIfunct Class"^^xsd:string .
+
+:IbmPatentRef
+      rdf:type owl:Class ;
+      rdfs:label "IBM Patent Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :MoleculeDbRef ;
+      skos:prefLabel "IBM Patent Cross Reference"^^xsd:string .
+
+:IbmPatentStructureRef
+      rdf:type owl:Class ;
+      rdfs:label "IBM Patent Structures Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :MoleculeDbRef ;
+      skos:prefLabel "IBM Patent Structures Cross Reference"^^xsd:string .
+
+:Immunoadhesin
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL Immunoadhesin Class"^^xsd:string ;
+      rdfs:subClassOf :Antibody ;
+      dc:description "Immunoadhesin Molecule"^^xsd:string ;
+      skos:prefLabel "ChEMBL Immunoadhesin Class"^^xsd:string .
+
+:Inorganic
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL Inorganic Class"^^xsd:string ;
+      rdfs:subClassOf :SmallMolecule ;
+      dc:description "Inorganic molecules"^^xsd:string ;
+      skos:prefLabel "ChEMBL Inorganic Class"^^xsd:string .
+
+:IntactRef
+      rdf:type owl:Class ;
+      rdfs:label "Intact Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :TargetCmptDbRef ;
+      skos:prefLabel "Intact Cross Reference"^^xsd:string .
+
+:InterproRef
+      rdf:type owl:Class ;
+      rdfs:label "Interpro Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :TargetCmptDbRef ;
+      skos:prefLabel "Interpro Cross Reference"^^xsd:string .
+
+:IupharRef
+      rdf:type owl:Class ;
+      rdfs:label "IUPHAR Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :MoleculeDbRef ;
+      skos:prefLabel "IUPHAR Cross Reference"^^xsd:string .
+
+:IupharTargetRef
+      rdf:type owl:Class ;
+      rdfs:label "IUPHAR Target Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :TargetCmptDbRef ;
+      skos:prefLabel "IUPHAR Target Cross Reference"^^xsd:string .
+
+:Journal
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL Journal Class"^^xsd:string ;
+      rdfs:subClassOf :ChEMBL ;
+      skos:prefLabel "ChEMBL Journal Class"^^xsd:string .
+
+:KeggLigandRef
+      rdf:type owl:Class ;
+      rdfs:label "KEGG Ligand Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :MoleculeDbRef ;
+      skos:prefLabel "KEGG Ligand Cross Reference"^^xsd:string .
+
+:Mab  rdf:type owl:Class ;
+      rdfs:label "ChEMBL Mab Class"^^xsd:string ;
+      rdfs:subClassOf :Antibody ;
+      dc:description "Whole monoclonal antibody"^^xsd:string ;
+      skos:prefLabel "ChEMBL Mab Class"^^xsd:string .
+
+:Macromolecule
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL Macromolecule Class"^^xsd:string ;
+      rdfs:subClassOf :Molecular ;
+      skos:prefLabel "ChEMBL Macromolecule Class"^^xsd:string .
+
+:MculeRef
+      rdf:type owl:Class ;
+      rdfs:label "Mcule Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :MoleculeDbRef ;
+      dc:description ""^^xsd:string ;
+      skos:prefLabel "Mcule Cross Reference"^^xsd:string .
+
+:Mechanism
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL Mechanism Class"^^xsd:string ;
+      rdfs:subClassOf :ChEMBL ;
+      skos:prefLabel "ChEMBL Mechanism Class"^^xsd:string .
+
+:Metal
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL Metal Class"^^xsd:string ;
+      rdfs:subClassOf :Molecular ;
+      skos:prefLabel "ChEMBL Metal Class"^^xsd:string .
+
+:MicadRef
+      rdf:type owl:Class ;
+      rdfs:label "Molecular Imaging and Contrast Agent Database (MICAD) Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :TargetCmptDbRef ;
+      skos:prefLabel "Molecular Imaging and Contrast Agent Database (MICAD) Cross Reference"^^xsd:string .
+
+:Molecular
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL Molecular Class"^^xsd:string ;
+      rdfs:subClassOf :Target ;
+      skos:prefLabel "ChEMBL Molecular Class"^^xsd:string .
+
+:MoleculeDbRef
+      rdf:type owl:Class ;
+      rdfs:label "Molecule Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :DatabaseReference ;
+      skos:prefLabel "Molecule Cross Reference"^^xsd:string .
+
+:NaturalProductDerived
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL NaturalProductDerived Class"^^xsd:string ;
+      rdfs:subClassOf :SmallMolecule ;
+      dc:description "Natural product derived molecules"^^xsd:string ;
+      skos:prefLabel "ChEMBL NaturalProductDerived Class"^^xsd:string .
+
+:NihNccRef
+      rdf:type owl:Class ;
+      rdfs:label "NIH Clinical Collection Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :MoleculeDbRef ;
+      skos:prefLabel "NIH Clinical Collection Cross Reference"^^xsd:string .
+
+:NonMolecular
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL NonMolecular Class"^^xsd:string ;
+      rdfs:subClassOf :Target ;
+      skos:prefLabel "ChEMBL NonMolecular Class"^^xsd:string .
+
+:NucleicAcid
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL NucleicAcid Class"^^xsd:string ;
+      rdfs:subClassOf :Molecular ;
+      dc:description "Target is DNA, RNA or PNA"^^xsd:string ;
+      skos:prefLabel "ChEMBL NucleicAcid Class"^^xsd:string .
+
+:Oligonucleotide
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL Oligonucleotide Class"^^xsd:string ;
+      rdfs:subClassOf :Biological ;
+      dc:description "A substance which is a polymer built primarily from nucleotide-like monomers"^^xsd:string ;
+      skos:prefLabel "ChEMBL Oligonucleotide Class"^^xsd:string .
+
+:Oligosaccharide
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL Oligosaccharide Class"^^xsd:string ;
+      rdfs:subClassOf :Biological ;
+      dc:description "A substance which is a polymer built primarily from sugar-like monomers"^^xsd:string ;
+      skos:prefLabel "ChEMBL Oligosaccharide Class"^^xsd:string .
+
+:OligosaccharideTarget
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL OligosaccharideTarget Class"^^xsd:string ;
+      rdfs:subClassOf :Molecular ;
+      skos:prefLabel "ChEMBL OligosaccharideTarget Class"^^xsd:string .
+
+:Organism
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL Organism Class"^^xsd:string ;
+      rdfs:subClassOf :NonMolecular ;
+      dc:description "Target is a complete organism"^^xsd:string ;
+      skos:prefLabel "ChEMBL Organism Class"^^xsd:string .
+
+:PdbeRef
+      rdf:type owl:Class ;
+      rdfs:label "PDBe Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :MoleculeDbRef ;
+      skos:prefLabel "PDBe Cross Reference"^^xsd:string .
+
+:PfamRef
+      rdf:type owl:Class ;
+      rdfs:label "PFAM Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :TargetCmptDbRef ;
+      skos:prefLabel "PFAM Cross Reference"^^xsd:string .
+
+:PharmGkbRef
+      rdf:type owl:Class ;
+      rdfs:label "PharmGKB Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :MoleculeDbRef ;
+      skos:prefLabel "PharmGKB Cross Reference"^^xsd:string .
+
+:PharmgkbRef
+      rdf:type owl:Class ;
+      rdfs:label "PharmGKB Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :TargetCmptDbRef ;
+      skos:prefLabel "PharmGKB Cross Reference"^^xsd:string .
+
+:Phenotype
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL Phenotype Class"^^xsd:string ;
+      rdfs:subClassOf :NonMolecular ;
+      dc:description "Target is a biological phenotype or process"^^xsd:string ;
+      skos:prefLabel "ChEMBL Phenotype Class"^^xsd:string .
+
+:ProteinClassification
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL ProteinClassification Class"^^xsd:string ;
+      rdfs:subClassOf :ChEMBL ;
+      skos:prefLabel "ChEMBL ProteinClassification Class"^^xsd:string .
+
+:ProteinComplex
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL ProteinComplex Class"^^xsd:string ;
+      rdfs:subClassOf :ProteinTarget ;
+      dc:description "Target is a defined protein complex, consisting of multiple subunits"^^xsd:string ;
+      skos:prefLabel "ChEMBL ProteinComplex Class"^^xsd:string .
+
+:ProteinComplexGroup
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL ProteinComplexGroup Class"^^xsd:string ;
+      rdfs:subClassOf :ProteinTarget ;
+      dc:description "Target is a poorly defined protein complex, where subunit composition is unclear"^^xsd:string ;
+      skos:prefLabel "ChEMBL ProteinComplexGroup Class"^^xsd:string .
+
+:ProteinDataBankRef
+      rdf:type owl:Class ;
+      rdfs:label "PDBe Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :TargetCmptDbRef ;
+      skos:prefLabel "PDBe Cross Reference"^^xsd:string .
+
+:ProteinFamily
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL ProteinFamily Class"^^xsd:string ;
+      rdfs:subClassOf :ProteinTarget ;
+      dc:description "Target is a group of closely related proteins"^^xsd:string ;
+      skos:prefLabel "ChEMBL ProteinFamily Class"^^xsd:string .
+
+:ProteinMolecule
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL ProteinMolecule Class"^^xsd:string ;
+      rdfs:subClassOf :Biological ;
+      dc:description "A substance which is a polymer built primarily from amino acids, containing in excess of twenty amino acids, and that is not a monoclonal antibody"^^xsd:string ;
+      skos:prefLabel "ChEMBL ProteinMolecule Class"^^xsd:string .
+
+:ProteinNucleicAcidComplex
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL ProteinNucleicAcidComplex Class"^^xsd:string ;
+      rdfs:subClassOf :Molecular ;
+      skos:prefLabel "ChEMBL ProteinNucleicAcidComplex Class"^^xsd:string .
+
+:ProteinProteinInteraction
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL ProteinProteinInteraction Class"^^xsd:string ;
+      rdfs:subClassOf :ProteinTarget ;
+      dc:description "Target is the disruption of a protein-protein interaction"^^xsd:string ;
+      skos:prefLabel "ChEMBL ProteinProteinInteraction Class"^^xsd:string .
+
+:ProteinSelectivityGroup
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL ProteinSelectivityGroup Class"^^xsd:string ;
+      rdfs:subClassOf :ProteinTarget ;
+      dc:description "Target is a pair of proteins for which the selectivity has been assessed"^^xsd:string ;
+      skos:prefLabel "ChEMBL ProteinSelectivityGroup Class"^^xsd:string .
+
+:ProteinTarget
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL ProteinTarget Class"^^xsd:string ;
+      rdfs:subClassOf :Molecular ;
+      skos:prefLabel "ChEMBL ProteinTarget Class"^^xsd:string .
+
+:PubchemBioassayRef
+      rdf:type owl:Class ;
+      rdfs:label "Pubchem Bioassay Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :AssayDbRef ;
+      skos:prefLabel "Pubchem Bioassay Cross Reference"^^xsd:string .
+
+:PubchemDotfRef
+      rdf:type owl:Class ;
+      rdfs:label "Pubchem Drugs of the Future Subset Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :MoleculeDbRef ;
+      skos:prefLabel "Pubchem Drugs of the Future Subset Cross Reference"^^xsd:string .
+
+:PubchemRef
+      rdf:type owl:Class ;
+      rdfs:label "Pubchem Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :MoleculeDbRef ;
+      dc:description ""^^xsd:string ;
+      skos:prefLabel "Pubchem Cross Reference"^^xsd:string .
+
+:PubchemThomPharmRef
+      rdf:type owl:Class ;
+      rdfs:label "Pubchem Thomson Pharma Subset Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :MoleculeDbRef ;
+      skos:prefLabel "Pubchem Thomson Pharma Subset Cross Reference"^^xsd:string .
+
+:ReactomeRef
+      rdf:type owl:Class ;
+      rdfs:label "Reactome Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :TargetCmptDbRef ;
+      skos:prefLabel "Reactome Cross Reference"^^xsd:string .
+
+:ScFv
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL ScFv Class"^^xsd:string ;
+      rdfs:subClassOf :Antibody ;
+      dc:description "Single-chain variable fragment"^^xsd:string ;
+      skos:prefLabel "ChEMBL ScFv Class"^^xsd:string .
+
+:SdAb
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL SdAb Class"^^xsd:string ;
+      rdfs:subClassOf :Antibody ;
+      dc:description "Single-domain antibody"^^xsd:string ;
+      skos:prefLabel "ChEMBL SdAb Class"^^xsd:string .
+
+:SelleckRef
+      rdf:type owl:Class ;
+      rdfs:label "Selleck Chemicals Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :MoleculeDbRef ;
+      skos:prefLabel "Selleck Chemicals Cross Reference"^^xsd:string .
+
+:SingleProtein
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL SingleProtein Class"^^xsd:string ;
+      rdfs:subClassOf :ProteinTarget ;
+      dc:description "Target is a single protein chain"^^xsd:string ;
+      skos:prefLabel "ChEMBL SingleProtein Class"^^xsd:string .
+
+:SmallMolecule
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL SmallMolecule Class"^^xsd:string ;
+      rdfs:subClassOf :Substance ;
+      skos:prefLabel "ChEMBL SmallMolecule Class"^^xsd:string .
+
+:SmallMoleculeTarget
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL SmallMoleculeTarget Class"^^xsd:string ;
+      rdfs:subClassOf :Molecular ;
+      skos:prefLabel "ChEMBL SmallMoleculeTarget Class"^^xsd:string .
+
+:Source
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL Source Class"^^xsd:string ;
+      rdfs:subClassOf :ChEMBL ;
+      skos:prefLabel "ChEMBL Source Class"^^xsd:string .
+
+:SubCellular
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL SubCellular Class"^^xsd:string ;
+      rdfs:subClassOf :NonMolecular ;
+      dc:description "Target is a subcellular fraction"^^xsd:string ;
+      skos:prefLabel "ChEMBL SubCellular Class"^^xsd:string .
+
+:Substance
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL Substance Class"^^xsd:string ;
+      rdfs:subClassOf :ChEMBL ;
+      skos:prefLabel "ChEMBL Substance Class"^^xsd:string .
+
+:SureChemRef
+      rdf:type owl:Class ;
+      rdfs:label "SureChem Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :MoleculeDbRef ;
+      skos:prefLabel "SureChem Cross Reference"^^xsd:string .
+
+:Synthetic
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL Synthetic Class"^^xsd:string ;
+      rdfs:subClassOf :SmallMolecule ;
+      dc:description "Synthetic Molecules"^^xsd:string ;
+      skos:prefLabel "ChEMBL Synthetic Class"^^xsd:string .
+
+:Target
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL Target Class"^^xsd:string ;
+      rdfs:subClassOf :ChEMBL ;
+      skos:prefLabel "ChEMBL Target Class"^^xsd:string .
+
+:TargetCmptDbRef
+      rdf:type owl:Class ;
+      rdfs:label "Target Component Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :DatabaseReference ;
+      skos:prefLabel "Target Component Cross Reference"^^xsd:string .
+
+:TargetComponent
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL TargetComponent Class"^^xsd:string ;
+      rdfs:subClassOf :ChEMBL ;
+      skos:prefLabel "ChEMBL TargetComponent Class"^^xsd:string .
+
+:TargetDbRef
+      rdf:type owl:Class ;
+      rdfs:label "Target Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :DatabaseReference ;
+      skos:prefLabel "Target Cross Reference"^^xsd:string .
+
+:TimbalRef
+      rdf:type owl:Class ;
+      rdfs:label "TIMBAL Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :TargetCmptDbRef ;
+      skos:prefLabel "TIMBAL Cross Reference"^^xsd:string .
+
+:Tissue
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL Tissue Class"^^xsd:string ;
+      rdfs:subClassOf :NonMolecular ;
+      dc:description "Target is a healthy or diseased tissue"^^xsd:string ;
+      skos:prefLabel "ChEMBL Tissue Class"^^xsd:string .
+
+:UnclassifiedSubstance
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL UnclassifiedSubstance Class"^^xsd:string ;
+      rdfs:subClassOf :UndefinedSubstance ;
+      skos:prefLabel "ChEMBL UnclassifiedSubstance Class"^^xsd:string .
+
+:UnclassifiedTarget
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL UnclassifiedTarget Class"^^xsd:string ;
+      rdfs:subClassOf :UndefinedTarget ;
+      dc:description "Target has not yet been assigned"^^xsd:string ;
+      skos:prefLabel "ChEMBL UnclassifiedTarget Class"^^xsd:string .
+
+:UndefinedSubstance
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL UndefinedSubstance Class"^^xsd:string ;
+      rdfs:subClassOf :Substance ;
+      skos:prefLabel "ChEMBL UndefinedSubstance Class"^^xsd:string .
+
+:UndefinedTarget
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL UndefinedTarget Class"^^xsd:string ;
+      rdfs:subClassOf :Target ;
+      skos:prefLabel "ChEMBL UndefinedTarget Class"^^xsd:string .
+
+:UniprotRef
+      rdf:type owl:Class ;
+      rdfs:label "UniProt Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :TargetCmptDbRef ;
+      skos:prefLabel "UniProt Cross Reference"^^xsd:string .
+
+:UnknownSubstance
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL UnknownSubstance Class"^^xsd:string ;
+      rdfs:subClassOf :UndefinedSubstance ;
+      skos:prefLabel "ChEMBL UnknownSubstance Class"^^xsd:string .
+
+:UnknownTarget
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL UnknownTarget Class"^^xsd:string ;
+      rdfs:subClassOf :UndefinedTarget ;
+      dc:description "Molecular identity of target is unknown (e.g., pharmacologically defined target)"^^xsd:string ;
+      skos:prefLabel "ChEMBL UnknownTarget Class"^^xsd:string .
+
+:Vaccine
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL Vaccine Class"^^xsd:string ;
+      rdfs:subClassOf :Biological ;
+      dc:description "A substance that acts through eliciting an acquired immune response in the patient"^^xsd:string ;
+      skos:prefLabel "ChEMBL Vaccine Class"^^xsd:string .
+
+:Virus
+      rdf:type owl:Class ;
+      rdfs:label "ChEMBL Virus Class"^^xsd:string ;
+      rdfs:subClassOf :Biological ;
+      dc:description "A substance with the biological characteristics of a competant virus"^^xsd:string ;
+      skos:prefLabel "ChEMBL Virus Class"^^xsd:string .
+
+:WikipediaMolRef
+      rdf:type owl:Class ;
+      rdfs:label "Wikipedia Molecule Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :MoleculeDbRef ;
+      skos:prefLabel "Wikipedia Molecule Cross Reference"^^xsd:string .
+
+:WikipediaTargetCmptRef
+      rdf:type owl:Class ;
+      rdfs:label "Wikipedia Target Component Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :TargetCmptDbRef ;
+      skos:prefLabel "Wikipedia Target Component Cross Reference"^^xsd:string .
+
+:WikipediaTargetRef
+      rdf:type owl:Class ;
+      rdfs:label "Wikipedia Target Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :TargetDbRef ;
+      skos:prefLabel "Wikipedia Target Cross Reference"^^xsd:string .
+
+:ZincRef
+      rdf:type owl:Class ;
+      rdfs:label "Zinc Cross Reference"^^xsd:string ;
+      rdfs:subClassOf :MoleculeDbRef ;
+      skos:prefLabel "Zinc Cross Reference"^^xsd:string .
+
+:activityComment
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Activity ;
+      rdfs:label "ChEMBL Activity Entity Comment"^^xsd:string ;
+      dc:description "Describes non-numeric activities i.e. 'Slighty active', 'Not determined'"^^xsd:string ;
+      skos:prefLabel "ChEMBL Activity Entity Comment"^^xsd:string .
+
+:assayCategory
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Assay ;
+      rdfs:label "ChEMBL Assay Entity Category"^^xsd:string ;
+      dc:description "Screening, confirmatory (ie: dose-response), summary, panel or other."^^xsd:string ;
+      skos:prefLabel "ChEMBL Assay Entity Category"^^xsd:string .
+
+:assayCellType
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Assay ;
+      rdfs:label "ChEMBL Assay Cell Type"^^xsd:string ;
+      dc:description "Name of cell type or cell line used in the assay system (e.g., for cell-based assays)."^^xsd:string ;
+      skos:prefLabel "ChEMBL Assay Cell Type"^^xsd:string .
+
+:assayStrain
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Assay ;
+      rdfs:label "ChEMBL Assay Entity Strain"^^xsd:string ;
+      dc:description "Name of specific strain of the assay organism used (where known)"^^xsd:string ;
+      skos:prefLabel "ChEMBL Assay Entity Strain"^^xsd:string .
+
+:assaySubCellFrac
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Assay ;
+      rdfs:label "ChEMBL Assay Subcellular Fraction "^^xsd:string ;
+      dc:description "Name of subcellular fraction used in the assay system (e.g., microsomes, mitochondria)."^^xsd:string ;
+      skos:prefLabel "ChEMBL Assay Subcellular Fraction "^^xsd:string .
+
+:assayTestType
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Assay ;
+      rdfs:label "ChEMBL Assay Test Type"^^xsd:string ;
+      dc:description "Type of assay system (i.e., in vivo or in vitro)"^^xsd:string ;
+      skos:prefLabel "ChEMBL Assay Test Type"^^xsd:string .
+
+:assayTissue
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Assay ;
+      rdfs:label "ChEMBL Assay Tissue"^^xsd:string ;
+      dc:description "Name of tissue used in the assay system (e.g., for tissue-based assays) or from which the assay system was derived (e.g., for cell/subcellular fraction-based assays)."^^xsd:string ;
+      skos:prefLabel "ChEMBL Assay Tissue"^^xsd:string .
+
+:assayType
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Assay ;
+      rdfs:label "ChEMBL Assay Entity Type"^^xsd:string ;
+      dc:description "Assay classification, e.g. Binding assay, ADME assay or Functional assay"^^xsd:string ;
+      skos:prefLabel "ChEMBL Assay Entity Type"^^xsd:string .
+
+:assayXref
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :Assay ;
+      rdfs:label "ChEMBL Assay Cross Reference Property"^^xsd:string ;
+      rdfs:subPropertyOf :xref ;
+      skos:prefLabel "ChEMBL Assay Cross Reference Property"^^xsd:string .
+
+:atcClassification
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Substance ;
+      rdfs:label "ATC Code"^^xsd:string ;
+      dc:description "ATC Classification Code"^^xsd:string ;
+      skos:prefLabel "ATC Code"^^xsd:string .
+
+:bindingSiteName
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :BindingSite ;
+      rdfs:label "Binding site name"^^xsd:string ;
+      dc:description ""^^xsd:string ;
+      skos:prefLabel "Binding site name"^^xsd:string .
+
+:cellosaurusId
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :CellLine ;
+      rdfs:label "Cellosaurus ID"^^xsd:string ;
+      dc:description "ID for the corresponding cell line in Cellosaurus Ontology"^^xsd:string ;
+      skos:prefLabel "Cellosaurus ID"^^xsd:string .
+
+:chemblId
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (:Activity :Assay :BindingSite :BioComponent :Document :Journal :Mechanism :Substance :ProteinClassification :Source :Target :TargetComponent :CellLine)
+              ] ;
+      rdfs:label "The ChEMBL ID for a given entity"^^xsd:string ;
+      dc:description ""^^xsd:string ;
+      skos:prefLabel "The ChEMBL ID for a given entity"^^xsd:string .
+
+:classLevel
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :ProteinClassification ;
+      rdfs:label "Classification Level"^^xsd:string ;
+      dc:description "The level a particular classification appears in hierarchy"^^xsd:string ;
+      skos:prefLabel "Classification Level"^^xsd:string .
+
+:classPath
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :ProteinClassification ;
+      rdfs:label "Classification Path"^^xsd:string ;
+      dc:description "The path to a particular classification in hierarchy"^^xsd:string ;
+      skos:prefLabel "Classification Path"^^xsd:string .
+
+:componentType
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (:TargetComponent :BioComponent)
+              ] ;
+      rdfs:label "Describes the type of ChEMBL Target Component or Biotherapeutic Component being represented (e.g., 'PROTEIN','DNA','RNA')"^^xsd:string ;
+      skos:prefLabel "Describes the type of ChEMBL Target Component or Biotherapeutic Component being represented (e.g., 'PROTEIN','DNA','RNA')"^^xsd:string .
+
+:dataValidityComment
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Activity ;
+      rdfs:label "ChEMBL Activity Data Validity Issue Comment"^^xsd:string ;
+      dc:description "Comment reflecting whether the values for this activity measurement are likely to be correct - one of 'Manually validated' (checked original paper and value is correct), 'Potential author error' (value looks incorrect but is as reported in the original paper), 'Outside typical range' (value seems too high/low to be correct e.g., negative IC50 value), 'Non standard unit type' (units look incorrect for this activity type)."^^xsd:string ;
+      skos:prefLabel "ChEMBL Activity Data Validity Issue Comment"^^xsd:string .
+
+:dataValidityIssue
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Activity ;
+      rdfs:label "ChEMBL Activity Data Validity Issue Flag"^^xsd:string ;
+      dc:description "Flag reflecting whether the values for this activity measurement are likely to be correct"^^xsd:string ;
+      skos:prefLabel "ChEMBL Activity Data Validity Issue Flag"^^xsd:string .
+
+:documentType
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Document ;
+      rdfs:label "ChEMBL Document Type"^^xsd:string ;
+      dc:description "ChEMBL Document Type e.g. Publication, Book, Dataset"^^xsd:string ;
+      skos:prefLabel "ChEMBL Document Type"^^xsd:string .
+
+:hasActivity
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :Assay ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (:Substance :Document)
+              ] ;
+      rdfs:label "ChEMBL Activity Association"^^xsd:string ;
+      rdfs:range :Activity ;
+      dc:description "Association between the entity and a ChEMBL Activity"^^xsd:string ;
+      skos:prefLabel "ChEMBL Activity Association"^^xsd:string .
+
+:hasAssay
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :Activity ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (:Target :Document :Source)
+              ] ;
+      rdfs:label "ChEMBL Assay Association"^^xsd:string ;
+      rdfs:range :Assay ;
+      dc:description "Association between the entity and a ChEMBL Assay"^^xsd:string ;
+      skos:prefLabel "ChEMBL Assay Association"^^xsd:string .
+
+:hasBindingSite
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (:Mechanism :Target)
+              ] ;
+      rdfs:label "ChEMBL Binding Site Association"^^xsd:string ;
+      rdfs:range :BindingSite ;
+      dc:description "Association between the entity and a ChEMBL Binding Site"^^xsd:string ;
+      skos:prefLabel "ChEMBL Binding Site Association"^^xsd:string .
+
+:hasBioComponent
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :Substance ;
+      rdfs:label "ChEMBL Biotherapeutic Component Association"^^xsd:string ;
+      rdfs:range :BioComponent ;
+      dc:description "Association between the entity and a ChEMBL Biotherapeutic Component"^^xsd:string ;
+      skos:prefLabel "ChEMBL Biotherapeutic Component Association"^^xsd:string .
+
+:hasCLO
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :CellLine ;
+      rdfs:label "Link between a ChEMBL Entity and the Cell Line Ontology"^^xsd:string ;
+      dc:description ""^^xsd:string ;
+      skos:prefLabel "Link between a ChEMBL Entity and the Cell Line Ontology"^^xsd:string .
+
+:hasCellLine
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :Assay ;
+      rdfs:label "Association between ChEMBL Entity and Cell Line "^^xsd:string ;
+      rdfs:range :CellLine ;
+      dc:description ""^^xsd:string ;
+      skos:prefLabel "Association between ChEMBL Entity and Cell Line "^^xsd:string .
+
+:hasChildMolecule
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :Substance ;
+      rdfs:label "Association between parent ChEMBL Molecule and ChEMBL Molecule"^^xsd:string ;
+      rdfs:range :Substance ;
+      dc:description "Association between parent ChEMBL Molecule and ChEMBL Molecule. The child form of a molecule is generated by the addition of salt."^^xsd:string ;
+      skos:prefLabel "Association between parent ChEMBL Molecule and ChEMBL Molecule"^^xsd:string .
+
+:hasDocument
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :Activity ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (:Assay :Journal :Substance)
+              ] ;
+      rdfs:label "ChEMBL Document Association"^^xsd:string ;
+      rdfs:range :Document ;
+      dc:description "Association between the entity and a ChEMBL Document"^^xsd:string ;
+      skos:prefLabel "ChEMBL Document Association"^^xsd:string .
+
+:hasEFO
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :CellLine ;
+      rdfs:label "Link between a ChEMBL Entity and the Experimental Factor Ontology"^^xsd:string ;
+      dc:description ""^^xsd:string ;
+      skos:prefLabel "Link between a ChEMBL Entity and the Experimental Factor Ontology"^^xsd:string .
+
+:hasJournal
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :Document ;
+      rdfs:label "ChEMBL Journal Association"^^xsd:string ;
+      rdfs:range :Journal ;
+      dc:description "Association between the entity and a ChEMBL Journal"^^xsd:string ;
+      skos:prefLabel "ChEMBL Journal Association"^^xsd:string .
+
+:hasMechanism
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :Substance ;
+      rdfs:label "ChEMBL Mechanism Association"^^xsd:string ;
+      rdfs:range :Mechanism ;
+      dc:description "Association between the entity and a ChEMBL Mechanism of Action"^^xsd:string ;
+      skos:prefLabel "ChEMBL Mechanism Association"^^xsd:string .
+
+:hasMolecule
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (:Activity :Document :BioComponent :Mechanism)
+              ] ;
+      rdfs:label "ChEMBL Molecule Association"^^xsd:string ;
+      rdfs:range :Substance ;
+      dc:description "Association between the entity and a ChEMBL Molecule"^^xsd:string ;
+      skos:prefLabel "ChEMBL Molecule Association"^^xsd:string .
+
+:hasParentMolecule
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :Substance ;
+      rdfs:label "Association between ChEMBL Molecule and parent ChEMBL Molecule"^^xsd:string ;
+      rdfs:range :Substance ;
+      dc:description "Association between ChEMBL Molecule and parent ChEMBL Molecule. The parent molecule is generated by the removal of salt."^^xsd:string ;
+      skos:prefLabel "Association between ChEMBL Molecule and parent ChEMBL Molecule"^^xsd:string .
+
+:hasProteinClassification
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (:TargetComponent :Target)
+              ] ;
+      rdfs:label "ChEMBL ProteinClassification Association "^^xsd:string ;
+      rdfs:range :ProteinClassification ;
+      dc:description "Association between the entity and a ChEMBL ProteinClassification"^^xsd:string ;
+      skos:prefLabel "ChEMBL ProteinClassification Association "^^xsd:string .
+
+:hasQUDT
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :Activity ;
+      rdfs:label "QUDT Ontology Link"^^xsd:string ;
+      dc:description "Link between ChEMBL Activity unit and QUDT Ontology "^^xsd:string ;
+      skos:prefLabel "QUDT Ontology Link"^^xsd:string .
+
+:hasSource
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :Assay ;
+      rdfs:label "ChEMBL Source Association"^^xsd:string ;
+      rdfs:range :Source ;
+      dc:description "Association between the entity and a ChEMBL Source"^^xsd:string ;
+      skos:prefLabel "ChEMBL Source Association"^^xsd:string .
+
+:hasTarget
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (:Assay :Mechanism :BindingSite)
+              ] ;
+      rdfs:label "ChEMBL Target Association"^^xsd:string ;
+      rdfs:range :Target ;
+      dc:description "Association between the entity and a ChEMBL Target"^^xsd:string ;
+      skos:prefLabel "ChEMBL Target Association"^^xsd:string .
+
+:hasTargetComponent
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :Target ;
+      rdfs:label "ChEMBL TargetComponent Association"^^xsd:string ;
+      rdfs:range :TargetComponent ;
+      dc:description "Association between the entity and a ChEMBL TargetComponent"^^xsd:string ;
+      skos:prefLabel "ChEMBL TargetComponent Association"^^xsd:string .
+
+:hasTargetComponentDescendant
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :ProteinClassification ;
+      rdfs:label "Descendant ChEMBL TargetComponents"^^xsd:string ;
+      rdfs:range :TargetComponent ;
+      dc:description "Descendant ChEMBL TargetComponents for a particular node in classification hierarchy"^^xsd:string ;
+      skos:prefLabel "Descendant ChEMBL TargetComponents"^^xsd:string .
+
+:hasTargetDescendant
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :ProteinClassification ;
+      rdfs:label "Descendant ChEMBL Targets"^^xsd:string ;
+      rdfs:range :Target ;
+      dc:description "Descendant ChEMBL Targets for a particular node in classification hierarchy"^^xsd:string ;
+      skos:prefLabel "Descendant ChEMBL Targets"^^xsd:string .
+
+:hasUnitOnto
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :Activity ;
+      rdfs:label "Unit Ontology Link"^^xsd:string ;
+      dc:description "Link between ChEMBL Activity unit and Unit Ontology "^^xsd:string ;
+      skos:prefLabel "Unit Ontology Link"^^xsd:string .
+
+:highestDevelopmentPhase
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Substance ;
+      rdfs:label "ChEMBL Molecule Development Phase"^^xsd:string ;
+      dc:description "The highest phase the molecule has reached in drug approval process (4 = approved)"^^xsd:string ;
+      skos:prefLabel "ChEMBL Molecule Development Phase"^^xsd:string .
+
+:isBindingSiteForMechanism
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :BindingSite ;
+      rdfs:label "Association between ChEMBL Binding Site and Mechanism "^^xsd:string ;
+      rdfs:range :Mechanism ;
+      dc:description ""^^xsd:string ;
+      skos:prefLabel "Association between ChEMBL Binding Site and Mechanism "^^xsd:string .
+
+:isBiotherapeutic
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Substance ;
+      rdfs:label "ChEMBL Molecule Biotherapeutic Flag"^^xsd:string ;
+      dc:description "Flag to indicate whether the molecule is a biotherapeutic (e.g. mAb) "^^xsd:string ;
+      skos:prefLabel "ChEMBL Molecule Biotherapeutic Flag"^^xsd:string .
+
+:isCellLineForAssay
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :CellLine ;
+      rdfs:label "Association between ChEMBL Cell Line and ChEMBL Assay"^^xsd:string ;
+      dc:description ""^^xsd:string ;
+      skos:prefLabel "Association between ChEMBL Cell Line and ChEMBL Assay"^^xsd:string .
+
+:isCellLineForTarget
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :CellLine ;
+      rdfs:label "Association between ChEMBL Cell Line and ChEMBL Target"^^xsd:string ;
+      dc:description ""^^xsd:string ;
+      skos:prefLabel "Association between ChEMBL Cell Line and ChEMBL Target"^^xsd:string .
+
+:isSpeciesGroup
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Target ;
+      rdfs:label "ChEMBL Target Species Group Flag"^^xsd:string ;
+      dc:description "Flag to indicate whether the target represents a group of species, rather than an individual species (e.g., 'Bacterial DHFR'). When true, indicates that any associated target components will be a representative, rather than a comprehensive set."^^xsd:string ;
+      skos:prefLabel "ChEMBL Target Species Group Flag"^^xsd:string .
+
+:isTargetForCellLine
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :Target ;
+      rdfs:label "Association between ChEMBL Target and Cell Line "^^xsd:string ;
+      rdfs:range :CellLine ;
+      dc:description ""^^xsd:string ;
+      skos:prefLabel "Association between ChEMBL Target and Cell Line "^^xsd:string .
+
+:isTargetForMechanism
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :Target ;
+      rdfs:label "Association between ChEMBL Target and Mechanism "^^xsd:string ;
+      rdfs:range :Mechanism ;
+      dc:description ""^^xsd:string ;
+      skos:prefLabel "Association between ChEMBL Target and Mechanism "^^xsd:string .
+
+:mechanismActionType
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Mechanism ;
+      rdfs:label "ChEMBL Mechanism Action Type"^^xsd:string ;
+      dc:description "Type of action of the drug on the target e.g., agonist/antagonist etc (foreign key to action_type table)"^^xsd:string ;
+      skos:prefLabel "ChEMBL Mechanism Action Type"^^xsd:string .
+
+:mechanismDescription
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Mechanism ;
+      rdfs:label "ChEMBL Drug Mechanism of Action"^^xsd:string ;
+      dc:description "Description of the mechanism of action e.g., 'Phosphodiesterase 5 inhibitor'"^^xsd:string ;
+      skos:prefLabel "ChEMBL Drug Mechanism of Action"^^xsd:string .
+
+:moleculeXref
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :Substance ;
+      rdfs:label "ChEMBL Molecule Cross Reference Property"^^xsd:string ;
+      rdfs:range :MoleculeDbRef ;
+      rdfs:subPropertyOf :xref ;
+      skos:prefLabel "ChEMBL Molecule Cross Reference Property"^^xsd:string .
+
+:organismName
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (:Assay :Target :TargetComponent :BioComponent :CellLine)
+              ] ;
+      rdfs:label "Organism name for given ChEMBL Entity"^^xsd:string ;
+      dc:description "Source organism of molecuar target or tissue, or the target organism if compound activity is reported in an organism rather than a protein or tissue"^^xsd:string ;
+      skos:prefLabel "Organism name for given ChEMBL Entity"^^xsd:string .
+
+:pChembl
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Activity ;
+      rdfs:label "ChEMBL Activity pChembl Value"^^xsd:string ;
+      dc:description "Negative log of selected concentration-response activity values (IC50/EC50/XC50/AC50/Ki/Kd/Potency)"^^xsd:string ;
+      skos:prefLabel "ChEMBL Activity pChembl Value"^^xsd:string .
+
+:potentialDuplicate
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Activity ;
+      rdfs:label "ChEMBL Activity Potential Duplicate Flag"^^xsd:string ;
+      dc:description "Indicates whether the value is likely to be a repeat citation of a value reported in a previous ChEMBL paper, rather than a new, independent measurement."^^xsd:string ;
+      skos:prefLabel "ChEMBL Activity Potential Duplicate Flag"^^xsd:string .
+
+:proteinSequence
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (:TargetComponent :BioComponent)
+              ] ;
+      rdfs:label "Protein sequence for given ChEMBL entity"^^xsd:string ;
+      dc:description "Protein sequence for given ChEMBL entity"^^xsd:string ;
+      skos:prefLabel "Protein sequence for given ChEMBL entity"^^xsd:string .
+
+:publishedRelation
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Activity ;
+      rdfs:label "ChEMBL Activity Entity Published Relation"^^xsd:string ;
+      dc:description "Symbol constraining the activity value (e.g. >, <, =)"^^xsd:string ;
+      skos:prefLabel "ChEMBL Activity Entity Published Relation"^^xsd:string .
+
+:publishedType
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Activity ;
+      rdfs:label "ChEMBL Activity Entity Published Type"^^xsd:string ;
+      dc:description "Type of end-point measurement: e.g. IC50, LD50, %inhibition etc, as it appears in the original publication"^^xsd:string ;
+      skos:prefLabel "ChEMBL Activity Entity Published Type"^^xsd:string .
+
+:publishedUnits
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Activity ;
+      rdfs:label "ChEMBL Activity Entity Published Units"^^xsd:string ;
+      dc:description "Units of measurement as they appear in the original publication"^^xsd:string ;
+      skos:prefLabel "ChEMBL Activity Entity Published Units"^^xsd:string .
+
+:publishedValue
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Activity ;
+      rdfs:label "ChEMBL Activity Entity Published Value"^^xsd:string ;
+      dc:description "Datapoint value as it appears in the original publication"^^xsd:string ;
+      skos:prefLabel "ChEMBL Activity Entity Published Value"^^xsd:string .
+
+:relEquivalentTo
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :Target ;
+      rdfs:label "relEquivalentTo relationship between ChEMBL Protein targets"^^xsd:string ;
+      rdfs:range :Target ;
+      dc:description "A relationship between protein targets based on overlapping protein components. The relEquivalentTo indicates the object target components are the same as the subject target components. The protein targets are different based on their type (targetType), e.g. complex, selectivity group, complex group."^^xsd:string ;
+      skos:prefLabel "relEquivalentTo relationship between ChEMBL Protein targets"^^xsd:string .
+
+:relHasSubset
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :Target ;
+      rdfs:label "relHasSubset relationship between ChEMBL Protein targets"^^xsd:string ;
+      rdfs:range :Target ;
+      dc:description "A relationship between protein targets based on overlapping protein components. The relHasSubset indicates the object target components are all part of the subject target components."^^xsd:string ;
+      skos:prefLabel "relHasSubset relationship between ChEMBL Protein targets"^^xsd:string .
+
+:relOverlapsWith
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :Target ;
+      rdfs:label "relOverlapsWith relationship between ChEMBL Protein targets"^^xsd:string ;
+      rdfs:range :Target ;
+      dc:description "A relationship between protein targets based on overlapping protein components. The relOverlapsWith indicates the object target and subject target share 1 or more proteins components, but neither are a subset of each other."^^xsd:string ;
+      skos:prefLabel "relOverlapsWith relationship between ChEMBL Protein targets"^^xsd:string .
+
+:relSubsetOf
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :Target ;
+      rdfs:label "relSubsetOf relationship between ChEMBL Protein targets"^^xsd:string ;
+      rdfs:range :Target ;
+      dc:description "A relationship between protein targets based on overlapping protein components. The relSubsetOf indicates the subject target components are a subset of the object target components."^^xsd:string ;
+      skos:prefLabel "relSubsetOf relationship between ChEMBL Protein targets"^^xsd:string .
+
+:standardRelation
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Activity ;
+      rdfs:label "ChEMBL Activity Entity Standard Relation"^^xsd:string ;
+      dc:description "Standardised version of the publishedRelation and is a symbol constraining the activity value (e.g. >, <, =)"^^xsd:string ;
+      skos:prefLabel "ChEMBL Activity Entity Standard Relation"^^xsd:string .
+
+:standardType
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Activity ;
+      rdfs:label "ChEMBL Activity Entity Standard Type"^^xsd:string ;
+      dc:description "Standardised version of the publishedType, e.g. IC50 rather than Ic-50/Ic50/ic50/ic-50"^^xsd:string ;
+      skos:prefLabel "ChEMBL Activity Entity Standard Type"^^xsd:string .
+
+:standardUnits
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Activity ;
+      rdfs:label "ChEMBL Activity Entity Standard Units"^^xsd:string ;
+      dc:description "Standardised version of the publishedUnits, e.g. concentrations are in nM."^^xsd:string ;
+      skos:prefLabel "ChEMBL Activity Entity Standard Units"^^xsd:string .
+
+:standardValue
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Activity ;
+      rdfs:label "ChEMBL Activity Entity Standard Value"^^xsd:string ;
+      dc:description "Standardised version of the publishedValue. Transformed to common units: e.g. All concentration values are converted to values in nannoMolar, all time values are converted to minutes etc"^^xsd:string ;
+      skos:prefLabel "ChEMBL Activity Entity Standard Value"^^xsd:string .
+
+:substanceType
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Substance ;
+      rdfs:label "ChEMBL Substance Entity Type"^^xsd:string ;
+      dc:description "ChEMBL Substance Entity Type"^^xsd:string ;
+      skos:prefLabel "ChEMBL Substance Entity Type"^^xsd:string .
+
+:targetCmptXref
+      rdf:type owl:ObjectProperty ;
+      rdfs:label "ChEMBL Target Component Cross Reference Property"^^xsd:string ;
+      rdfs:subPropertyOf :xref ;
+      skos:prefLabel "ChEMBL Target Component Cross Reference Property"^^xsd:string .
+
+:targetConfDesc
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Assay ;
+      rdfs:label "ChEMBL Assay Target Confidence Description"^^xsd:string ;
+      dc:description "Description of the target types assigned with each targetConfScore"^^xsd:string ;
+      skos:prefLabel "ChEMBL Assay Target Confidence Description"^^xsd:string .
+
+:targetConfScore
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Assay ;
+      rdfs:label "ChEMBL Assay Target Confidence Score"^^xsd:string ;
+      dc:description "Confidence score, indicating how accurately the assigned target(s) represents the actually assay target. Foreign key to CONFIDENCE_SCORE table. 0 means uncurated/unassigned, 1 = low confidence to 9 = high confidence."^^xsd:string ;
+      skos:prefLabel "ChEMBL Assay Target Confidence Score"^^xsd:string .
+
+:targetRelDesc
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Assay ;
+      rdfs:label "ChEMBL Assay Relationship Type Description"^^xsd:string ;
+      dc:description "Description of targetRelType flags"^^xsd:string ;
+      skos:prefLabel "ChEMBL Assay Relationship Type Description"^^xsd:string .
+
+:targetRelType
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Assay ;
+      rdfs:label "ChEMBL Assay Relationship Type"^^xsd:string ;
+      dc:description "Flag indicating of the relationship between the reported target in the source document and the assigned target from TARGET_DICTIONARY. Foreign key to RELATIONSHIP_TYPE table."^^xsd:string ;
+      skos:prefLabel "ChEMBL Assay Relationship Type"^^xsd:string .
+
+:targetType
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Target ;
+      rdfs:label "ChEMBL Target Entity Type"^^xsd:string ;
+      dc:description "Describes whether target is a protein, an organism, a tissue etc."^^xsd:string ;
+      skos:prefLabel "ChEMBL Target Entity Type"^^xsd:string .
+
+:targetXref
+      rdf:type owl:ObjectProperty ;
+      rdfs:label "ChEMBL Target Cross Reference Property"^^xsd:string ;
+      rdfs:subPropertyOf :xref ;
+      skos:prefLabel "ChEMBL Target Cross Reference Property"^^xsd:string .
+
+:taxonomy
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain
+              [ rdf:type owl:Class ;
+                owl:unionOf (:Assay :Target :TargetComponent :BioComponent :CellLine)
+              ] ;
+      rdfs:label "ChEMBL Entity Taxonomy"^^xsd:string ;
+      dc:description "NCBI taxonomy ID for the ChEMBL Entity"^^xsd:string ;
+      skos:prefLabel "ChEMBL Entity Taxonomy"^^xsd:string .
+
+:xref
+      rdf:type owl:ObjectProperty ;
+      rdfs:label "ChEMBL Cross Reference Property"^^xsd:string ;
+      skos:prefLabel "ChEMBL Cross Reference Property"^^xsd:string .
