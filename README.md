@@ -20,9 +20,7 @@ For technical details about the techniques used by Hydrowl and the theory behind
 
 # INSTALLATION
 
-Maven is used for some dependencies, however, some systems are not available in maven repository hence the necessary jar files are located under the /lib directory. The current distribution is using a fairly old version of GraphDB (called SwiftOWLIM) that was available under LGPL
-
-Hydrowl is also using SwiftOWLIM. SwiftOWLIM uses various other jars that can be located under the folder SwiftOWLIM (in particular it uses openrdf-model.jar, openrdf-util.jar, owlim-2.9.1.jar, rio.jar, sesame.jar, and trree-2.9.1.jar). Java needs to be able to see these jars as well in order for Hydrowl to work. Please see the separate SwiftOWLIM folder for licenses regarding these jars.
+Maven is used for some dependencies, however, some systems are not available in maven repository hence the necessary jar files are located under the /lib directory. The current distribution is using a fairly old version of GraphDB (called SwiftOWLIM) that was available under LGPL. All necessary libs are under the respective folders and need to be added to the build path.
 
 # Usage
 
